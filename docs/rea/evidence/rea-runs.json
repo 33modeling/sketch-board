@@ -1,0 +1,334 @@
+{
+ "tool": "rea-agents 6.8.0 (npx, 전역 설치·MCP 설정·setup 없음)",
+ "node": "v22.23.4",
+ "targets": {
+  "excalidraw": {
+   "repo": "https://github.com/excalidraw/excalidraw",
+   "commit": "dabd83c4aa6b9e42d0dd0a42be62200eb8e3cce9",
+   "license": "MIT (Copyright (c) 2020 Excalidraw)",
+   "sparse_paths": [
+    "/packages/excalidraw/*.ts",
+    "/packages/excalidraw/*.tsx",
+    "/packages/excalidraw/package.json",
+    "/packages/excalidraw/actions/",
+    "/packages/excalidraw/data/",
+    "/packages/excalidraw/scene/",
+    "/packages/excalidraw/renderer/",
+    "/packages/excalidraw/components/App.tsx",
+    "/packages/element/src/",
+    "/packages/element/package.json",
+    "/LICENSE",
+    "/README.md"
+   ],
+   "excluded": [
+    "테스트(*.test.ts·*.test.tsx)",
+    "packages/excalidraw/components/ (App.tsx 빼고)",
+    "locales/",
+    "fonts/",
+    "css/",
+    "packages/common·math·utils",
+    "excalidraw-app/"
+   ]
+  }
+ },
+ "note": "app-*-view.json·ref-source-*.summary.json 사본은 작업 폴더 절대 경로를 <target> 으로 바꿔 넣었다(원본 SHA-256 은 아래 runs). 큰 결과(앱 분석 약 60·70 MB, 기능 추적 원본)는 저장소에 넣지 않았다(bytes·sha256 만). 같은 명령(scripts/run-rea.sh)으로 다시 만들어 SHA-256 으로 대조한다. trace-*-input.json 은 app-*.json 을 그대로 감싼 입력이라 따로 적지 않았다.",
+ "runs": [
+  {
+   "label": "ref-element",
+   "command": "npx -y rea-agents@6.8.0 import-reference-source <target>/packages/element --format json",
+   "exit": 0,
+   "seconds": 2.1,
+   "output": {
+    "file": "ref-source-element.json",
+    "bytes": 78312,
+    "sha256": "124e5cf4951d10d254eb310b93f126e2be644e80c5a904b87bf9df44e838031a"
+   }
+  },
+  {
+   "label": "ref-element-summary",
+   "command": "npx -y rea-agents@6.8.0 import-reference-source <target>/packages/element --detail summary --outline-depth 3 --format json",
+   "exit": 0,
+   "seconds": 2.1,
+   "output": {
+    "file": "ref-source-element.summary.json",
+    "bytes": 10509,
+    "sha256": "43b46d2d1480c106cfd200f2c65c8d98ad954b91d346dead087aec0783e20db2"
+   }
+  },
+  {
+   "label": "ref-excalidraw",
+   "command": "npx -y rea-agents@6.8.0 import-reference-source <target>/packages/excalidraw --format json",
+   "exit": 0,
+   "seconds": 2.1,
+   "output": {
+    "file": "ref-source-excalidraw.json",
+    "bytes": 121039,
+    "sha256": "efebe23b3d49a0ec764fc64442b17b7cce82c027aa84fcf7c570a5612074d66b"
+   }
+  },
+  {
+   "label": "ref-excalidraw-summary",
+   "command": "npx -y rea-agents@6.8.0 import-reference-source <target>/packages/excalidraw --detail summary --outline-depth 3 --format json",
+   "exit": 0,
+   "seconds": 2.1,
+   "output": {
+    "file": "ref-source-excalidraw.summary.json",
+    "bytes": 18237,
+    "sha256": "cfa863224fdf533a89cab9938bb51ad95a9f1e8953f167d7b8e06a98c29d3275"
+   }
+  },
+  {
+   "label": "app-element",
+   "command": "npx -y rea-agents@6.8.0 analyze-javascript-application <target>/packages/element --source-paths-json <work>/selection-element.json --max-semantic-nodes 400000 --max-semantic-unknowns 400000 --format json",
+   "exit": 0,
+   "seconds": 14.5,
+   "output": {
+    "file": "app-element.json",
+    "bytes": 59583362,
+    "sha256": "318256c1ae9054f2f9ab7325f8e16c995ea2de5a1cc406f99076d0842f2ef14a"
+   }
+  },
+  {
+   "label": "app-excalidraw",
+   "command": "npx -y rea-agents@6.8.0 analyze-javascript-application <target>/packages/excalidraw --source-paths-json <work>/selection-excalidraw.json --max-semantic-nodes 400000 --max-semantic-unknowns 400000 --format json",
+   "exit": 0,
+   "seconds": 15.6,
+   "output": {
+    "file": "app-excalidraw.json",
+    "bytes": 70388457,
+    "sha256": "f21053e09587e3a049be73873957a1ce105badaf5ff74822466fa031a4e2f96f"
+   }
+  },
+  {
+   "label": "view-element-summary",
+   "command": "npx -y rea-agents@6.8.0 inspect-analysis-view view-element-summary.json --format json",
+   "exit": 0,
+   "seconds": 6.7,
+   "output": {
+    "file": "app-element-summary-view.json",
+    "bytes": 12765,
+    "sha256": "316206bda0566bc2d663656bb4333db5547af11ee0d6e3880d00dc3c512698a5"
+   }
+  },
+  {
+   "label": "view-element-modules",
+   "command": "npx -y rea-agents@6.8.0 inspect-analysis-view view-element-modules.json --format json",
+   "exit": 0,
+   "seconds": 8.0,
+   "output": {
+    "file": "app-element-modules-view.json",
+    "bytes": 32438,
+    "sha256": "7dcb13986db131ad06e330651eda26a7ba4c8211d30a8a8c9f490e456656da9d"
+   }
+  },
+  {
+   "label": "view-excalidraw-summary",
+   "command": "npx -y rea-agents@6.8.0 inspect-analysis-view view-excalidraw-summary.json --format json",
+   "exit": 0,
+   "seconds": 7.7,
+   "output": {
+    "file": "app-excalidraw-summary-view.json",
+    "bytes": 12856,
+    "sha256": "82023134e3bd8151dfb01891cfd416e1229099f157206207131fec606cc29153"
+   }
+  },
+  {
+   "label": "view-excalidraw-modules",
+   "command": "npx -y rea-agents@6.8.0 inspect-analysis-view view-excalidraw-modules.json --format json",
+   "exit": 0,
+   "seconds": 7.7,
+   "output": {
+    "file": "app-excalidraw-modules-view.json",
+    "bytes": 36212,
+    "sha256": "12cc0a7f6c81fd66e46a52e35370e3fcd8e22839dbe1e4da1f54b3e6259da841"
+   }
+  },
+  {
+   "label": "feature-element-groups",
+   "command": "npx -y rea-agents@6.8.0 trace-application-feature trace-feature-element-groups-input.json --format json",
+   "exit": 0,
+   "seconds": 6.6,
+   "output": {
+    "file": "trace-feature-element-groups.json",
+    "bytes": 3565175,
+    "sha256": "0d556fabc729fb08668637870b1a46f65d5710098795ffc1183060d3e909cb0f"
+   }
+  },
+  {
+   "label": "feature-element-shape",
+   "command": "npx -y rea-agents@6.8.0 trace-application-feature trace-feature-element-shape-input.json --format json",
+   "exit": 0,
+   "seconds": 6.5,
+   "output": {
+    "file": "trace-feature-element-shape.json",
+    "bytes": 3563565,
+    "sha256": "33f728fffbc678641ebbb007dd71624c9130b1b065a5f68cab479b0d59147c9a"
+   }
+  },
+  {
+   "label": "feature-excalidraw-history",
+   "command": "npx -y rea-agents@6.8.0 trace-application-feature trace-feature-excalidraw-history-input.json --format json",
+   "exit": 0,
+   "seconds": 7.4,
+   "output": {
+    "file": "trace-feature-excalidraw-history.json",
+    "bytes": 5478904,
+    "sha256": "f74329c62d7e7962349e2d36ae6526999653bfb510c2dc7b7f4ce26108872ea0"
+   }
+  },
+  {
+   "label": "feature-excalidraw-library",
+   "command": "npx -y rea-agents@6.8.0 trace-application-feature trace-feature-excalidraw-library-input.json --format json",
+   "exit": 0,
+   "seconds": 7.4,
+   "output": {
+    "file": "trace-feature-excalidraw-library.json",
+    "bytes": 5479761,
+    "sha256": "c9d7afcb9202f78b82329ee557bd258bb22268aedd5ffda37c54296d7fa7e962"
+   }
+  },
+  {
+   "label": "sem-bounds-common-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-bounds-common-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 6.5,
+   "output": {
+    "file": "trace-semantics-bounds-common-callers.json",
+    "bytes": 7643,
+    "sha256": "69576755cd1d9c0101886c609afe54ed5e5a46d31258e7757e49c5b49a78ecc5"
+   }
+  },
+  {
+   "label": "sem-collision-hititself-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-collision-hititself-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 6.5,
+   "output": {
+    "file": "trace-semantics-collision-hititself-callers.json",
+    "bytes": 20478,
+    "sha256": "cba611b4cea0c1cdfde15181b7a7b449a38d5745c5c6755fe3b450ec969815ea"
+   }
+  },
+  {
+   "label": "sem-export-svg-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-export-svg-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 7.4,
+   "output": {
+    "file": "trace-semantics-export-svg-callers.json",
+    "bytes": 45144,
+    "sha256": "32915d32373073d8b10ff63ef6bf8f1335748ba0bc396a1e1162eb947a075cc6"
+   }
+  },
+  {
+   "label": "sem-gesture-center-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-gesture-center-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 7.6,
+   "output": {
+    "file": "trace-semantics-gesture-center-callers.json",
+    "bytes": 9352,
+    "sha256": "599f14def78124ec70f09be29fcf8576cd48cf5965548f7776858a6a3302c024"
+   }
+  },
+  {
+   "label": "sem-groupids-property",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-groupids-property-input.json --format json",
+   "exit": 0,
+   "seconds": 6.5,
+   "output": {
+    "file": "trace-semantics-groupids-property.json",
+    "bytes": 17826,
+    "sha256": "1a3b36d184ed27a8150ee106179b3b2dceb2f2d2781c3986c8dd53223c674280"
+   }
+  },
+  {
+   "label": "sem-groups-selectfromgiven-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-groups-selectfromgiven-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 6.5,
+   "output": {
+    "file": "trace-semantics-groups-selectfromgiven-callers.json",
+    "bytes": 8825,
+    "sha256": "b6739890b00b452de170ed82fa20b78652e000c494b3f8d9b02e40938bb2896e"
+   }
+  },
+  {
+   "label": "sem-history-record-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-history-record-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 7.5,
+   "output": {
+    "file": "trace-semantics-history-record-callers.json",
+    "bytes": 10449,
+    "sha256": "3ee5e5dfc7e8f7de22494acb512adfe2512de7ffba0aadc15ada3fc0e9d241e5"
+   }
+  },
+  {
+   "label": "sem-json-serialize-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-json-serialize-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 7.4,
+   "output": {
+    "file": "trace-semantics-json-serialize-callers.json",
+    "bytes": 12321,
+    "sha256": "77a9bdaf181e0bd1d4ccee453d54f5c9b4789634b3251ca91ae9c834c7302732"
+   }
+  },
+  {
+   "label": "sem-library-merge-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-library-merge-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 7.3,
+   "output": {
+    "file": "trace-semantics-library-merge-callers.json",
+    "bytes": 10506,
+    "sha256": "a2e5050d56e27d273311bac39362585728e1b4e98b062314c08ab69cbd172eaf"
+   }
+  },
+  {
+   "label": "sem-seed-property",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-seed-property-input.json --format json",
+   "exit": 0,
+   "seconds": 6.4,
+   "output": {
+    "file": "trace-semantics-seed-property.json",
+    "bytes": 18359,
+    "sha256": "048951ebbf9891f2bc8dca017b98248e8597e1c27c59df536058d5469b8e89fa"
+   }
+  },
+  {
+   "label": "sem-shape-adjustroughness-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-shape-adjustroughness-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 6.5,
+   "output": {
+    "file": "trace-semantics-shape-adjustroughness-callers.json",
+    "bytes": 11999,
+    "sha256": "bdb21fbf13dc5ec16f75820e4319d76de1a1e50b377a8e0511987e2e4eecca0d"
+   }
+  },
+  {
+   "label": "sem-shape-roughoptions-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-shape-roughoptions-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 6.4,
+   "output": {
+    "file": "trace-semantics-shape-roughoptions-callers.json",
+    "bytes": 23766,
+    "sha256": "fa0674b0bccd20450c0dc09245f365ec37c1d8c734a27da4e9a1ea3a3749a42f"
+   }
+  },
+  {
+   "label": "sem-viewport-forzoom-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-viewport-forzoom-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 7.3,
+   "output": {
+    "file": "trace-semantics-viewport-forzoom-callers.json",
+    "bytes": 8360,
+    "sha256": "7588b0398b936709141e1e5bb14cfea0b4814976b7a310dad19f17fdf0afb0ea"
+   }
+  }
+ ]
+}

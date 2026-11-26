@@ -1,0 +1,6591 @@
+{
+ "element": {
+  "evidence_id": "ev_5729fdea1056c978de15d35282856ab741dbf6461c15a8db920f0e92dab30fa1",
+  "statistics": {
+   "relevant_files": 56,
+   "nested_asar_containers": 0,
+   "text_bytes_read": 432571,
+   "invalid_utf8_files": 0,
+   "parsed_javascript_files": 18,
+   "skipped_javascript_files": 0,
+   "visited_ast_nodes": 49898,
+   "findings": 968,
+   "modules": 0,
+   "parse_failures": 0
+  },
+  "application_graph": {
+   "nodes": {
+    "javascript-module": 457,
+    "unknown": 38,
+    "javascript-asset": 55,
+    "artifact": 2
+   },
+   "edges": {
+    "static-import": 139,
+    "contains": 656,
+    "require": 10
+   },
+   "limitations": [
+    "Caller-selected source analysis leaves 38 inventoried files outside analysis scope. Inventory identity covers the complete artifact; relationships through unselected sources remain unknown.",
+    "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+    "Electron relationships are derived from inert syntax; runtime registration, reachability, defaults, and enforcement remain unproven.",
+    "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+    "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+    "Sender, frame, URL, and origin checks are observations only; REA does not claim that they enforce a complete authorization policy.",
+    "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+    "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+    "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+   ]
+  },
+  "semantic_graph": {
+   "nodes": {
+    "expression": 22782,
+    "parameter": 1225,
+    "call-site": 2496,
+    "binding": 2274,
+    "return-site": 753,
+    "function": 554,
+    "property-slot": 1906,
+    "module": 55,
+    "literal": 53,
+    "boundary": 9
+   },
+   "relations": {
+    "aliases": 10895,
+    "calls": 372,
+    "reads": 9668,
+    "defines": 5308,
+    "argument-to-parameter": 1194,
+    "reads-property": 2472,
+    "captures": 2195,
+    "writes": 293,
+    "writes-property": 172,
+    "returns-to-call": 645,
+    "destructures": 128,
+    "spreads": 68,
+    "validates": 6,
+    "coerces": 3
+   },
+   "resolution": {
+    "candidate": 13645,
+    "resolved": 19774
+   },
+   "fingerprints": 541,
+   "unknowns": {
+    "object-flow/ambiguous-target": 3941,
+    "data-flow/unknown-value": 3843,
+    "call-flow/dynamic-call": 2447,
+    "object-flow/dynamic-property": 268,
+    "object-flow/incomplete-module": 37,
+    "resource-lifecycle/incomplete-module": 37,
+    "timer/incomplete-module": 37,
+    "request/incomplete-module": 37,
+    "event/incomplete-module": 37,
+    "closure/incomplete-module": 37,
+    "data-flow/incomplete-module": 37,
+    "call-flow/incomplete-module": 37,
+    "configuration/incomplete-module": 37,
+    "boundary/incomplete-module": 37,
+    "child-process/incomplete-module": 37,
+    "promise-ownership/incomplete-module": 37,
+    "data-flow/dynamic-property": 11,
+    "boundary/ambiguous-target": 6
+   }
+  },
+  "functions": {
+   "src/newElement.ts": [
+    {
+     "name": "_newElementBase",
+     "line": 89
+    },
+    {
+     "name": "newElement",
+     "line": 176
+    },
+    {
+     "name": "normalizeStickyNoteStyle",
+     "line": 188
+    },
+    {
+     "name": "normalizeStickyNoteGeometry",
+     "line": 207
+    },
+    {
+     "name": "normalizeStickyNote",
+     "line": 226
+    },
+    {
+     "name": "newStickyNoteElement",
+     "line": 232
+    },
+    {
+     "name": "newEmbeddableElement",
+     "line": 247
+    },
+    {
+     "name": "newIframeElement",
+     "line": 255
+    },
+    {
+     "name": "newFrameElement",
+     "line": 265
+    },
+    {
+     "name": "newMagicFrameElement",
+     "line": 282
+    },
+    {
+     "name": "getTextAnchorRatios",
+     "line": 305
+    },
+    {
+     "name": "getTextElementPositionOffsets",
+     "line": 319
+    },
+    {
+     "name": "newTextElement",
+     "line": 337
+    },
+    {
+     "name": "getAdjustedDimensions",
+     "line": 397
+    },
+    {
+     "name": "adjustXYWithRotation",
+     "line": 493
+    },
+    {
+     "name": "refreshTextDimensions",
+     "line": 540
+    },
+    {
+     "name": "newFreeDrawElement",
+     "line": 602
+    },
+    {
+     "name": "newLinearElement",
+     "line": 623
+    },
+    {
+     "name": "newArrowElement",
+     "line": 652
+    },
+    {
+     "name": "newImageElement",
+     "line": 692
+    }
+   ],
+   "src/store.ts": [
+    {
+     "name": "Store",
+     "line": 78
+    },
+    {
+     "name": "snapshot",
+     "line": 91
+    },
+    {
+     "name": "snapshot",
+     "line": 95
+    },
+    {
+     "name": "constructor",
+     "line": 99
+    },
+    {
+     "name": "scheduleAction",
+     "line": 101
+    },
+    {
+     "name": "scheduleCapture",
+     "line": 110
+    },
+    {
+     "name": "scheduleMicroAction",
+     "line": 117
+    },
+    {
+     "name": null,
+     "line": 168
+    },
+    {
+     "name": "commit",
+     "line": 183
+    },
+    {
+     "name": "clear",
+     "line": 206
+    },
+    {
+     "name": "emitDurableIncrement",
+     "line": 216
+    },
+    {
+     "name": "emitEphemeralIncrement",
+     "line": 253
+    },
+    {
+     "name": "applyChangeToSnapshot",
+     "line": 272
+    },
+    {
+     "name": "maybeCloneSnapshot",
+     "line": 286
+    },
+    {
+     "name": "flushMicroActions",
+     "line": 305
+    },
+    {
+     "name": "processAction",
+     "line": 317
+    },
+    {
+     "name": "getScheduledMacroAction",
+     "line": 391
+    },
+    {
+     "name": "satisfiesScheduledActionsInvariant",
+     "line": 411
+    },
+    {
+     "name": "StoreChange",
+     "line": 432
+    },
+    {
+     "name": "constructor",
+     "line": 435
+    },
+    {
+     "name": "create",
+     "line": 440
+    },
+    {
+     "name": "StoreIncrement",
+     "line": 454
+    },
+    {
+     "name": "constructor",
+     "line": 455
+    },
+    {
+     "name": "isDurable",
+     "line": 460
+    },
+    {
+     "name": "isEphemeral",
+     "line": 466
+    },
+    {
+     "name": "DurableIncrement",
+     "line": 476
+    },
+    {
+     "name": "constructor",
+     "line": 477
+    },
+    {
+     "name": "EphemeralIncrement",
+     "line": 488
+    },
+    {
+     "name": "constructor",
+     "line": 489
+    },
+    {
+     "name": "StoreDelta",
+     "line": 497
+    },
+    {
+     "name": "constructor",
+     "line": 498
+    },
+    {
+     "name": "create",
+     "line": 507
+    },
+    {
+     "name": "calculate",
+     "line": 522
+    },
+    {
+     "name": "restore",
+     "line": 540
+    },
+    {
+     "name": "load",
+     "line": 552
+    },
+    {
+     "name": "squash",
+     "line": 566
+    },
+    {
+     "name": "inverse",
+     "line": 580
+    },
+    {
+     "name": "applyTo",
+     "line": 587
+    },
+    {
+     "name": "applyLatestChanges",
+     "line": 611
+    },
+    {
+     "name": "empty",
+     "line": 630
+    },
+    {
+     "name": "isEmpty",
+     "line": 634
+    },
+    {
+     "name": "StoreSnapshot",
+     "line": 643
+    },
+    {
+     "name": "constructor",
+     "line": 647
+    },
+    {
+     "name": "create",
+     "line": 661
+    },
+    {
+     "name": "empty",
+     "line": 679
+    },
+    {
+     "name": "getChangedElements",
+     "line": 691
+    },
+    {
+     "name": "getChangedAppState",
+     "line": 714
+    },
+    {
+     "name": null,
+     "line": 721
+    },
+    {
+     "name": "isEmpty",
+     "line": 729
+    },
+    {
+     "name": "applyChange",
+     "line": 736
+    },
+    {
+     "name": "maybeClone",
+     "line": 761
+    },
+    {
+     "name": "maybeCreateAppStateSnapshot",
+     "line": 813
+    },
+    {
+     "name": "maybeCreateElementsSnapshot",
+     "line": 842
+    },
+    {
+     "name": "detectChangedAppState",
+     "line": 864
+    },
+    {
+     "name": "detectChangedElements",
+     "line": 904
+    },
+    {
+     "name": "createElementsSnapshot",
+     "line": 970
+    },
+    {
+     "name": "getDefaultObservedAppState",
+     "line": 992
+    },
+    {
+     "name": "getObservedAppState",
+     "line": 1006
+    },
+    {
+     "name": "isObservedAppState",
+     "line": 1034
+    }
+   ],
+   "src/delta.ts": [
+    {
+     "name": "Delta",
+     "line": 78
+    },
+    {
+     "name": "constructor",
+     "line": 79
+    },
+    {
+     "name": "create",
+     "line": 84
+    },
+    {
+     "name": "calculate",
+     "line": 113
+    },
+    {
+     "name": "empty",
+     "line": 146
+    },
+    {
+     "name": "isEmpty",
+     "line": 150
+    },
+    {
+     "name": "merge",
+     "line": 159
+    },
+    {
+     "name": "mergeObjects",
+     "line": 173
+    },
+    {
+     "name": "mergeArrays",
+     "line": 190
+    },
+    {
+     "name": "diffObjects",
+     "line": 208
+    },
+    {
+     "name": null,
+     "line": 232
+    },
+    {
+     "name": null,
+     "line": 240
+    },
+    {
+     "name": "diffArrays",
+     "line": 264
+    },
+    {
+     "name": null,
+     "line": 287
+    },
+    {
+     "name": null,
+     "line": 294
+    },
+    {
+     "name": null,
+     "line": 302
+    },
+    {
+     "name": null,
+     "line": 305
+    },
+    {
+     "name": "isLeftDifferent",
+     "line": 320
+    },
+    {
+     "name": "isRightDifferent",
+     "line": 338
+    },
+    {
+     "name": "isInnerDifferent",
+     "line": 356
+    },
+    {
+     "name": "isDifferent",
+     "line": 374
+    },
+    {
+     "name": "getLeftDifferences",
+     "line": 392
+    },
+    {
+     "name": "getRightDifferences",
+     "line": 405
+    },
+    {
+     "name": "getInnerDifferences",
+     "line": 418
+    },
+    {
+     "name": "getDifferences",
+     "line": 431
+    },
+    {
+     "name": "distinctKeysIterator",
+     "line": 448
+    },
+    {
+     "name": null,
+     "line": 465
+    },
+    {
+     "name": "AppStateDelta",
+     "line": 527
+    },
+    {
+     "name": "constructor",
+     "line": 528
+    },
+    {
+     "name": "create",
+     "line": 530
+    },
+    {
+     "name": "calculate",
+     "line": 534
+    },
+    {
+     "name": "restore",
+     "line": 549
+    },
+    {
+     "name": "empty",
+     "line": 554
+    },
+    {
+     "name": "inverse",
+     "line": 558
+    },
+    {
+     "name": "squash",
+     "line": 563
+    },
+    {
+     "name": "applyTo",
+     "line": 635
+    },
+    {
+     "name": "isEmpty",
+     "line": 715
+    },
+    {
+     "name": "filterInvisibleChanges",
+     "line": 724
+    },
+    {
+     "name": "filterSelectedElements",
+     "line": 876
+    },
+    {
+     "name": "filterSelectedGroups",
+     "line": 905
+    },
+    {
+     "name": "stripElementsProps",
+     "line": 932
+    },
+    {
+     "name": "stripStandaloneProps",
+     "line": 953
+    },
+    {
+     "name": "postProcess",
+     "line": 970
+    },
+    {
+     "name": null,
+     "line": 980
+    },
+    {
+     "name": null,
+     "line": 986
+    },
+    {
+     "name": null,
+     "line": 992
+    },
+    {
+     "name": "orderAppStateKeys",
+     "line": 1006
+    },
+    {
+     "name": "ElementsDelta",
+     "line": 1040
+    },
+    {
+     "name": "constructor",
+     "line": 1041
+    },
+    {
+     "name": "create",
+     "line": 1047
+    },
+    {
+     "name": "restore",
+     "line": 1094
+    },
+    {
+     "name": null,
+     "line": 1099
+    },
+    {
+     "name": null,
+     "line": 1106
+    },
+    {
+     "name": null,
+     "line": 1112
+    },
+    {
+     "name": null,
+     "line": 1117
+    },
+    {
+     "name": null,
+     "line": 1134
+    },
+    {
+     "name": "validate",
+     "line": 1143
+    },
+    {
+     "name": "calculate",
+     "line": 1171
+    },
+    {
+     "name": "empty",
+     "line": 1271
+    },
+    {
+     "name": "inverse",
+     "line": 1275
+    },
+    {
+     "name": "inverseInternal",
+     "line": 1276
+    },
+    {
+     "name": "isEmpty",
+     "line": 1294
+    },
+    {
+     "name": "applyLatestChanges",
+     "line": 1309
+    },
+    {
+     "name": "modifier",
+     "line": 1315
+    },
+    {
+     "name": null,
+     "line": 1319
+    },
+    {
+     "name": "applyLatestChangesInternal",
+     "line": 1356
+    },
+    {
+     "name": "applyTo",
+     "line": 1396
+    },
+    {
+     "name": null,
+     "line": 1510
+    },
+    {
+     "name": "squash",
+     "line": 1566
+    },
+    {
+     "name": "mergeBoundElements",
+     "line": 1573
+    },
+    {
+     "name": null,
+     "line": 1582
+    },
+    {
+     "name": null,
+     "line": 1590
+    },
+    {
+     "name": null,
+     "line": 1667
+    },
+    {
+     "name": null,
+     "line": 1674
+    },
+    {
+     "name": null,
+     "line": 1681
+    },
+    {
+     "name": null,
+     "line": 1712
+    },
+    {
+     "name": null,
+     "line": 1717
+    },
+    {
+     "name": "applyDelta",
+     "line": 1742
+    },
+    {
+     "name": null,
+     "line": 1776
+    },
+    {
+     "name": "checkForVisibleDifference",
+     "line": 1819
+    },
+    {
+     "name": "visibleElement",
+     "line": 1825
+    },
+    {
+     "name": "visibleBindings",
+     "line": 1850
+    },
+    {
+     "name": null,
+     "line": 1855
+    },
+    {
+     "name": null,
+     "line": 1865
+    },
+    {
+     "name": null,
+     "line": 1867
+    },
+    {
+     "name": "resolveConflicts",
+     "line": 1895
+    },
+    {
+     "name": "updater",
+     "line": 1901
+    },
+    {
+     "name": null,
+     "line": 1958
+    },
+    {
+     "name": null,
+     "line": 1959
+    },
+    {
+     "name": null,
+     "line": 1974
+    },
+    {
+     "name": "unbindAffected",
+     "line": 1990
+    },
+    {
+     "name": "prevElement",
+     "line": 2000
+    },
+    {
+     "name": "nextElement",
+     "line": 2001
+    },
+    {
+     "name": "rebindAffected",
+     "line": 2014
+    },
+    {
+     "name": "prevElement",
+     "line": 2024
+    },
+    {
+     "name": "nextElement",
+     "line": 2025
+    },
+    {
+     "name": null,
+     "line": 2033
+    },
+    {
+     "name": "redrawElements",
+     "line": 2044
+    },
+    {
+     "name": "redrawTextBoundingBoxes",
+     "line": 2078
+    },
+    {
+     "name": "redrawBoundArrows",
+     "line": 2127
+    },
+    {
+     "name": "reorderElements",
+     "line": 2147
+    },
+    {
+     "name": null,
+     "line": 2162
+    },
+    {
+     "name": "rank",
+     "line": 2182
+    },
+    {
+     "name": "postProcess",
+     "line": 2215
+    },
+    {
+     "name": null,
+     "line": 2220
+    },
+    {
+     "name": "stripIrrelevantProps",
+     "line": 2256
+    }
+   ],
+   "src/collision.ts": [
+    {
+     "name": "shouldTestInside",
+     "line": 87
+    },
+    {
+     "name": "frameNameBoundsEqual",
+     "line": 125
+    },
+    {
+     "name": "hitElementItself",
+     "line": 137
+    },
+    {
+     "name": "isPointInRotatedBounds",
+     "line": 232
+    },
+    {
+     "name": "hitElementBoundingBox",
+     "line": 250
+    },
+    {
+     "name": "hitElementBoundingBoxOnly",
+     "line": 260
+    },
+    {
+     "name": "hitElementBoundText",
+     "line": 269
+    },
+    {
+     "name": "isPointClippedByEnclosingFrame",
+     "line": 289
+    },
+    {
+     "name": "bindableElementBorderDistanceIfClose",
+     "line": 307
+    },
+    {
+     "name": "isPointInBindingArea",
+     "line": 344
+    },
+    {
+     "name": "isOpaqueForBinding",
+     "line": 372
+    },
+    {
+     "name": "getBindingCandidates",
+     "line": 382
+    },
+    {
+     "name": "getAllHoveredElementAtPoint",
+     "line": 450
+    },
+    {
+     "name": null,
+     "line": 457
+    },
+    {
+     "name": "getHoveredElementForBinding",
+     "line": 460
+    },
+    {
+     "name": null,
+     "line": 477
+    },
+    {
+     "name": null,
+     "line": 490
+    },
+    {
+     "name": null,
+     "line": 491
+    },
+    {
+     "name": null,
+     "line": 503
+    },
+    {
+     "name": "intersectElementWithLineSegment",
+     "line": 518
+    },
+    {
+     "name": "curveIntersections",
+     "line": 586
+    },
+    {
+     "name": "lineIntersections",
+     "line": 628
+    },
+    {
+     "name": "intersectLinearOrFreeDrawWithLineSegment",
+     "line": 650
+    },
+    {
+     "name": "intersectRectanguloidWithLineSegment",
+     "line": 705
+    },
+    {
+     "name": "intersectDiamondWithLineSegment",
+     "line": 764
+    },
+    {
+     "name": "intersectEllipseWithLineSegment",
+     "line": 814
+    },
+    {
+     "name": null,
+     "line": 828
+    },
+    {
+     "name": "isPointOnElementOutline",
+     "line": 839
+    },
+    {
+     "name": "isPointInElement",
+     "line": 853
+    },
+    {
+     "name": null,
+     "line": 905
+    },
+    {
+     "name": null,
+     "line": 905
+    },
+    {
+     "name": "isBindableElementInsideOtherBindable",
+     "line": 910
+    },
+    {
+     "name": "getCornerPoints",
+     "line": 916
+    },
+    {
+     "name": null,
+     "line": 933
+    },
+    {
+     "name": null,
+     "line": 947
+    },
+    {
+     "name": null,
+     "line": 956
+    },
+    {
+     "name": null,
+     "line": 963
+    }
+   ],
+   "src/shape.ts": [
+    {
+     "name": "ShapeCache",
+     "line": 87
+    },
+    {
+     "name": null,
+     "line": 98
+    },
+    {
+     "name": null,
+     "line": 111
+    },
+    {
+     "name": null,
+     "line": 116
+    },
+    {
+     "name": null,
+     "line": 124
+    },
+    {
+     "name": "getDashArrayDashed",
+     "line": 172
+    },
+    {
+     "name": "getDashArrayDotted",
+     "line": 174
+    },
+    {
+     "name": "adjustRoughness",
+     "line": 176
+    },
+    {
+     "name": "generateRoughOptions",
+     "line": 199
+    },
+    {
+     "name": "modifyIframeLikeForRoughOptions",
+     "line": 266
+    },
+    {
+     "name": "generateArrowheadCardinalityOne",
+     "line": 299
+    },
+    {
+     "name": "generateArrowheadLinesToTip",
+     "line": 313
+    },
+    {
+     "name": "getArrowheadLineOptions",
+     "line": 330
+    },
+    {
+     "name": "generateArrowheadOutlineCircle",
+     "line": 349
+    },
+    {
+     "name": "fillArrowheadOutline",
+     "line": 386
+    },
+    {
+     "name": null,
+     "line": 389
+    },
+    {
+     "name": null,
+     "line": 390
+    },
+    {
+     "name": "getArrowheadShapes",
+     "line": 401
+    },
+    {
+     "name": "getFreedrawFillCurvePoints",
+     "line": 637
+    },
+    {
+     "name": "getFreedrawFillPolygon",
+     "line": 649
+    },
+    {
+     "name": "generateLinearCollisionShape",
+     "line": 678
+    },
+    {
+     "name": null,
+     "line": 710
+    },
+    {
+     "name": null,
+     "line": 727
+    },
+    {
+     "name": null,
+     "line": 772
+    },
+    {
+     "name": null,
+     "line": 806
+    },
+    {
+     "name": "_generateElementShape",
+     "line": 829
+    },
+    {
+     "name": null,
+     "line": 964
+    },
+    {
+     "name": "generateElbowArrowShape",
+     "line": 1079
+    },
+    {
+     "name": "isJog",
+     "line": 1088
+    },
+    {
+     "name": null,
+     "line": 1100
+    },
+    {
+     "name": "getElementShape",
+     "line": 1166
+    },
+    {
+     "name": "toggleLinePolygonState",
+     "line": 1217
+    },
+    {
+     "name": "getFreeDrawSvgPath",
+     "line": 1266
+    },
+    {
+     "name": "getFreedrawStreamline",
+     "line": 1296
+    },
+    {
+     "name": "getVariableWidthFreedrawOutline",
+     "line": 1303
+    },
+    {
+     "name": null,
+     "line": 1311
+    },
+    {
+     "name": null,
+     "line": 1321
+    },
+    {
+     "name": "createLaserPointer",
+     "line": 1326
+    },
+    {
+     "name": null,
+     "line": 1331
+    },
+    {
+     "name": "getConstantWidthFreedrawOutline",
+     "line": 1338
+    },
+    {
+     "name": null,
+     "line": 1342
+    },
+    {
+     "name": null,
+     "line": 1346
+    },
+    {
+     "name": "getFreedrawOutlinePoints",
+     "line": 1349
+    },
+    {
+     "name": "getFreedrawMaxStrokeRadius",
+     "line": 1366
+    },
+    {
+     "name": "getFreedrawStrokeCenterPoints",
+     "line": 1384
+    },
+    {
+     "name": null,
+     "line": 1391
+    },
+    {
+     "name": "med",
+     "line": 1393
+    },
+    {
+     "name": "getSvgPathFromStroke",
+     "line": 1402
+    },
+    {
+     "name": null,
+     "line": 1411
+    }
+   ],
+   "src/groups.ts": [
+    {
+     "name": "selectGroup",
+     "line": 20
+    },
+    {
+     "name": null,
+     "line": 29
+    },
+    {
+     "name": "isSelectedViaGroup",
+     "line": 66
+    },
+    {
+     "name": "getSelectedGroupForElement",
+     "line": 74
+    },
+    {
+     "name": null,
+     "line": 82
+    },
+    {
+     "name": null,
+     "line": 83
+    },
+    {
+     "name": "getSelectedGroupIds",
+     "line": 85
+    },
+    {
+     "name": null,
+     "line": 89
+    },
+    {
+     "name": null,
+     "line": 90
+    },
+    {
+     "name": "selectGroupsFromGivenElements",
+     "line": 94
+    },
+    {
+     "name": "editGroupForSelectedElement",
+     "line": 126
+    },
+    {
+     "name": "isElementInGroup",
+     "line": 140
+    },
+    {
+     "name": "getElementsInGroup",
+     "line": 143
+    },
+    {
+     "name": "getSelectedGroupIdForElement",
+     "line": 160
+    },
+    {
+     "name": null,
+     "line": 163
+    },
+    {
+     "name": "addToGroup",
+     "line": 165
+    },
+    {
+     "name": "removeFromSelectedGroups",
+     "line": 181
+    },
+    {
+     "name": null,
+     "line": 184
+    },
+    {
+     "name": "getMaximumGroups",
+     "line": 186
+    },
+    {
+     "name": null,
+     "line": 193
+    },
+    {
+     "name": "getNonDeletedGroupIds",
+     "line": 212
+    },
+    {
+     "name": "elementsAreInSameGroup",
+     "line": 230
+    },
+    {
+     "name": null,
+     "line": 233
+    },
+    {
+     "name": "isInGroup",
+     "line": 247
+    },
+    {
+     "name": "getNewGroupIdsForDuplication",
+     "line": 251
+    },
+    {
+     "name": "getSelectedElementsByGroup",
+     "line": 271
+    },
+    {
+     "name": null,
+     "line": 280
+    },
+    {
+     "name": null,
+     "line": 282
+    }
+   ],
+   "src/bounds.ts": [
+    {
+     "name": "ElementBounds",
+     "line": 95
+    },
+    {
+     "name": "getBounds",
+     "line": 111
+    },
+    {
+     "name": "calculateBounds",
+     "line": 157
+    },
+    {
+     "name": null,
+     "line": 169
+    },
+    {
+     "name": "getElementAbsoluteCoords",
+     "line": 256
+    },
+    {
+     "name": "getElementLineSegments",
+     "line": 309
+    },
+    {
+     "name": null,
+     "line": 322
+    },
+    {
+     "name": null,
+     "line": 366
+    },
+    {
+     "name": null,
+     "line": 373
+    },
+    {
+     "name": null,
+     "line": 413
+    },
+    {
+     "name": "_isRectanguloidElement",
+     "line": 427
+    },
+    {
+     "name": "getRotatedSides",
+     "line": 443
+    },
+    {
+     "name": null,
+     "line": 448
+    },
+    {
+     "name": "getSegmentsOnCurve",
+     "line": 456
+    },
+    {
+     "name": "getSegmentsOnEllipse",
+     "line": 485
+    },
+    {
+     "name": "getRectangleBoxAbsoluteCoords",
+     "line": 521
+    },
+    {
+     "name": "getDiamondPoints",
+     "line": 532
+    },
+    {
+     "name": "getBezierValueForT",
+     "line": 548
+    },
+    {
+     "name": "solveQuadratic",
+     "line": 564
+    },
+    {
+     "name": "getCubicBezierCurveBound",
+     "line": 609
+    },
+    {
+     "name": null,
+     "line": 622
+    },
+    {
+     "name": null,
+     "line": 630
+    },
+    {
+     "name": "getMinMaxXYFromCurvePathOps",
+     "line": 637
+    },
+    {
+     "name": null,
+     "line": 644
+    },
+    {
+     "name": "getBoundsFromPoints",
+     "line": 690
+    },
+    {
+     "name": "getFreeDrawElementAbsoluteCoords",
+     "line": 709
+    },
+    {
+     "name": "getArrowheadSize",
+     "line": 731
+    },
+    {
+     "name": "getArrowheadAngle",
+     "line": 758
+    },
+    {
+     "name": "getArrowheadCorner",
+     "line": 788
+    },
+    {
+     "name": "getSidesClearSize",
+     "line": 837
+    },
+    {
+     "name": "isCardinalityArrowhead",
+     "line": 855
+    },
+    {
+     "name": "getCardinalityMarkerScale",
+     "line": 865
+    },
+    {
+     "name": "bar",
+     "line": 871
+    },
+    {
+     "name": "crowsFoot",
+     "line": 883
+    },
+    {
+     "name": "circle",
+     "line": 885
+    },
+    {
+     "name": "getArrowheadSizeBeyondLastSegment",
+     "line": 915
+    },
+    {
+     "name": "getArrowheadPoints",
+     "line": 996
+    },
+    {
+     "name": "equation",
+     "line": 1041
+    },
+    {
+     "name": "generateLinearElementShape",
+     "line": 1171
+    },
+    {
+     "name": null,
+     "line": 1177
+    },
+    {
+     "name": "getLinearElementRotatedBounds",
+     "line": 1193
+    },
+    {
+     "name": "transformXY",
+     "line": 1231
+    },
+    {
+     "name": "getElementBounds",
+     "line": 1256
+    },
+    {
+     "name": "getCommonBounds",
+     "line": 1264
+    },
+    {
+     "name": null,
+     "line": 1279
+    },
+    {
+     "name": "getDraggedElementsBounds",
+     "line": 1290
+    },
+    {
+     "name": "getResizedElementAbsoluteCoords",
+     "line": 1303
+    },
+    {
+     "name": "getElementPointsCoords",
+     "line": 1353
+    },
+    {
+     "name": "getCommonBoundingBox",
+     "line": 1387
+    },
+    {
+     "name": "getVisibleSceneBounds",
+     "line": 1408
+    },
+    {
+     "name": "getCenterForBounds",
+     "line": 1423
+    },
+    {
+     "name": "aabbForElement",
+     "line": 1432
+    },
+    {
+     "name": "pointInsideBounds",
+     "line": 1488
+    },
+    {
+     "name": "pointInsideBoundsInclusive",
+     "line": 1496
+    },
+    {
+     "name": "doBoundsIntersect",
+     "line": 1505
+    },
+    {
+     "name": "boundsContainBounds",
+     "line": 1519
+    },
+    {
+     "name": null,
+     "line": 1525
+    },
+    {
+     "name": "elementsOverlappingBBox",
+     "line": 1532
+    },
+    {
+     "name": null,
+     "line": 1697
+    },
+    {
+     "name": null,
+     "line": 1746
+    },
+    {
+     "name": null,
+     "line": 1756
+    },
+    {
+     "name": null,
+     "line": 1782
+    },
+    {
+     "name": null,
+     "line": 1790
+    },
+    {
+     "name": null,
+     "line": 1794
+    },
+    {
+     "name": null,
+     "line": 1797
+    },
+    {
+     "name": null,
+     "line": 1807
+    },
+    {
+     "name": null,
+     "line": 1815
+    },
+    {
+     "name": "elementCenterPoint",
+     "line": 1818
+    }
+   ],
+   "src/distance.ts": [
+    {
+     "name": "distanceToElement",
+     "line": 30
+    },
+    {
+     "name": "distanceToRectanguloidElement",
+     "line": 66
+    },
+    {
+     "name": null,
+     "line": 80
+    },
+    {
+     "name": null,
+     "line": 81
+    },
+    {
+     "name": "distanceToDiamondElement",
+     "line": 93
+    },
+    {
+     "name": null,
+     "line": 107
+    },
+    {
+     "name": null,
+     "line": 108
+    },
+    {
+     "name": "distanceToEllipseElement",
+     "line": 120
+    },
+    {
+     "name": "distanceToLinearOrFreeDraElement",
+     "line": 133
+    },
+    {
+     "name": null,
+     "line": 143
+    },
+    {
+     "name": null,
+     "line": 144
+    },
+    {
+     "name": "distanceToFreeDrawElement",
+     "line": 156
+    },
+    {
+     "name": null,
+     "line": 167
+    },
+    {
+     "name": null,
+     "line": 172
+    }
+   ],
+   "src/zindex.ts": [
+    {
+     "name": "isOfTargetFrame",
+     "line": 24
+    },
+    {
+     "name": "getIndicesToMove",
+     "line": 36
+    },
+    {
+     "name": "toContiguousGroups",
+     "line": 72
+    },
+    {
+     "name": null,
+     "line": 74
+    },
+    {
+     "name": "getTargetIndexAccountingForBinding",
+     "line": 88
+    },
+    {
+     "name": null,
+     "line": 110
+    },
+    {
+     "name": "getContiguousFrameRangeElements",
+     "line": 129
+    },
+    {
+     "name": null,
+     "line": 135
+    },
+    {
+     "name": "moveArrowAboveBindable",
+     "line": 153
+    },
+    {
+     "name": null,
+     "line": 174
+    },
+    {
+     "name": null,
+     "line": 175
+    },
+    {
+     "name": null,
+     "line": 176
+    },
+    {
+     "name": "getTargetIndex",
+     "line": 193
+    },
+    {
+     "name": "indexFilter",
+     "line": 207
+    },
+    {
+     "name": null,
+     "line": 226
+    },
+    {
+     "name": null,
+     "line": 229
+    },
+    {
+     "name": "getTargetElementsMap",
+     "line": 301
+    },
+    {
+     "name": null,
+     "line": 305
+    },
+    {
+     "name": "hasSameElementIds",
+     "line": 312
+    },
+    {
+     "name": "shiftElementsByOne",
+     "line": 345
+    },
+    {
+     "name": null,
+     "line": 363
+    },
+    {
+     "name": null,
+     "line": 364
+    },
+    {
+     "name": null,
+     "line": 367
+    },
+    {
+     "name": null,
+     "line": 372
+    },
+    {
+     "name": "shiftElementsToEnd",
+     "line": 431
+    },
+    {
+     "name": null,
+     "line": 455
+    },
+    {
+     "name": null,
+     "line": 474
+    },
+    {
+     "name": "isValidIndex",
+     "line": 497
+    },
+    {
+     "name": null,
+     "line": 505
+    },
+    {
+     "name": "shiftElementsAccountingForFrames",
+     "line": 543
+    },
+    {
+     "name": "moveOneLeft",
+     "line": 626
+    },
+    {
+     "name": "moveOneRight",
+     "line": 634
+    },
+    {
+     "name": "moveAllLeft",
+     "line": 642
+    },
+    {
+     "name": "moveAllRight",
+     "line": 654
+    }
+   ],
+   "src/renderElement.ts": [
+    {
+     "name": "isPendingImageElement",
+     "line": 99
+    },
+    {
+     "name": "getCanvasPadding",
+     "line": 106
+    },
+    {
+     "name": "getElementRenderOffset",
+     "line": 127
+    },
+    {
+     "name": "getRenderElementWithPositionOverride",
+     "line": 138
+    },
+    {
+     "name": "resolveElementRenderState",
+     "line": 162
+    },
+    {
+     "name": null,
+     "line": 194
+    },
+    {
+     "name": "cappedElementCanvasSize",
+     "line": 223
+    },
+    {
+     "name": "generateElementCanvas",
+     "line": 280
+    },
+    {
+     "name": "getPlaceholderImg",
+     "line": 363
+    },
+    {
+     "name": "drawImagePlaceholder",
+     "line": 369
+    },
+    {
+     "name": "drawStickyNotePath",
+     "line": 399
+    },
+    {
+     "name": "fillStickyNoteShape",
+     "line": 421
+    },
+    {
+     "name": "strokeStickyNoteEdge",
+     "line": 429
+    },
+    {
+     "name": "withSavedContext",
+     "line": 448
+    },
+    {
+     "name": "drawElementOnCanvas",
+     "line": 460
+    },
+    {
+     "name": null,
+     "line": 468
+    },
+    {
+     "name": null,
+     "line": 518
+    },
+    {
+     "name": null,
+     "line": 526
+    },
+    {
+     "name": null,
+     "line": 545
+    },
+    {
+     "name": null,
+     "line": 677
+    },
+    {
+     "name": "generateElementWithCanvas",
+     "line": 729
+    },
+    {
+     "name": "canSnapElement",
+     "line": 794
+    },
+    {
+     "name": "drawElementFromCanvas",
+     "line": 809
+    },
+    {
+     "name": null,
+     "line": 829
+    },
+    {
+     "name": "renderSelectionElement",
+     "line": 998
+    },
+    {
+     "name": "renderElement",
+     "line": 1025
+    },
+    {
+     "name": "drawElement",
+     "line": 1073
+    },
+    {
+     "name": null,
+     "line": 1087
+    },
+    {
+     "name": null,
+     "line": 1133
+    },
+    {
+     "name": null,
+     "line": 1193
+    },
+    {
+     "name": null,
+     "line": 1230
+    },
+    {
+     "name": null,
+     "line": 1306
+    },
+    {
+     "name": null,
+     "line": 1323
+    },
+    {
+     "name": "getFreedrawOutlineAsSegments",
+     "line": 1367
+    },
+    {
+     "name": null,
+     "line": 1387
+    }
+   ],
+   "src/transformHandles.ts": [
+    {
+     "name": "generateTransformHandle",
+     "line": 95
+    },
+    {
+     "name": "canResizeFromSides",
+     "line": 112
+    },
+    {
+     "name": "getOmitSidesForEditorInterface",
+     "line": 123
+    },
+    {
+     "name": "getTransformHandlesFromCoords",
+     "line": 133
+    },
+    {
+     "name": "getTransformHandles",
+     "line": 272
+    },
+    {
+     "name": "hasBoundingBox",
+     "line": 328
+    }
+   ],
+   "src/resizeElements.ts": [
+    {
+     "name": "transformElements",
+     "line": 97
+    },
+    {
+     "name": "rotateSingleElement",
+     "line": 217
+    },
+    {
+     "name": "rescalePointsInElement",
+     "line": 282
+    },
+    {
+     "name": "measureFontSizeFromWidth",
+     "line": 299
+    },
+    {
+     "name": "resizeSingleTextElement",
+     "line": 324
+    },
+    {
+     "name": "rotateMultipleElements",
+     "line": 431
+    },
+    {
+     "name": null,
+     "line": 453
+    },
+    {
+     "name": "getResizeOffsetXY",
+     "line": 519
+    },
+    {
+     "name": "getResizeArrowDirection",
+     "line": 578
+    },
+    {
+     "name": "getResizeAnchor",
+     "line": 602
+    },
+    {
+     "name": "getResizedOrigin",
+     "line": 643
+    },
+    {
+     "name": "resizeSingleElement",
+     "line": 751
+    },
+    {
+     "name": null,
+     "line": 907
+    },
+    {
+     "name": "getNextSingleWidthAndHeightFromPointer",
+     "line": 1016
+    },
+    {
+     "name": "getNextMultipleWidthAndHeightFromPointer",
+     "line": 1110
+    },
+    {
+     "name": null,
+     "line": 1126
+    },
+    {
+     "name": null,
+     "line": 1133
+    },
+    {
+     "name": null,
+     "line": 1159
+    },
+    {
+     "name": null,
+     "line": 1225
+    },
+    {
+     "name": "resizeMultipleElements",
+     "line": 1237
+    },
+    {
+     "name": null,
+     "line": 1284
+    },
+    {
+     "name": null,
+     "line": 1310
+    },
+    {
+     "name": null,
+     "line": 1336
+    },
+    {
+     "name": null,
+     "line": 1403
+    },
+    {
+     "name": null,
+     "line": 1506
+    },
+    {
+     "name": null,
+     "line": 1552
+    },
+    {
+     "name": null,
+     "line": 1556
+    }
+   ],
+   "src/resizeTest.ts": [
+    {
+     "name": "isInsideTransformHandle",
+     "line": 39
+    },
+    {
+     "name": "resizeTest",
+     "line": 49
+    },
+    {
+     "name": null,
+     "line": 81
+    },
+    {
+     "name": "getElementWithTransformHandleType",
+     "line": 132
+    },
+    {
+     "name": null,
+     "line": 142
+    },
+    {
+     "name": "getTransformHandleTypeFromCoords",
+     "line": 160
+    },
+    {
+     "name": null,
+     "line": 178
+    },
+    {
+     "name": "rotateResizeCursor",
+     "line": 222
+    },
+    {
+     "name": "getCursorForResizingElement",
+     "line": 234
+    },
+    {
+     "name": "getSelectionBorders",
+     "line": 279
+    }
+   ],
+   "src/dragElements.ts": [
+    {
+     "name": "dragSelectedElements",
+     "line": 42
+    },
+    {
+     "name": null,
+     "line": 63
+    },
+    {
+     "name": null,
+     "line": 66
+    },
+    {
+     "name": null,
+     "line": 69
+    },
+    {
+     "name": null,
+     "line": 85
+    },
+    {
+     "name": null,
+     "line": 86
+    },
+    {
+     "name": null,
+     "line": 123
+    },
+    {
+     "name": "calculateOffset",
+     "line": 186
+    },
+    {
+     "name": "updateElementCoords",
+     "line": 217
+    },
+    {
+     "name": "getDragOffsetXY",
+     "line": 235
+    },
+    {
+     "name": "dragNewTextElement",
+     "line": 258
+    },
+    {
+     "name": "dragNewElement",
+     "line": 313
+    }
+   ],
+   "src/selection.ts": [
+    {
+     "name": "shouldIgnoreElementFromSelection",
+     "line": 30
+    },
+    {
+     "name": "excludeElementsFromFrames",
+     "line": 33
+    },
+    {
+     "name": null,
+     "line": 37
+    },
+    {
+     "name": "excludeElementsInFramesFromSelection",
+     "line": 51
+    },
+    {
+     "name": null,
+     "line": 58
+    },
+    {
+     "name": "getElementsWithinSelection",
+     "line": 67
+    },
+    {
+     "name": "getVisibleAndNonSelectedElements",
+     "line": 98
+    },
+    {
+     "name": null,
+     "line": 107
+    },
+    {
+     "name": null,
+     "line": 109
+    },
+    {
+     "name": null,
+     "line": 123
+    },
+    {
+     "name": "ret",
+     "line": 128
+    },
+    {
+     "name": null,
+     "line": 141
+    },
+    {
+     "name": null,
+     "line": 149
+    },
+    {
+     "name": "getSelectedElements",
+     "line": 158
+    },
+    {
+     "name": null,
+     "line": 195
+    },
+    {
+     "name": null,
+     "line": 198
+    },
+    {
+     "name": "getTargetElements",
+     "line": 212
+    },
+    {
+     "name": "makeNextSelectedElementIds",
+     "line": 234
+    },
+    {
+     "name": "getActiveTextElement",
+     "line": 248
+    }
+   ],
+   "src/fractionalIndex.ts": [
+    {
+     "name": "InvalidFractionalIndexError",
+     "line": 23
+    },
+    {
+     "name": "validateFractionalIndices",
+     "line": 49
+    },
+    {
+     "name": "stringifyElement",
+     "line": 67
+    },
+    {
+     "name": null,
+     "line": 72
+    },
+    {
+     "name": null,
+     "line": 121
+    },
+    {
+     "name": null,
+     "line": 124
+    },
+    {
+     "name": null,
+     "line": 133
+    },
+    {
+     "name": "orderByFractionalIndex",
+     "line": 150
+    },
+    {
+     "name": null,
+     "line": 153
+    },
+    {
+     "name": "syncMovedIndices",
+     "line": 175
+    },
+    {
+     "name": null,
+     "line": 185
+    },
+    {
+     "name": "syncInvalidIndices",
+     "line": 223
+    },
+    {
+     "name": "syncInvalidIndicesImmutable",
+     "line": 242
+    },
+    {
+     "name": "getMovedIndicesGroups",
+     "line": 261
+    },
+    {
+     "name": "getInvalidIndicesGroups",
+     "line": 296
+    },
+    {
+     "name": "getLowerBound",
+     "line": 306
+    },
+    {
+     "name": "getUpperBound",
+     "line": 329
+    },
+    {
+     "name": "isValidFractionalIndex",
+     "line": 396
+    },
+    {
+     "name": "generateIndices",
+     "line": 430
+    },
+    {
+     "name": "isOrderedElement",
+     "line": 461
+    }
+   ],
+   "src/mutateElement.ts": [
+    {
+     "name": "mutateElement",
+     "line": 40
+    },
+    {
+     "name": "newElementWith",
+     "line": 149
+    },
+    {
+     "name": "bumpVersion",
+     "line": 188
+    }
+   ],
+   "src/sizeHelpers.ts": [
+    {
+     "name": "getPositionAfterHeightChange",
+     "line": 28
+    },
+    {
+     "name": "isInvisiblySmallElement",
+     "line": 61
+    },
+    {
+     "name": "isElementInViewport",
+     "line": 80
+    },
+    {
+     "name": "isElementCompletelyInViewport",
+     "line": 117
+    },
+    {
+     "name": "getPerfectElementSize",
+     "line": 158
+    },
+    {
+     "name": "getLockedLinearCursorAlignSize",
+     "line": 187
+    },
+    {
+     "name": "getNormalizedDimensions",
+     "line": 256
+    }
+   ]
+  },
+  "functions_named": 380,
+  "functions_total": 554,
+  "listeners": [],
+  "timers": [],
+  "state_properties_top": [
+   {
+    "module": "src/delta.ts",
+    "name": "get",
+    "slots": 23
+   },
+   {
+    "module": "src/delta.ts",
+    "name": "isDeleted",
+    "slots": 18
+   },
+   {
+    "module": "src/delta.ts",
+    "name": "id",
+    "slots": 16
+   },
+   {
+    "module": "src/renderElement.ts",
+    "name": "x",
+    "slots": 14
+   },
+   {
+    "module": "src/renderElement.ts",
+    "name": "y",
+    "slots": 14
+   },
+   {
+    "module": "src/zindex.ts",
+    "name": "id",
+    "slots": 14
+   },
+   {
+    "module": "src/zindex.ts",
+    "name": "length",
+    "slots": 12
+   },
+   {
+    "module": "src/shape.ts",
+    "name": "length",
+    "slots": 11
+   },
+   {
+    "module": "src/bounds.ts",
+    "name": "x",
+    "slots": 11
+   },
+   {
+    "module": "src/bounds.ts",
+    "name": "y",
+    "slots": 11
+   },
+   {
+    "module": "src/bounds.ts",
+    "name": "length",
+    "slots": 11
+   },
+   {
+    "module": "src/renderElement.ts",
+    "name": "width",
+    "slots": 10
+   },
+   {
+    "module": "src/delta.ts",
+    "name": "version",
+    "slots": 10
+   },
+   {
+    "module": "src/renderElement.ts",
+    "name": "height",
+    "slots": 10
+   },
+   {
+    "module": "src/store.ts",
+    "name": "id",
+    "slots": 9
+   },
+   {
+    "module": "src/delta.ts",
+    "name": "boundElements",
+    "slots": 9
+   },
+   {
+    "module": "src/store.ts",
+    "name": "appState",
+    "slots": 9
+   },
+   {
+    "module": "src/resizeElements.ts",
+    "name": "width",
+    "slots": 9
+   },
+   {
+    "module": "src/delta.ts",
+    "name": "inserted",
+    "slots": 9
+   },
+   {
+    "module": "src/resizeElements.ts",
+    "name": "angle",
+    "slots": 9
+   },
+   {
+    "module": "src/renderElement.ts",
+    "name": "scale",
+    "slots": 9
+   },
+   {
+    "module": "src/collision.ts",
+    "name": "length",
+    "slots": 8
+   },
+   {
+    "module": "src/selection.ts",
+    "name": "id",
+    "slots": 8
+   },
+   {
+    "module": "src/delta.ts",
+    "name": "has",
+    "slots": 8
+   },
+   {
+    "module": "src/fractionalIndex.ts",
+    "name": "index",
+    "slots": 8
+   },
+   {
+    "module": "src/groups.ts",
+    "name": "length",
+    "slots": 8
+   },
+   {
+    "module": "src/delta.ts",
+    "name": "length",
+    "slots": 8
+   },
+   {
+    "module": "src/shape.ts",
+    "name": "points",
+    "slots": 8
+   },
+   {
+    "module": "src/delta.ts",
+    "name": "set",
+    "slots": 8
+   },
+   {
+    "module": "src/store.ts",
+    "name": "elements",
+    "slots": 8
+   },
+   {
+    "module": "src/resizeElements.ts",
+    "name": "height",
+    "slots": 8
+   },
+   {
+    "module": "src/shape.ts",
+    "name": "push",
+    "slots": 7
+   },
+   {
+    "module": "src/collision.ts",
+    "name": "angle",
+    "slots": 7
+   },
+   {
+    "module": "src/collision.ts",
+    "name": "height",
+    "slots": 7
+   },
+   {
+    "module": "src/bounds.ts",
+    "name": "angle",
+    "slots": 7
+   },
+   {
+    "module": "src/sizeHelpers.ts",
+    "name": "x",
+    "slots": 7
+   },
+   {
+    "module": "src/resizeElements.ts",
+    "name": "id",
+    "slots": 7
+   },
+   {
+    "module": "src/resizeElements.ts",
+    "name": "fontSize",
+    "slots": 7
+   },
+   {
+    "module": "src/resizeElements.ts",
+    "name": "x",
+    "slots": 7
+   },
+   {
+    "module": "src/collision.ts",
+    "name": "width",
+    "slots": 7
+   },
+   {
+    "module": "src/resizeElements.ts",
+    "name": "y",
+    "slots": 7
+   },
+   {
+    "module": "src/sizeHelpers.ts",
+    "name": "y",
+    "slots": 7
+   },
+   {
+    "module": "src/resizeElements.ts",
+    "name": "map",
+    "slots": 7
+   },
+   {
+    "module": "src/delta.ts",
+    "name": "deleted",
+    "slots": 7
+   },
+   {
+    "module": "src/distance.ts",
+    "name": "map",
+    "slots": 7
+   },
+   {
+    "module": "src/resizeElements.ts",
+    "name": "get",
+    "slots": 6
+   },
+   {
+    "module": "src/collision.ts",
+    "name": "element",
+    "slots": 6
+   },
+   {
+    "module": "src/dragElements.ts",
+    "name": "y",
+    "slots": 6
+   },
+   {
+    "module": "src/renderElement.ts",
+    "name": "restore",
+    "slots": 6
+   },
+   {
+    "module": "src/bounds.ts",
+    "name": "height",
+    "slots": 6
+   },
+   {
+    "module": "src/renderElement.ts",
+    "name": "angle",
+    "slots": 6
+   },
+   {
+    "module": "src/shape.ts",
+    "name": "strokeWidth",
+    "slots": 6
+   },
+   {
+    "module": "src/renderElement.ts",
+    "name": "save",
+    "slots": 6
+   },
+   {
+    "module": "src/newElement.ts",
+    "name": "width",
+    "slots": 6
+   },
+   {
+    "module": "src/resizeElements.ts",
+    "name": "endBinding",
+    "slots": 6
+   },
+   {
+    "module": "src/store.ts",
+    "name": "create",
+    "slots": 6
+   },
+   {
+    "module": "src/delta.ts",
+    "name": "selectedGroupIds",
+    "slots": 6
+   },
+   {
+    "module": "src/delta.ts",
+    "name": "values",
+    "slots": 6
+   },
+   {
+    "module": "src/resizeElements.ts",
+    "name": "startBinding",
+    "slots": 6
+   },
+   {
+    "module": "src/renderElement.ts",
+    "name": "theme",
+    "slots": 6
+   },
+   {
+    "module": "src/bounds.ts",
+    "name": "width",
+    "slots": 6
+   },
+   {
+    "module": "src/fractionalIndex.ts",
+    "name": "push",
+    "slots": 6
+   },
+   {
+    "module": "src/dragElements.ts",
+    "name": "x",
+    "slots": 6
+   },
+   {
+    "module": "src/delta.ts",
+    "name": "selectedElementIds",
+    "slots": 6
+   },
+   {
+    "module": "src/dragElements.ts",
+    "name": "id",
+    "slots": 6
+   },
+   {
+    "module": "src/delta.ts",
+    "name": "lockedMultiSelections",
+    "slots": 6
+   },
+   {
+    "module": "src/newElement.ts",
+    "name": "x",
+    "slots": 5
+   },
+   {
+    "module": "src/renderElement.ts",
+    "name": "translate",
+    "slots": 5
+   },
+   {
+    "module": "src/newElement.ts",
+    "name": "y",
+    "slots": 5
+   },
+   {
+    "module": "src/shape.ts",
+    "name": "roughness",
+    "slots": 5
+   },
+   {
+    "module": "src/renderElement.ts",
+    "name": "id",
+    "slots": 5
+   },
+   {
+    "module": "src/mutateElement.ts",
+    "name": "version",
+    "slots": 5
+   },
+   {
+    "module": "src/resizeElements.ts",
+    "name": "length",
+    "slots": 5
+   },
+   {
+    "module": "src/collision.ts",
+    "name": "y",
+    "slots": 5
+   },
+   {
+    "module": "src/bounds.ts",
+    "name": "push",
+    "slots": 5
+   },
+   {
+    "module": "src/collision.ts",
+    "name": "x",
+    "slots": 5
+   },
+   {
+    "module": "src/renderElement.ts",
+    "name": "opacity",
+    "slots": 5
+   },
+   {
+    "module": "src/resizeElements.ts",
+    "name": "mutateElement",
+    "slots": 5
+   },
+   {
+    "module": "src/zindex.ts",
+    "name": "frameId",
+    "slots": 5
+   },
+   {
+    "module": "src/resizeElements.ts",
+    "name": "getNonDeletedElementsMap",
+    "slots": 5
+   }
+  ],
+  "require_like_edges": 10
+ },
+ "excalidraw": {
+  "evidence_id": "ev_c70f013f2a2c5b192bb0b591e391f80133e4291120162eb4f33ab9cdaa048432",
+  "statistics": {
+   "relevant_files": 105,
+   "nested_asar_containers": 0,
+   "text_bytes_read": 642281,
+   "invalid_utf8_files": 0,
+   "parsed_javascript_files": 20,
+   "skipped_javascript_files": 0,
+   "visited_ast_nodes": 70097,
+   "findings": 1377,
+   "modules": 0,
+   "parse_failures": 0
+  },
+  "application_graph": {
+   "nodes": {
+    "javascript-module": 575,
+    "javascript-asset": 104,
+    "unknown": 85,
+    "endpoint": 2,
+    "artifact": 2
+   },
+   "edges": {
+    "contains": 1092,
+    "static-import": 264,
+    "require": 7,
+    "dynamic-import": 4
+   },
+   "limitations": [
+    "Caller-selected source analysis leaves 85 inventoried files outside analysis scope. Inventory identity covers the complete artifact; relationships through unselected sources remain unknown.",
+    "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+    "Electron relationships are derived from inert syntax; runtime registration, reachability, defaults, and enforcement remain unproven.",
+    "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+    "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+    "Sender, frame, URL, and origin checks are observations only; REA does not claim that they enforce a complete authorization policy.",
+    "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+    "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+    "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+   ]
+  },
+  "semantic_graph": {
+   "nodes": {
+    "expression": 25154,
+    "call-site": 3726,
+    "binding": 2371,
+    "property-slot": 2364,
+    "parameter": 1052,
+    "return-site": 837,
+    "task": 82,
+    "function": 782,
+    "literal": 61,
+    "event": 22,
+    "module": 104,
+    "listener": 19,
+    "promise": 44,
+    "boundary": 12,
+    "request": 2,
+    "timer": 5
+   },
+   "relations": {
+    "aliases": 12723,
+    "reads": 9055,
+    "returns-to-call": 230,
+    "writes": 242,
+    "reads-property": 3339,
+    "defines": 4789,
+    "captures": 2702,
+    "spreads": 112,
+    "calls": 202,
+    "writes-property": 217,
+    "returns-task": 12,
+    "argument-to-parameter": 456,
+    "awaits": 89,
+    "detaches-task": 5,
+    "destructures": 67,
+    "creates-promise": 44,
+    "registers-listener": 19,
+    "dispatches-candidate": 3,
+    "coerces": 7,
+    "owns": 5,
+    "chains": 9,
+    "schedules-timer": 5,
+    "parses": 5,
+    "constructs-request": 2,
+    "aggregates": 2
+   },
+   "resolution": {
+    "candidate": 15210,
+    "resolved": 19131
+   },
+   "fingerprints": 776,
+   "unknowns": {
+    "object-flow/ambiguous-target": 6742,
+    "data-flow/unknown-value": 3782,
+    "call-flow/dynamic-call": 3728,
+    "object-flow/dynamic-property": 145,
+    "promise-ownership/ambiguous-target": 100,
+    "object-flow/incomplete-module": 84,
+    "closure/incomplete-module": 84,
+    "resource-lifecycle/incomplete-module": 84,
+    "boundary/incomplete-module": 84,
+    "timer/incomplete-module": 84,
+    "request/incomplete-module": 84,
+    "child-process/incomplete-module": 84,
+    "event/incomplete-module": 84,
+    "data-flow/incomplete-module": 84,
+    "call-flow/incomplete-module": 84,
+    "configuration/incomplete-module": 84,
+    "promise-ownership/incomplete-module": 84,
+    "event/ambiguous-target": 22,
+    "timer/ambiguous-target": 9,
+    "data-flow/dynamic-property": 3,
+    "request/ambiguous-target": 2
+   }
+  },
+  "functions": {
+   "components/App.tsx": [
+    {
+     "name": "isUIConfig",
+     "line": 473
+    },
+    {
+     "name": null,
+     "line": 522
+    },
+    {
+     "name": "useApp",
+     "line": 541
+    },
+    {
+     "name": "useAppProps",
+     "line": 542
+    },
+    {
+     "name": "useEditorInterface",
+     "line": 543
+    },
+    {
+     "name": "useStylesPanelMode",
+     "line": 545
+    },
+    {
+     "name": "useExcalidrawContainer",
+     "line": 547
+    },
+    {
+     "name": "useExcalidrawElements",
+     "line": 549
+    },
+    {
+     "name": "useExcalidrawAppState",
+     "line": 551
+    },
+    {
+     "name": "useExcalidrawSetAppState",
+     "line": 553
+    },
+    {
+     "name": "useExcalidrawActionManager",
+     "line": 555
+    },
+    {
+     "name": "useExcalidrawAPI",
+     "line": 560
+    },
+    {
+     "name": "App",
+     "line": 592
+    },
+    {
+     "name": "ownerDocument",
+     "line": 607
+    },
+    {
+     "name": "ownerWindow",
+     "line": 615
+    },
+    {
+     "name": "renderEnvironment",
+     "line": 628
+    },
+    {
+     "name": null,
+     "line": 680
+    },
+    {
+     "name": null,
+     "line": 686
+    },
+    {
+     "name": null,
+     "line": 693
+    },
+    {
+     "name": null,
+     "line": 694
+    },
+    {
+     "name": null,
+     "line": 698
+    },
+    {
+     "name": null,
+     "line": 701
+    },
+    {
+     "name": null,
+     "line": 702
+    },
+    {
+     "name": null,
+     "line": 705
+    },
+    {
+     "name": null,
+     "line": 706
+    },
+    {
+     "name": null,
+     "line": 707
+    },
+    {
+     "name": null,
+     "line": 784
+    },
+    {
+     "name": null,
+     "line": 788
+    },
+    {
+     "name": "createExcalidrawAPI",
+     "line": 798
+    },
+    {
+     "name": null,
+     "line": 818
+    },
+    {
+     "name": null,
+     "line": 819
+    },
+    {
+     "name": null,
+     "line": 821
+    },
+    {
+     "name": null,
+     "line": 830
+    },
+    {
+     "name": null,
+     "line": 833
+    },
+    {
+     "name": null,
+     "line": 834
+    },
+    {
+     "name": null,
+     "line": 835
+    },
+    {
+     "name": null,
+     "line": 836
+    },
+    {
+     "name": null,
+     "line": 837
+    },
+    {
+     "name": null,
+     "line": 838
+    },
+    {
+     "name": "constructor",
+     "line": 845
+    },
+    {
+     "name": null,
+     "line": 899
+    },
+    {
+     "name": null,
+     "line": 900
+    },
+    {
+     "name": "isInteractionEnabled",
+     "line": 940
+    },
+    {
+     "name": "isLinksEnabled",
+     "line": 953
+    },
+    {
+     "name": "isNavigationEnabled",
+     "line": 970
+    },
+    {
+     "name": "isEmbedsEnabled",
+     "line": 984
+    },
+    {
+     "name": "isBrowserZoomEnabled",
+     "line": 1001
+    },
+    {
+     "name": null,
+     "line": 1022
+    },
+    {
+     "name": "isToolLocked",
+     "line": 1056
+    },
+    {
+     "name": "isActiveToolPointerCapturing",
+     "line": 1068
+    },
+    {
+     "name": "isDefaultUIEnabled",
+     "line": 1084
+    },
+    {
+     "name": null,
+     "line": 1091
+    },
+    {
+     "name": null,
+     "line": 1107
+    },
+    {
+     "name": null,
+     "line": 1116
+    },
+    {
+     "name": "handleSkipBindMode",
+     "line": 1179
+    },
+    {
+     "name": null,
+     "line": 1228
+    },
+    {
+     "name": "resetDelayedBindMode",
+     "line": 1267
+    },
+    {
+     "name": null,
+     "line": 1276
+    },
+    {
+     "name": "handleDelayedBindModeChange",
+     "line": 1287
+    },
+    {
+     "name": "effector",
+     "line": 1295
+    },
+    {
+     "name": null,
+     "line": 1345
+    },
+    {
+     "name": null,
+     "line": 1475
+    },
+    {
+     "name": "cacheEmbeddableRef",
+     "line": 1495
+    },
+    {
+     "name": null,
+     "line": 1508
+    },
+    {
+     "name": "getHTMLIFrameElement",
+     "line": 1514
+    },
+    {
+     "name": "isIframeLikeInteractive",
+     "line": 1524
+    },
+    {
+     "name": null,
+     "line": 1534
+    },
+    {
+     "name": "handleIframeLikeCenterClick",
+     "line": 1568
+    },
+    {
+     "name": null,
+     "line": 1650
+    },
+    {
+     "name": null,
+     "line": 1736
+    },
+    {
+     "name": "isIframeLikeElementCenter",
+     "line": 1751
+    },
+    {
+     "name": null,
+     "line": 1773
+    },
+    {
+     "name": null,
+     "line": 1781
+    },
+    {
+     "name": null,
+     "line": 1785
+    },
+    {
+     "name": null,
+     "line": 1809
+    },
+    {
+     "name": "renderEmbeddables",
+     "line": 1816
+    },
+    {
+     "name": null,
+     "line": 1824
+    },
+    {
+     "name": null,
+     "line": 1832
+    },
+    {
+     "name": null,
+     "line": 1875
+    },
+    {
+     "name": null,
+     "line": 1883
+    },
+    {
+     "name": null,
+     "line": 1939
+    },
+    {
+     "name": null,
+     "line": 2066
+    },
+    {
+     "name": null,
+     "line": 2105
+    },
+    {
+     "name": null,
+     "line": 2110
+    },
+    {
+     "name": null,
+     "line": 2152
+    },
+    {
+     "name": null,
+     "line": 2159
+    },
+    {
+     "name": null,
+     "line": 2176
+    },
+    {
+     "name": null,
+     "line": 2180
+    },
+    {
+     "name": null,
+     "line": 2233
+    },
+    {
+     "name": null,
+     "line": 2238
+    },
+    {
+     "name": null,
+     "line": 2239
+    },
+    {
+     "name": null,
+     "line": 2240
+    },
+    {
+     "name": null,
+     "line": 2322
+    },
+    {
+     "name": null,
+     "line": 2324
+    },
+    {
+     "name": null,
+     "line": 2336
+    },
+    {
+     "name": "render",
+     "line": 2343
+    },
+    {
+     "name": null,
+     "line": 2560
+    },
+    {
+     "name": null,
+     "line": 2582
+    },
+    {
+     "name": null,
+     "line": 2590
+    },
+    {
+     "name": null,
+     "line": 2628
+    },
+    {
+     "name": null,
+     "line": 2629
+    },
+    {
+     "name": null,
+     "line": 2775
+    },
+    {
+     "name": null,
+     "line": 2779
+    },
+    {
+     "name": null,
+     "line": 2783
+    },
+    {
+     "name": null,
+     "line": 2787
+    },
+    {
+     "name": null,
+     "line": 2791
+    },
+    {
+     "name": null,
+     "line": 2799
+    },
+    {
+     "name": null,
+     "line": 2817
+    },
+    {
+     "name": null,
+     "line": 2836
+    },
+    {
+     "name": "setPlugins",
+     "line": 2874
+    },
+    {
+     "name": "onMagicFrameGenerate",
+     "line": 2878
+    },
+    {
+     "name": null,
+     "line": 2895
+    },
+    {
+     "name": null,
+     "line": 2932
+    },
+    {
+     "name": "onIframeSrcCopy",
+     "line": 2997
+    },
+    {
+     "name": null,
+     "line": 3008
+    },
+    {
+     "name": null,
+     "line": 3029
+    },
+    {
+     "name": null,
+     "line": 3072
+    },
+    {
+     "name": null,
+     "line": 3077
+    },
+    {
+     "name": null,
+     "line": 3113
+    },
+    {
+     "name": null,
+     "line": 3118
+    },
+    {
+     "name": null,
+     "line": 3134
+    },
+    {
+     "name": null,
+     "line": 3135
+    },
+    {
+     "name": null,
+     "line": 3147
+    },
+    {
+     "name": null,
+     "line": 3195
+    },
+    {
+     "name": null,
+     "line": 3205
+    },
+    {
+     "name": null,
+     "line": 3232
+    },
+    {
+     "name": null,
+     "line": 3236
+    },
+    {
+     "name": null,
+     "line": 3244
+    },
+    {
+     "name": null,
+     "line": 3248
+    },
+    {
+     "name": "isFileDropEnabled",
+     "line": 3252
+    },
+    {
+     "name": null,
+     "line": 3256
+    },
+    {
+     "name": null,
+     "line": 3268
+    },
+    {
+     "name": null,
+     "line": 3282
+    },
+    {
+     "name": null,
+     "line": 3295
+    },
+    {
+     "name": null,
+     "line": 3299
+    },
+    {
+     "name": null,
+     "line": 3306
+    },
+    {
+     "name": null,
+     "line": 3322
+    },
+    {
+     "name": null,
+     "line": 3365
+    },
+    {
+     "name": null,
+     "line": 3402
+    },
+    {
+     "name": null,
+     "line": 3505
+    },
+    {
+     "name": null,
+     "line": 3521
+    },
+    {
+     "name": null,
+     "line": 3559
+    },
+    {
+     "name": null,
+     "line": 3563
+    },
+    {
+     "name": null,
+     "line": 3572
+    },
+    {
+     "name": null,
+     "line": 3576
+    },
+    {
+     "name": null,
+     "line": 3586
+    },
+    {
+     "name": null,
+     "line": 3592
+    },
+    {
+     "name": null,
+     "line": 3625
+    },
+    {
+     "name": null,
+     "line": 3686
+    },
+    {
+     "name": null,
+     "line": 3731
+    },
+    {
+     "name": null,
+     "line": 3744
+    },
+    {
+     "name": null,
+     "line": 3751
+    },
+    {
+     "name": null,
+     "line": 3781
+    },
+    {
+     "name": null,
+     "line": 3795
+    },
+    {
+     "name": null,
+     "line": 3805
+    },
+    {
+     "name": "clearImageShapeCache",
+     "line": 3813
+    },
+    {
+     "name": null,
+     "line": 3815
+    },
+    {
+     "name": "componentDidMount",
+     "line": 3823
+    },
+    {
+     "name": null,
+     "line": 3836
+    },
+    {
+     "name": null,
+     "line": 3842
+    },
+    {
+     "name": null,
+     "line": 3865
+    },
+    {
+     "name": null,
+     "line": 3871
+    },
+    {
+     "name": null,
+     "line": 3887
+    },
+    {
+     "name": "componentWillUnmount",
+     "line": 3913
+    },
+    {
+     "name": null,
+     "line": 3925
+    },
+    {
+     "name": null,
+     "line": 3941
+    },
+    {
+     "name": null,
+     "line": 3976
+    },
+    {
+     "name": null,
+     "line": 3979
+    },
+    {
+     "name": null,
+     "line": 3986
+    },
+    {
+     "name": "removeEventListeners",
+     "line": 3998
+    },
+    {
+     "name": "addEventListeners",
+     "line": 4002
+    },
+    {
+     "name": null,
+     "line": 4043
+    },
+    {
+     "name": null,
+     "line": 4052
+    },
+    {
+     "name": "getSnapshotBeforeUpdate",
+     "line": 4266
+    },
+    {
+     "name": "markZenModeTransition",
+     "line": 4281
+    },
+    {
+     "name": null,
+     "line": 4291
+    },
+    {
+     "name": "unmarkZenModeTransition",
+     "line": 4297
+    },
+    {
+     "name": "componentDidUpdate",
+     "line": 4303
+    },
+    {
+     "name": null,
+     "line": 4445
+    },
+    {
+     "name": null,
+     "line": 4459
+    },
+    {
+     "name": null,
+     "line": 4467
+    },
+    {
+     "name": null,
+     "line": 4521
+    },
+    {
+     "name": null,
+     "line": 4531
+    },
+    {
+     "name": null,
+     "line": 4533
+    },
+    {
+     "name": "resetTapTwice",
+     "line": 4541
+    },
+    {
+     "name": null,
+     "line": 4546
+    },
+    {
+     "name": null,
+     "line": 4611
+    },
+    {
+     "name": null,
+     "line": 4629
+    },
+    {
+     "name": null,
+     "line": 4670
+    },
+    {
+     "name": null,
+     "line": 4688
+    },
+    {
+     "name": null,
+     "line": 4722
+    },
+    {
+     "name": null,
+     "line": 4743
+    },
+    {
+     "name": null,
+     "line": 4750
+    },
+    {
+     "name": null,
+     "line": 4782
+    },
+    {
+     "name": null,
+     "line": 4796
+    },
+    {
+     "name": null,
+     "line": 4812
+    },
+    {
+     "name": null,
+     "line": 4819
+    },
+    {
+     "name": null,
+     "line": 4833
+    },
+    {
+     "name": null,
+     "line": 4834
+    },
+    {
+     "name": null,
+     "line": 4848
+    },
+    {
+     "name": null,
+     "line": 4880
+    },
+    {
+     "name": null,
+     "line": 4888
+    },
+    {
+     "name": null,
+     "line": 4897
+    },
+    {
+     "name": "showSceneReplacedToast",
+     "line": 4901
+    },
+    {
+     "name": null,
+     "line": 4916
+    },
+    {
+     "name": null,
+     "line": 4926
+    },
+    {
+     "name": null,
+     "line": 4966
+    },
+    {
+     "name": null,
+     "line": 5019
+    },
+    {
+     "name": null,
+     "line": 5040
+    },
+    {
+     "name": null,
+     "line": 5060
+    },
+    {
+     "name": null,
+     "line": 5071
+    },
+    {
+     "name": null,
+     "line": 5085
+    },
+    {
+     "name": null,
+     "line": 5118
+    },
+    {
+     "name": null,
+     "line": 5126
+    },
+    {
+     "name": "get",
+     "line": 5139
+    },
+    {
+     "name": null,
+     "line": 5401
+    },
+    {
+     "name": null,
+     "line": 5421
+    },
+    {
+     "name": null,
+     "line": 5427
+    },
+    {
+     "name": null,
+     "line": 5455
+    },
+    {
+     "name": null,
+     "line": 5554
+    },
+    {
+     "name": null,
+     "line": 5582
+    },
+    {
+     "name": null,
+     "line": 5619
+    },
+    {
+     "name": null,
+     "line": 5686
+    },
+    {
+     "name": null,
+     "line": 5707
+    },
+    {
+     "name": null,
+     "line": 5749
+    },
+    {
+     "name": null,
+     "line": 5829
+    },
+    {
+     "name": null,
+     "line": 5877
+    },
+    {
+     "name": null,
+     "line": 5887
+    },
+    {
+     "name": null,
+     "line": 5894
+    },
+    {
+     "name": null,
+     "line": 5903
+    },
+    {
+     "name": null,
+     "line": 5921
+    },
+    {
+     "name": null,
+     "line": 5943
+    },
+    {
+     "name": null,
+     "line": 5962
+    },
+    {
+     "name": "getElementAtPosition",
+     "line": 5981
+    },
+    {
+     "name": "getElementsAtPosition",
+     "line": 6041
+    },
+    {
+     "name": null,
+     "line": 6057
+    },
+    {
+     "name": null,
+     "line": 6063
+    },
+    {
+     "name": null,
+     "line": 6064
+    },
+    {
+     "name": null,
+     "line": 6065
+    },
+    {
+     "name": "isClippedByFrameAt",
+     "line": 6085
+    },
+    {
+     "name": "getElementHitThreshold",
+     "line": 6107
+    },
+    {
+     "name": "hitElement",
+     "line": 6117
+    },
+    {
+     "name": null,
+     "line": 6164
+    },
+    {
+     "name": null,
+     "line": 6171
+    },
+    {
+     "name": null,
+     "line": 6180
+    },
+    {
+     "name": null,
+     "line": 6204
+    },
+    {
+     "name": null,
+     "line": 6369
+    },
+    {
+     "name": null,
+     "line": 6448
+    },
+    {
+     "name": null,
+     "line": 6466
+    },
+    {
+     "name": null,
+     "line": 6501
+    },
+    {
+     "name": null,
+     "line": 6574
+    },
+    {
+     "name": null,
+     "line": 6599
+    },
+    {
+     "name": null,
+     "line": 6635
+    },
+    {
+     "name": null,
+     "line": 6668
+    },
+    {
+     "name": null,
+     "line": 6696
+    },
+    {
+     "name": null,
+     "line": 6715
+    },
+    {
+     "name": null,
+     "line": 6731
+    },
+    {
+     "name": null,
+     "line": 6757
+    },
+    {
+     "name": null,
+     "line": 6766
+    },
+    {
+     "name": null,
+     "line": 6774
+    },
+    {
+     "name": null,
+     "line": 6780
+    },
+    {
+     "name": null,
+     "line": 6805
+    },
+    {
+     "name": null,
+     "line": 6835
+    },
+    {
+     "name": null,
+     "line": 6847
+    },
+    {
+     "name": null,
+     "line": 6935
+    },
+    {
+     "name": null,
+     "line": 6957
+    },
+    {
+     "name": null,
+     "line": 6987
+    },
+    {
+     "name": null,
+     "line": 7054
+    },
+    {
+     "name": null,
+     "line": 7109
+    },
+    {
+     "name": null,
+     "line": 7351
+    },
+    {
+     "name": null,
+     "line": 7371
+    },
+    {
+     "name": null,
+     "line": 7377
+    },
+    {
+     "name": null,
+     "line": 7392
+    },
+    {
+     "name": "handleHoverSelectedLinearElement",
+     "line": 7403
+    },
+    {
+     "name": null,
+     "line": 7475
+    },
+    {
+     "name": null,
+     "line": 7489
+    },
+    {
+     "name": null,
+     "line": 7514
+    },
+    {
+     "name": null,
+     "line": 7532
+    },
+    {
+     "name": null,
+     "line": 7591
+    },
+    {
+     "name": null,
+     "line": 7595
+    },
+    {
+     "name": null,
+     "line": 7643
+    },
+    {
+     "name": null,
+     "line": 7652
+    },
+    {
+     "name": null,
+     "line": 7653
+    },
+    {
+     "name": null,
+     "line": 7680
+    },
+    {
+     "name": null,
+     "line": 7733
+    },
+    {
+     "name": "onPointerUp",
+     "line": 7735
+    },
+    {
+     "name": null,
+     "line": 7762
+    },
+    {
+     "name": null,
+     "line": 7943
+    },
+    {
+     "name": null,
+     "line": 7965
+    },
+    {
+     "name": null,
+     "line": 7972
+    },
+    {
+     "name": null,
+     "line": 8024
+    },
+    {
+     "name": null,
+     "line": 8039
+    },
+    {
+     "name": null,
+     "line": 8049
+    },
+    {
+     "name": null,
+     "line": 8060
+    },
+    {
+     "name": "updateGestureOnPointerDown",
+     "line": 8066
+    },
+    {
+     "name": null,
+     "line": 8087
+    },
+    {
+     "name": null,
+     "line": 8119
+    },
+    {
+     "name": "initialPointerDownState",
+     "line": 8159
+    },
+    {
+     "name": null,
+     "line": 8188
+    },
+    {
+     "name": "handleDraggingScrollBar",
+     "line": 8234
+    },
+    {
+     "name": null,
+     "line": 8246
+    },
+    {
+     "name": null,
+     "line": 8254
+    },
+    {
+     "name": null,
+     "line": 8274
+    },
+    {
+     "name": null,
+     "line": 8325
+    },
+    {
+     "name": null,
+     "line": 8344
+    },
+    {
+     "name": null,
+     "line": 8386
+    },
+    {
+     "name": null,
+     "line": 8439
+    },
+    {
+     "name": null,
+     "line": 8484
+    },
+    {
+     "name": null,
+     "line": 8490
+    },
+    {
+     "name": null,
+     "line": 8510
+    },
+    {
+     "name": null,
+     "line": 8604
+    },
+    {
+     "name": null,
+     "line": 8735
+    },
+    {
+     "name": null,
+     "line": 8736
+    },
+    {
+     "name": "getCurrentItemRoundness",
+     "line": 8794
+    },
+    {
+     "name": "getCurrentItemStrokeWidth",
+     "line": 8813
+    },
+    {
+     "name": null,
+     "line": 8820
+    },
+    {
+     "name": null,
+     "line": 8889
+    },
+    {
+     "name": "maybeCacheReferenceSnapPoints",
+     "line": 8922
+    },
+    {
+     "name": "maybeCacheVisibleGaps",
+     "line": 8946
+    },
+    {
+     "name": "onKeyDownFromPointerDownHandler",
+     "line": 8970
+    },
+    {
+     "name": null,
+     "line": 8973
+    },
+    {
+     "name": "onKeyUpFromPointerDownHandler",
+     "line": 8981
+    },
+    {
+     "name": null,
+     "line": 8984
+    },
+    {
+     "name": "onPointerMoveFromPointerDownHandler",
+     "line": 8996
+    },
+    {
+     "name": null,
+     "line": 8999
+    },
+    {
+     "name": null,
+     "line": 9178
+    },
+    {
+     "name": "handlePointerMoveOverScrollbars",
+     "line": 9422
+    },
+    {
+     "name": "onPointerUpFromPointerDownHandler",
+     "line": 9454
+    },
+    {
+     "name": null,
+     "line": 9457
+    },
+    {
+     "name": null,
+     "line": 9502
+    },
+    {
+     "name": null,
+     "line": 9538
+    },
+    {
+     "name": null,
+     "line": 9587
+    },
+    {
+     "name": null,
+     "line": 9588
+    },
+    {
+     "name": null,
+     "line": 9589
+    },
+    {
+     "name": null,
+     "line": 9590
+    },
+    {
+     "name": null,
+     "line": 9817
+    },
+    {
+     "name": null,
+     "line": 9835
+    },
+    {
+     "name": null,
+     "line": 9936
+    },
+    {
+     "name": null,
+     "line": 9969
+    },
+    {
+     "name": null,
+     "line": 10060
+    },
+    {
+     "name": null,
+     "line": 10152
+    },
+    {
+     "name": null,
+     "line": 10209
+    },
+    {
+     "name": null,
+     "line": 10290
+    },
+    {
+     "name": null,
+     "line": 10301
+    },
+    {
+     "name": null,
+     "line": 10307
+    },
+    {
+     "name": null,
+     "line": 10312
+    },
+    {
+     "name": null,
+     "line": 10317
+    },
+    {
+     "name": null,
+     "line": 10328
+    },
+    {
+     "name": null,
+     "line": 10338
+    },
+    {
+     "name": null,
+     "line": 10343
+    },
+    {
+     "name": null,
+     "line": 10375
+    },
+    {
+     "name": null,
+     "line": 10396
+    },
+    {
+     "name": null,
+     "line": 10462
+    },
+    {
+     "name": null,
+     "line": 10525
+    },
+    {
+     "name": null,
+     "line": 10540
+    },
+    {
+     "name": null,
+     "line": 10572
+    },
+    {
+     "name": null,
+     "line": 10579
+    },
+    {
+     "name": null,
+     "line": 10609
+    },
+    {
+     "name": null,
+     "line": 10615
+    },
+    {
+     "name": null,
+     "line": 10617
+    },
+    {
+     "name": null,
+     "line": 10623
+    },
+    {
+     "name": null,
+     "line": 10641
+    },
+    {
+     "name": null,
+     "line": 10648
+    },
+    {
+     "name": null,
+     "line": 10673
+    },
+    {
+     "name": null,
+     "line": 10677
+    },
+    {
+     "name": null,
+     "line": 10710
+    },
+    {
+     "name": null,
+     "line": 10718
+    },
+    {
+     "name": null,
+     "line": 10727
+    },
+    {
+     "name": null,
+     "line": 10746
+    },
+    {
+     "name": null,
+     "line": 10755
+    },
+    {
+     "name": null,
+     "line": 10760
+    },
+    {
+     "name": null,
+     "line": 10768
+    },
+    {
+     "name": null,
+     "line": 10774
+    },
+    {
+     "name": null,
+     "line": 10837
+    },
+    {
+     "name": null,
+     "line": 10838
+    },
+    {
+     "name": null,
+     "line": 10857
+    },
+    {
+     "name": null,
+     "line": 10865
+    },
+    {
+     "name": null,
+     "line": 10922
+    },
+    {
+     "name": null,
+     "line": 11003
+    },
+    {
+     "name": null,
+     "line": 11013
+    },
+    {
+     "name": null,
+     "line": 11037
+    },
+    {
+     "name": null,
+     "line": 11094
+    },
+    {
+     "name": null,
+     "line": 11102
+    },
+    {
+     "name": null,
+     "line": 11228
+    },
+    {
+     "name": null,
+     "line": 11333
+    },
+    {
+     "name": null,
+     "line": 11374
+    },
+    {
+     "name": null,
+     "line": 11380
+    },
+    {
+     "name": null,
+     "line": 11415
+    },
+    {
+     "name": null,
+     "line": 11426
+    },
+    {
+     "name": "getCanvasOffsets",
+     "line": 11430
+    },
+    {
+     "name": null,
+     "line": 11445
+    },
+    {
+     "name": "updateLanguage",
+     "line": 11447
+    },
+    {
+     "name": null,
+     "line": 11449
+    },
+    {
+     "name": "createTestHook",
+     "line": 11474
+    },
+    {
+     "name": "get",
+     "line": 11481
+    },
+    {
+     "name": "set",
+     "line": 11484
+    },
+    {
+     "name": "get",
+     "line": 11492
+    }
+   ],
+   "data/restore.ts": [
+    {
+     "name": "handleOversizedLinearElements",
+     "line": 132
+    },
+    {
+     "name": "restoreLinearElementPoints",
+     "line": 159
+    },
+    {
+     "name": null,
+     "line": 165
+    },
+    {
+     "name": "restoreFreedrawPoints",
+     "line": 184
+    },
+    {
+     "name": null,
+     "line": 204
+    },
+    {
+     "name": "restoreStrokeVariability",
+     "line": 257
+    },
+    {
+     "name": "getStrokeWidthKey",
+     "line": 267
+    },
+    {
+     "name": null,
+     "line": 269
+    },
+    {
+     "name": "restoreFreedrawStrokeOptions",
+     "line": 273
+    },
+    {
+     "name": "getFontFamilyByName",
+     "line": 289
+    },
+    {
+     "name": "restoreLineHeight",
+     "line": 308
+    },
+    {
+     "name": "repairBinding",
+     "line": 318
+    },
+    {
+     "name": "restoreElementWithProperties",
+     "line": 450
+    },
+    {
+     "name": null,
+     "line": 509
+    },
+    {
+     "name": "restoreElement",
+     "line": 541
+    },
+    {
+     "name": "repairContainerElement",
+     "line": 775
+    },
+    {
+     "name": null,
+     "line": 786
+    },
+    {
+     "name": "repairBoundElement",
+     "line": 823
+    },
+    {
+     "name": null,
+     "line": 846
+    },
+    {
+     "name": "repairBoundTextElementOrder",
+     "line": 863
+    },
+    {
+     "name": null,
+     "line": 867
+    },
+    {
+     "name": null,
+     "line": 871
+    },
+    {
+     "name": "repairFrameMembership",
+     "line": 890
+    },
+    {
+     "name": "restoreStickyNotes",
+     "line": 912
+    },
+    {
+     "name": "restoreElements",
+     "line": 960
+    },
+    {
+     "name": null,
+     "line": 980
+    },
+    {
+     "name": null,
+     "line": 1088
+    },
+    {
+     "name": null,
+     "line": 1117
+    },
+    {
+     "name": "bumpElementVersions",
+     "line": 1164
+    },
+    {
+     "name": null,
+     "line": 1170
+    },
+    {
+     "name": "coalesceAppStateValue",
+     "line": 1189
+    },
+    {
+     "name": null,
+     "line": 1207
+    },
+    {
+     "name": "restoreColorTopPicksList",
+     "line": 1220
+    },
+    {
+     "name": "restoreFontTopPicks",
+     "line": 1246
+    },
+    {
+     "name": "restoreAppState",
+     "line": 1268
+    },
+    {
+     "name": "restoreLibraryItem",
+     "line": 1388
+    },
+    {
+     "name": "restoreLibraryItems",
+     "line": 1395
+    }
+   ],
+   "history.ts": [
+    {
+     "name": "HistoryDelta",
+     "line": 19
+    },
+    {
+     "name": "applyTo",
+     "line": 23
+    },
+    {
+     "name": "calculate",
+     "line": 58
+    },
+    {
+     "name": "inverse",
+     "line": 68
+    },
+    {
+     "name": "applyLatestChanges",
+     "line": 75
+    },
+    {
+     "name": "HistoryChangedEvent",
+     "line": 90
+    },
+    {
+     "name": "constructor",
+     "line": 91
+    },
+    {
+     "name": "History",
+     "line": 97
+    },
+    {
+     "name": "isUndoStackEmpty",
+     "line": 105
+    },
+    {
+     "name": "isRedoStackEmpty",
+     "line": 109
+    },
+    {
+     "name": "constructor",
+     "line": 113
+    },
+    {
+     "name": "clear",
+     "line": 115
+    },
+    {
+     "name": "record",
+     "line": 124
+    },
+    {
+     "name": "undo",
+     "line": 146
+    },
+    {
+     "name": null,
+     "line": 155
+    },
+    {
+     "name": null,
+     "line": 156
+    },
+    {
+     "name": "redo",
+     "line": 161
+    },
+    {
+     "name": null,
+     "line": 170
+    },
+    {
+     "name": null,
+     "line": 171
+    },
+    {
+     "name": "perform",
+     "line": 176
+    },
+    {
+     "name": "pop",
+     "line": 256
+    },
+    {
+     "name": "push",
+     "line": 270
+    }
+   ],
+   "actions/actionGroup.tsx": [
+    {
+     "name": "allElementsInSameGroup",
+     "line": 53
+    },
+    {
+     "name": null,
+     "line": 66
+    },
+    {
+     "name": "enableActionGroup",
+     "line": 74
+    },
+    {
+     "name": null,
+     "line": 90
+    },
+    {
+     "name": null,
+     "line": 92
+    },
+    {
+     "name": null,
+     "line": 117
+    },
+    {
+     "name": null,
+     "line": 121
+    },
+    {
+     "name": null,
+     "line": 142
+    },
+    {
+     "name": null,
+     "line": 148
+    },
+    {
+     "name": null,
+     "line": 159
+    },
+    {
+     "name": null,
+     "line": 182
+    },
+    {
+     "name": null,
+     "line": 202
+    },
+    {
+     "name": null,
+     "line": 203
+    },
+    {
+     "name": null,
+     "line": 205
+    },
+    {
+     "name": null,
+     "line": 210
+    },
+    {
+     "name": null,
+     "line": 221
+    },
+    {
+     "name": null,
+     "line": 223
+    },
+    {
+     "name": null,
+     "line": 238
+    },
+    {
+     "name": null,
+     "line": 265
+    },
+    {
+     "name": null,
+     "line": 266
+    },
+    {
+     "name": null,
+     "line": 269
+    },
+    {
+     "name": null,
+     "line": 273
+    },
+    {
+     "name": null,
+     "line": 292
+    },
+    {
+     "name": null,
+     "line": 307
+    },
+    {
+     "name": null,
+     "line": 311
+    },
+    {
+     "name": null,
+     "line": 313
+    },
+    {
+     "name": null,
+     "line": 318
+    }
+   ],
+   "data/library.ts": [
+    {
+     "name": "cloneLibraryItems",
+     "line": 116
+    },
+    {
+     "name": "isUniqueItem",
+     "line": 122
+    },
+    {
+     "name": null,
+     "line": 126
+    },
+    {
+     "name": null,
+     "line": 133
+    },
+    {
+     "name": "mergeLibraryItems",
+     "line": 145
+    },
+    {
+     "name": "createLibraryUpdate",
+     "line": 165
+    },
+    {
+     "name": "Library",
+     "line": 197
+    },
+    {
+     "name": "constructor",
+     "line": 206
+    },
+    {
+     "name": null,
+     "line": 212
+    },
+    {
+     "name": null,
+     "line": 216
+    },
+    {
+     "name": null,
+     "line": 218
+    },
+    {
+     "name": null,
+     "line": 249
+    },
+    {
+     "name": null,
+     "line": 261
+    },
+    {
+     "name": null,
+     "line": 268
+    },
+    {
+     "name": null,
+     "line": 269
+    },
+    {
+     "name": null,
+     "line": 287
+    },
+    {
+     "name": null,
+     "line": 306
+    },
+    {
+     "name": null,
+     "line": 307
+    },
+    {
+     "name": null,
+     "line": 351
+    },
+    {
+     "name": null,
+     "line": 369
+    },
+    {
+     "name": null,
+     "line": 384
+    },
+    {
+     "name": null,
+     "line": 391
+    },
+    {
+     "name": null,
+     "line": 392
+    },
+    {
+     "name": "distributeLibraryItemsOnSquareGrid",
+     "line": 405
+    },
+    {
+     "name": "getMaxHeightPerRow",
+     "line": 413
+    },
+    {
+     "name": null,
+     "line": 416
+    },
+    {
+     "name": "getMaxWidthPerCol",
+     "line": 423
+    },
+    {
+     "name": null,
+     "line": 469
+    },
+    {
+     "name": "validateLibraryUrl",
+     "line": 497
+    },
+    {
+     "name": null,
+     "line": 509
+    },
+    {
+     "name": "parseLibraryTokensFromUrl",
+     "line": 530
+    },
+    {
+     "name": "AdapterTransaction",
+     "line": 545
+    },
+    {
+     "name": "getLibraryItems",
+     "line": 548
+    },
+    {
+     "name": "task",
+     "line": 553
+    },
+    {
+     "name": null,
+     "line": 554
+    },
+    {
+     "name": null,
+     "line": 570
+    },
+    {
+     "name": null,
+     "line": 575
+    },
+    {
+     "name": "constructor",
+     "line": 582
+    },
+    {
+     "name": "getLibraryItems",
+     "line": 586
+    },
+    {
+     "name": "getLibraryItemHash",
+     "line": 594
+    },
+    {
+     "name": "getLibraryItemsHash",
+     "line": 598
+    },
+    {
+     "name": null,
+     "line": 601
+    },
+    {
+     "name": "persistLibraryUpdate",
+     "line": 607
+    },
+    {
+     "name": null,
+     "line": 614
+    },
+    {
+     "name": "useHandleLibrary",
+     "line": 677
+    },
+    {
+     "name": null,
+     "line": 710
+    },
+    {
+     "name": "importLibraryFromURL",
+     "line": 718
+    },
+    {
+     "name": null,
+     "line": 725
+    },
+    {
+     "name": null,
+     "line": 746
+    },
+    {
+     "name": null,
+     "line": 747
+    },
+    {
+     "name": "onHashChange",
+     "line": 780
+    },
+    {
+     "name": null,
+     "line": 815
+    },
+    {
+     "name": null,
+     "line": 824
+    },
+    {
+     "name": null,
+     "line": 852
+    },
+    {
+     "name": null,
+     "line": 891
+    },
+    {
+     "name": null,
+     "line": 906
+    },
+    {
+     "name": null,
+     "line": 916
+    },
+    {
+     "name": null,
+     "line": 923
+    },
+    {
+     "name": null,
+     "line": 940
+    },
+    {
+     "name": null,
+     "line": 944
+    },
+    {
+     "name": "onUnload",
+     "line": 982
+    },
+    {
+     "name": null,
+     "line": 990
+    }
+   ],
+   "actions/actionCanvas.tsx": [
+    {
+     "name": null,
+     "line": 51
+    },
+    {
+     "name": null,
+     "line": 57
+    },
+    {
+     "name": null,
+     "line": 65
+    },
+    {
+     "name": null,
+     "line": 74
+    },
+    {
+     "name": null,
+     "line": 89
+    },
+    {
+     "name": null,
+     "line": 96
+    },
+    {
+     "name": null,
+     "line": 99
+    },
+    {
+     "name": "getZoomAnchor",
+     "line": 135
+    },
+    {
+     "name": null,
+     "line": 152
+    },
+    {
+     "name": null,
+     "line": 153
+    },
+    {
+     "name": null,
+     "line": 170
+    },
+    {
+     "name": null,
+     "line": 171
+    },
+    {
+     "name": null,
+     "line": 186
+    },
+    {
+     "name": null,
+     "line": 193
+    },
+    {
+     "name": null,
+     "line": 205
+    },
+    {
+     "name": null,
+     "line": 206
+    },
+    {
+     "name": null,
+     "line": 223
+    },
+    {
+     "name": null,
+     "line": 224
+    },
+    {
+     "name": null,
+     "line": 239
+    },
+    {
+     "name": null,
+     "line": 246
+    },
+    {
+     "name": null,
+     "line": 258
+    },
+    {
+     "name": null,
+     "line": 259
+    },
+    {
+     "name": null,
+     "line": 281
+    },
+    {
+     "name": null,
+     "line": 282
+    },
+    {
+     "name": null,
+     "line": 294
+    },
+    {
+     "name": null,
+     "line": 303
+    },
+    {
+     "name": "getScrollConstraintsBounds",
+     "line": 310
+    },
+    {
+     "name": null,
+     "line": 334
+    },
+    {
+     "name": null,
+     "line": 335
+    },
+    {
+     "name": null,
+     "line": 360
+    },
+    {
+     "name": null,
+     "line": 377
+    },
+    {
+     "name": null,
+     "line": 378
+    },
+    {
+     "name": null,
+     "line": 402
+    },
+    {
+     "name": null,
+     "line": 416
+    },
+    {
+     "name": null,
+     "line": 417
+    },
+    {
+     "name": null,
+     "line": 438
+    },
+    {
+     "name": null,
+     "line": 447
+    },
+    {
+     "name": null,
+     "line": 453
+    },
+    {
+     "name": null,
+     "line": 457
+    },
+    {
+     "name": null,
+     "line": 474
+    },
+    {
+     "name": null,
+     "line": 479
+    }
+   ],
+   "scene/normalize.ts": [
+    {
+     "name": "getNormalizedZoom",
+     "line": 7
+    },
+    {
+     "name": "getNormalizedGridSize",
+     "line": 11
+    },
+    {
+     "name": "getNormalizedGridStep",
+     "line": 15
+    }
+   ],
+   "actions/actionExport.tsx": [
+    {
+     "name": null,
+     "line": 41
+    },
+    {
+     "name": null,
+     "line": 47
+    },
+    {
+     "name": null,
+     "line": 51
+    },
+    {
+     "name": null,
+     "line": 61
+    },
+    {
+     "name": null,
+     "line": 75
+    },
+    {
+     "name": null,
+     "line": 81
+    },
+    {
+     "name": null,
+     "line": 84
+    },
+    {
+     "name": null,
+     "line": 97
+    },
+    {
+     "name": null,
+     "line": 103
+    },
+    {
+     "name": null,
+     "line": 106
+    },
+    {
+     "name": "onProgressToast",
+     "line": 122
+    },
+    {
+     "name": "handleOnExportResult",
+     "line": 147
+    },
+    {
+     "name": null,
+     "line": 156
+    },
+    {
+     "name": "prepareDataForJSONExport",
+     "line": 189
+    },
+    {
+     "name": null,
+     "line": 198
+    },
+    {
+     "name": null,
+     "line": 258
+    },
+    {
+     "name": null,
+     "line": 265
+    },
+    {
+     "name": null,
+     "line": 324
+    },
+    {
+     "name": null,
+     "line": 334
+    },
+    {
+     "name": null,
+     "line": 375
+    },
+    {
+     "name": null,
+     "line": 379
+    },
+    {
+     "name": null,
+     "line": 387
+    },
+    {
+     "name": null,
+     "line": 397
+    },
+    {
+     "name": null,
+     "line": 402
+    },
+    {
+     "name": null,
+     "line": 428
+    },
+    {
+     "name": null,
+     "line": 437
+    },
+    {
+     "name": null,
+     "line": 444
+    },
+    {
+     "name": null,
+     "line": 455
+    }
+   ],
+   "renderer/staticScene.ts": [
+    {
+     "name": "logElementRenderError",
+     "line": 68
+    },
+    {
+     "name": "strokeGrid",
+     "line": 93
+    },
+    {
+     "name": "snap",
+     "line": 123
+    },
+    {
+     "name": "frameClip",
+     "line": 190
+    },
+    {
+     "name": "getLinkIconCacheKey",
+     "line": 224
+    },
+    {
+     "name": "renderLinkIcon",
+     "line": 231
+    },
+    {
+     "name": "_renderStaticScene",
+     "line": 334
+    },
+    {
+     "name": null,
+     "line": 402
+    },
+    {
+     "name": null,
+     "line": 412
+    },
+    {
+     "name": null,
+     "line": 414
+    },
+    {
+     "name": "getRenderState",
+     "line": 422
+    },
+    {
+     "name": "clipElementToFrame",
+     "line": 430
+    },
+    {
+     "name": "isTranslated",
+     "line": 451
+    },
+    {
+     "name": null,
+     "line": 470
+    },
+    {
+     "name": null,
+     "line": 471
+    },
+    {
+     "name": null,
+     "line": 485
+    },
+    {
+     "name": null,
+     "line": 529
+    },
+    {
+     "name": null,
+     "line": 530
+    },
+    {
+     "name": null,
+     "line": 533
+    },
+    {
+     "name": null,
+     "line": 593
+    },
+    {
+     "name": "getStaticSceneThrottle",
+     "line": 617
+    },
+    {
+     "name": null,
+     "line": 630
+    },
+    {
+     "name": "renderStaticSceneThrottled",
+     "line": 647
+    },
+    {
+     "name": "cancelStaticSceneThrottle",
+     "line": 653
+    },
+    {
+     "name": "renderStaticScene",
+     "line": 660
+    }
+   ],
+   "data/blob.ts": [
+    {
+     "name": "parseFileContents",
+     "line": 34
+    },
+    {
+     "name": null,
+     "line": 54
+    },
+    {
+     "name": null,
+     "line": 57
+    },
+    {
+     "name": "getMimeType",
+     "line": 84
+    },
+    {
+     "name": "getFileHandleType",
+     "line": 108
+    },
+    {
+     "name": "isImageFileHandleType",
+     "line": 116
+    },
+    {
+     "name": "isImageFileHandle",
+     "line": 122
+    },
+    {
+     "name": "isSupportedImageFileType",
+     "line": 129
+    },
+    {
+     "name": "isSupportedImageFile",
+     "line": 133
+    },
+    {
+     "name": "loadSceneOrLibraryFromBlob",
+     "line": 140
+    },
+    {
+     "name": "loadFromBlob",
+     "line": 200
+    },
+    {
+     "name": "parseLibraryJSON",
+     "line": 220
+    },
+    {
+     "name": "loadLibraryFromBlob",
+     "line": 232
+    },
+    {
+     "name": "canvasToBlob",
+     "line": 239
+    },
+    {
+     "name": null,
+     "line": 242
+    },
+    {
+     "name": null,
+     "line": 247
+    },
+    {
+     "name": "generateIdFromFile",
+     "line": 263
+    },
+    {
+     "name": "getDataURL",
+     "line": 278
+    },
+    {
+     "name": null,
+     "line": 279
+    },
+    {
+     "name": null,
+     "line": 281
+    },
+    {
+     "name": null,
+     "line": 285
+    },
+    {
+     "name": "getDataURL_sync",
+     "line": 290
+    },
+    {
+     "name": "dataURLToFile",
+     "line": 300
+    },
+    {
+     "name": "dataURLToString",
+     "line": 313
+    },
+    {
+     "name": "getImageFileDimensions",
+     "line": 317
+    },
+    {
+     "name": null,
+     "line": 331
+    },
+    {
+     "name": "cleanup",
+     "line": 334
+    },
+    {
+     "name": null,
+     "line": 343
+    },
+    {
+     "name": null,
+     "line": 350
+    },
+    {
+     "name": "resizeImageFile",
+     "line": 359
+    },
+    {
+     "name": null,
+     "line": 387
+    },
+    {
+     "name": null,
+     "line": 389
+    },
+    {
+     "name": null,
+     "line": 401
+    },
+    {
+     "name": null,
+     "line": 402
+    },
+    {
+     "name": "SVGStringToFile",
+     "line": 418
+    },
+    {
+     "name": "ImageURLToFile",
+     "line": 424
+    },
+    {
+     "name": "getFileHandle",
+     "line": 449
+    },
+    {
+     "name": "getActualMimeTypeFromImage",
+     "line": 474
+    },
+    {
+     "name": "createFile",
+     "line": 507
+    },
+    {
+     "name": "normalizeFile",
+     "line": 522
+    },
+    {
+     "name": "blobToArrayBuffer",
+     "line": 547
+    },
+    {
+     "name": null,
+     "line": 552
+    },
+    {
+     "name": null,
+     "line": 554
+    }
+   ],
+   "data/json.ts": [
+    {
+     "name": "filterOutDeletedFiles",
+     "line": 34
+    },
+    {
+     "name": "serializeAsJSON",
+     "line": 52
+    },
+    {
+     "name": "saveAsJSON",
+     "line": 77
+    },
+    {
+     "name": null,
+     "line": 86
+    },
+    {
+     "name": "loadFromJSON",
+     "line": 102
+    },
+    {
+     "name": "isValidExcalidrawData",
+     "line": 115
+    },
+    {
+     "name": "isValidLibrary",
+     "line": 128
+    },
+    {
+     "name": "serializeLibraryAsJSON",
+     "line": 137
+    },
+    {
+     "name": "saveLibraryAsJSON",
+     "line": 147
+    }
+   ],
+   "actions/actionAddToLibrary.ts": [
+    {
+     "name": null,
+     "line": 13
+    },
+    {
+     "name": null,
+     "line": 21
+    },
+    {
+     "name": null,
+     "line": 34
+    },
+    {
+     "name": null,
+     "line": 45
+    },
+    {
+     "name": null,
+     "line": 54
+    }
+   ],
+   "scene/export.ts": [
+    {
+     "name": "clampPadding",
+     "line": 86
+    },
+    {
+     "name": null,
+     "line": 91
+    },
+    {
+     "name": "truncateText",
+     "line": 96
+    },
+    {
+     "name": "addFrameLabelsAsTextElements",
+     "line": 136
+    },
+    {
+     "name": "getFrameRenderingConfig",
+     "line": 177
+    },
+    {
+     "name": "prepareElementsForRender",
+     "line": 187
+    },
+    {
+     "name": "getExportRenderEnvironment",
+     "line": 503
+    },
+    {
+     "name": "getExportConfigFromAppState",
+     "line": 525
+    },
+    {
+     "name": "configExportDimension",
+     "line": 549
+    },
+    {
+     "name": null,
+     "line": 709
+    },
+    {
+     "name": "exportToCanvas",
+     "line": 838
+    },
+    {
+     "name": null,
+     "line": 883
+    },
+    {
+     "name": "createHTMLComment",
+     "line": 962
+    },
+    {
+     "name": "exportToSvg",
+     "line": 969
+    },
+    {
+     "name": null,
+     "line": 1066
+    },
+    {
+     "name": null,
+     "line": 1176
+    },
+    {
+     "name": null,
+     "line": 1177
+    },
+    {
+     "name": "encodeSvgBase64Payload",
+     "line": 1194
+    },
+    {
+     "name": "decodeSvgBase64Payload",
+     "line": 1221
+    },
+    {
+     "name": "getCanvasSize",
+     "line": 1260
+    },
+    {
+     "name": "exportToBlob",
+     "line": 1293
+    },
+    {
+     "name": null,
+     "line": 1312
+    },
+    {
+     "name": null,
+     "line": 1314
+    },
+    {
+     "name": "exportScene",
+     "line": 1366
+    },
+    {
+     "name": "exportToClipboard",
+     "line": 1384
+    }
+   ],
+   "viewport.ts": [
+    {
+     "name": "constrainScrollAxis",
+     "line": 120
+    },
+    {
+     "name": "constrainScrollState",
+     "line": 145
+    },
+    {
+     "name": "getViewportForZoom",
+     "line": 204
+    },
+    {
+     "name": "getViewportForZoomWithScrollConstraints",
+     "line": 236
+    },
+    {
+     "name": "zoomValueToFitBoundsOnViewport",
+     "line": 267
+    },
+    {
+     "name": "zoomToFitBounds",
+     "line": 281
+    },
+    {
+     "name": "doBoundsExceedViewport",
+     "line": 362
+    },
+    {
+     "name": "getClosestElementBounds",
+     "line": 370
+    },
+    {
+     "name": null,
+     "line": 381
+    },
+    {
+     "name": "centerScrollOn",
+     "line": 397
+    },
+    {
+     "name": "scrollBoundsIntoView",
+     "line": 433
+    },
+    {
+     "name": "shift",
+     "line": 452
+    },
+    {
+     "name": "getScrollToContentState",
+     "line": 483
+    }
+   ],
+   "actions/actionHistory.tsx": [
+    {
+     "name": "executeHistoryAction",
+     "line": 26
+    },
+    {
+     "name": "createUndoAction",
+     "line": 69
+    },
+    {
+     "name": null,
+     "line": 75
+    },
+    {
+     "name": null,
+     "line": 76
+    },
+    {
+     "name": null,
+     "line": 83
+    },
+    {
+     "name": null,
+     "line": 85
+    },
+    {
+     "name": "createRedoAction",
+     "line": 112
+    },
+    {
+     "name": null,
+     "line": 118
+    },
+    {
+     "name": null,
+     "line": 119
+    },
+    {
+     "name": null,
+     "line": 126
+    },
+    {
+     "name": null,
+     "line": 129
+    }
+   ],
+   "renderer/staticSvgScene.ts": [
+    {
+     "name": "roughSVGDrawWithPrecision",
+     "line": 60
+    },
+    {
+     "name": "maybeWrapNodesInFrameClipPath",
+     "line": 76
+    },
+    {
+     "name": null,
+     "line": 94
+    },
+    {
+     "name": "renderElementToSvg",
+     "line": 101
+    },
+    {
+     "name": "addToRoot",
+     "line": 144
+    },
+    {
+     "name": "getPathData",
+     "line": 163
+    },
+    {
+     "name": null,
+     "line": 165
+    },
+    {
+     "name": "createPath",
+     "line": 177
+    },
+    {
+     "name": null,
+     "line": 481
+    },
+    {
+     "name": "renderSceneToSvg",
+     "line": 857
+    },
+    {
+     "name": null,
+     "line": 871
+    },
+    {
+     "name": null,
+     "line": 872
+    },
+    {
+     "name": null,
+     "line": 921
+    },
+    {
+     "name": null,
+     "line": 922
+    }
+   ],
+   "scene/scrollbars.ts": [
+    {
+     "name": "getScrollBars",
+     "line": 15
+    },
+    {
+     "name": "isOverScrollBars",
+     "line": 132
+    },
+    {
+     "name": null,
+     "line": 144
+    }
+   ],
+   "data/filesystem.ts": [
+    {
+     "name": "fileOpen",
+     "line": 13
+    },
+    {
+     "name": null,
+     "line": 21
+    },
+    {
+     "name": null,
+     "line": 27
+    },
+    {
+     "name": null,
+     "line": 43
+    },
+    {
+     "name": "fileSave",
+     "line": 49
+    }
+   ],
+   "gesture.ts": [
+    {
+     "name": "getCenter",
+     "line": 3
+    },
+    {
+     "name": null,
+     "line": 6
+    },
+    {
+     "name": null,
+     "line": 7
+    },
+    {
+     "name": "getDistance",
+     "line": 11
+    },
+    {
+     "name": "sum",
+     "line": 14
+    },
+    {
+     "name": null,
+     "line": 15
+    }
+   ],
+   "data/index.ts": [
+    {
+     "name": "prepareElementsForExport",
+     "line": 49
+    },
+    {
+     "name": "exportCanvas",
+     "line": 99
+    },
+    {
+     "name": null,
+     "line": 146
+    },
+    {
+     "name": null,
+     "line": 162
+    },
+    {
+     "name": null,
+     "line": 186
+    },
+    {
+     "name": null,
+     "line": 187
+    }
+   ]
+  },
+  "functions_named": 249,
+  "functions_total": 782,
+  "listeners": [
+   {
+    "module": "components/App.tsx",
+    "line": 4255,
+    "event": null,
+    "method": "once"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 4232,
+    "event": null,
+    "method": "once"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 4019,
+    "event": null,
+    "method": "once"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 4184,
+    "event": null,
+    "method": "once"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 837,
+    "event": null,
+    "method": "on"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 4077,
+    "event": null,
+    "method": "once"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 3871,
+    "event": null,
+    "method": "on"
+   },
+   {
+    "module": "data/library.ts",
+    "line": 943,
+    "event": null,
+    "method": "on"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 835,
+    "event": null,
+    "method": "on"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 3865,
+    "event": null,
+    "method": "on"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 833,
+    "event": null,
+    "method": "on"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 4128,
+    "event": null,
+    "method": "once"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 834,
+    "event": null,
+    "method": "on"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 7764,
+    "event": null,
+    "method": "once"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 7943,
+    "event": null,
+    "method": "once"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 836,
+    "event": null,
+    "method": "on"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 838,
+    "event": null,
+    "method": "on"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 4167,
+    "event": null,
+    "method": "once"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 4148,
+    "event": null,
+    "method": "once"
+   }
+  ],
+  "timers": [
+   {
+    "module": "components/App.tsx",
+    "line": 1276,
+    "method": "setTimeout"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 4445,
+    "method": "setTimeout"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 1489,
+    "method": "setTimeout"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 1650,
+    "method": "setTimeout"
+   },
+   {
+    "module": "components/App.tsx",
+    "line": 3135,
+    "method": "setTimeout"
+   }
+  ],
+  "state_properties_top": [
+   {
+    "module": "components/App.tsx",
+    "name": "id",
+    "slots": 80
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "x",
+    "slots": 56
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "y",
+    "slots": 56
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "length",
+    "slots": 43
+   },
+   {
+    "module": "renderer/staticSvgScene.ts",
+    "name": "setAttribute",
+    "slots": 29
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "type",
+    "slots": 27
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "clientX",
+    "slots": 19
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "clientY",
+    "slots": 19
+   },
+   {
+    "module": "renderer/staticSvgScene.ts",
+    "name": "appendChild",
+    "slots": 15
+   },
+   {
+    "module": "data/restore.ts",
+    "name": "id",
+    "slots": 14
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "elementId",
+    "slots": 13
+   },
+   {
+    "module": "renderer/staticSvgScene.ts",
+    "name": "y",
+    "slots": 12
+   },
+   {
+    "module": "renderer/staticSvgScene.ts",
+    "name": "x",
+    "slots": 12
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "preventDefault",
+    "slots": 11
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "locked",
+    "slots": 11
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "map",
+    "slots": 11
+   },
+   {
+    "module": "data/restore.ts",
+    "name": "get",
+    "slots": 10
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "filter",
+    "slots": 9
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "width",
+    "slots": 9
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "frameId",
+    "slots": 9
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "name",
+    "slots": 9
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "altKey",
+    "slots": 9
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "height",
+    "slots": 9
+   },
+   {
+    "module": "actions/actionGroup.tsx",
+    "name": "length",
+    "slots": 8
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "isDeleted",
+    "slots": 8
+   },
+   {
+    "module": "renderer/staticSvgScene.ts",
+    "name": "id",
+    "slots": 8
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "displayName",
+    "slots": 8
+   },
+   {
+    "module": "viewport.ts",
+    "name": "value",
+    "slots": 8
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "elements",
+    "slots": 7
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "get",
+    "slots": 7
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "pointerType",
+    "slots": 7
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "message",
+    "slots": 7
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "shiftKey",
+    "slots": 7
+   },
+   {
+    "module": "data/blob.ts",
+    "name": "type",
+    "slots": 7
+   },
+   {
+    "module": "data/restore.ts",
+    "name": "length",
+    "slots": 7
+   },
+   {
+    "module": "data/restore.ts",
+    "name": "elementId",
+    "slots": 7
+   },
+   {
+    "module": "actions/actionCanvas.tsx",
+    "name": "shiftKey",
+    "slots": 7
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "size",
+    "slots": 7
+   },
+   {
+    "module": "viewport.ts",
+    "name": "height",
+    "slots": 7
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "has",
+    "slots": 7
+   },
+   {
+    "module": "data/restore.ts",
+    "name": "push",
+    "slots": 7
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "startBinding",
+    "slots": 7
+   },
+   {
+    "module": "viewport.ts",
+    "name": "width",
+    "slots": 7
+   },
+   {
+    "module": "actions/actionCanvas.tsx",
+    "name": "code",
+    "slots": 7
+   },
+   {
+    "module": "data/restore.ts",
+    "name": "isDeleted",
+    "slots": 6
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "endBinding",
+    "slots": 6
+   },
+   {
+    "module": "data/restore.ts",
+    "name": "type",
+    "slots": 6
+   },
+   {
+    "module": "data/restore.ts",
+    "name": "containerId",
+    "slots": 6
+   },
+   {
+    "module": "viewport.ts",
+    "name": "scrollX",
+    "slots": 6
+   },
+   {
+    "module": "viewport.ts",
+    "name": "scrollY",
+    "slots": 6
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "interaction",
+    "slots": 6
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "initialState",
+    "slots": 6
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "fileId",
+    "slots": 6
+   },
+   {
+    "module": "renderer/staticScene.ts",
+    "name": "id",
+    "slots": 6
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "link",
+    "slots": 6
+   },
+   {
+    "module": "actions/actionCanvas.tsx",
+    "name": "requestUnfollow",
+    "slots": 6
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "theme",
+    "slots": 6
+   },
+   {
+    "module": "actions/actionCanvas.tsx",
+    "name": "isNavigationEnabled",
+    "slots": 6
+   },
+   {
+    "module": "data/library.ts",
+    "name": "message",
+    "slots": 6
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "activeTool",
+    "slots": 6
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "value",
+    "slots": 6
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "selectedElementIds",
+    "slots": 6
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "nativeEvent",
+    "slots": 6
+   },
+   {
+    "module": "actions/actionCanvas.tsx",
+    "name": "value",
+    "slots": 5
+   },
+   {
+    "module": "data/restore.ts",
+    "name": "has",
+    "slots": 5
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "getBoundingClientRect",
+    "slots": 5
+   },
+   {
+    "module": "renderer/staticScene.ts",
+    "name": "x",
+    "slots": 5
+   },
+   {
+    "module": "actions/actionGroup.tsx",
+    "name": "id",
+    "slots": 5
+   },
+   {
+    "module": "data/library.ts",
+    "name": "id",
+    "slots": 5
+   },
+   {
+    "module": "renderer/staticSvgScene.ts",
+    "name": "width",
+    "slots": 5
+   },
+   {
+    "module": "scene/export.ts",
+    "name": "appendChild",
+    "slots": 5
+   },
+   {
+    "module": "renderer/staticScene.ts",
+    "name": "height",
+    "slots": 5
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "appState",
+    "slots": 5
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "ctrlKey",
+    "slots": 5
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "files",
+    "slots": 5
+   },
+   {
+    "module": "renderer/staticScene.ts",
+    "name": "y",
+    "slots": 5
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "code",
+    "slots": 5
+   },
+   {
+    "module": "data/restore.ts",
+    "name": "y",
+    "slots": 5
+   },
+   {
+    "module": "components/App.tsx",
+    "name": "selectedLinearElement",
+    "slots": 5
+   },
+   {
+    "module": "data/library.ts",
+    "name": "set",
+    "slots": 5
+   }
+  ],
+  "require_like_edges": 7
+ }
+}

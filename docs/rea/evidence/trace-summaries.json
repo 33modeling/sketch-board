@@ -1,0 +1,531 @@
+{
+ "feature-element-groups": {
+  "kind": "trace-application-feature",
+  "keys": [
+   "coverage",
+   "direction",
+   "evidence_links",
+   "graph",
+   "limitations",
+   "native_handoffs",
+   "paths",
+   "seed",
+   "seed_matches",
+   "source_evidence_id",
+   "source_graph_id",
+   "summary",
+   "trace_id"
+  ],
+  "summary": {
+   "matched_seeds": 19,
+   "traced_nodes": 552,
+   "traced_edges": 805,
+   "terminal_paths": 38,
+   "native_handoffs": 0,
+   "observed_facts": 356,
+   "inferred_facts": 1373,
+   "unknown_facts": 0,
+   "unavailable_facts": 38
+  },
+  "coverage": {
+   "status": "partial",
+   "source_graph_status": "partial",
+   "total_seed_matches": 19
+  },
+  "limitations": [
+   "A trace reports graph relationships, not proof that code executed or that a feature is reachable in every state.",
+   "Native handoffs never open a binary or invoke a provider automatically; snapshot reuse remains provider/profile/target exact.",
+   "Static, native, passive-runtime, inferred, and unknown facts retain their original authority in the returned graph.",
+   "The source application graph is incomplete; unmatched seeds and frontiers remain unknown."
+  ]
+ },
+ "feature-element-shape": {
+  "kind": "trace-application-feature",
+  "keys": [
+   "coverage",
+   "direction",
+   "evidence_links",
+   "graph",
+   "limitations",
+   "native_handoffs",
+   "paths",
+   "seed",
+   "seed_matches",
+   "source_evidence_id",
+   "source_graph_id",
+   "summary",
+   "trace_id"
+  ],
+  "summary": {
+   "matched_seeds": 13,
+   "traced_nodes": 552,
+   "traced_edges": 805,
+   "terminal_paths": 38,
+   "native_handoffs": 0,
+   "observed_facts": 356,
+   "inferred_facts": 1373,
+   "unknown_facts": 0,
+   "unavailable_facts": 38
+  },
+  "coverage": {
+   "status": "partial",
+   "source_graph_status": "partial",
+   "total_seed_matches": 13
+  },
+  "limitations": [
+   "A trace reports graph relationships, not proof that code executed or that a feature is reachable in every state.",
+   "Native handoffs never open a binary or invoke a provider automatically; snapshot reuse remains provider/profile/target exact.",
+   "Static, native, passive-runtime, inferred, and unknown facts retain their original authority in the returned graph.",
+   "The source application graph is incomplete; unmatched seeds and frontiers remain unknown."
+  ]
+ },
+ "feature-excalidraw-history": {
+  "kind": "trace-application-feature",
+  "keys": [
+   "coverage",
+   "direction",
+   "evidence_links",
+   "graph",
+   "limitations",
+   "native_handoffs",
+   "paths",
+   "seed",
+   "seed_matches",
+   "source_evidence_id",
+   "source_graph_id",
+   "summary",
+   "trace_id"
+  ],
+  "summary": {
+   "matched_seeds": 5,
+   "traced_nodes": 768,
+   "traced_edges": 1367,
+   "terminal_paths": 87,
+   "native_handoffs": 0,
+   "observed_facts": 462,
+   "inferred_facts": 2278,
+   "unknown_facts": 0,
+   "unavailable_facts": 85
+  },
+  "coverage": {
+   "status": "partial",
+   "source_graph_status": "partial",
+   "total_seed_matches": 5
+  },
+  "limitations": [
+   "A trace reports graph relationships, not proof that code executed or that a feature is reachable in every state.",
+   "Native handoffs never open a binary or invoke a provider automatically; snapshot reuse remains provider/profile/target exact.",
+   "Static, native, passive-runtime, inferred, and unknown facts retain their original authority in the returned graph.",
+   "The source application graph is incomplete; unmatched seeds and frontiers remain unknown."
+  ]
+ },
+ "feature-excalidraw-library": {
+  "kind": "trace-application-feature",
+  "keys": [
+   "coverage",
+   "direction",
+   "evidence_links",
+   "graph",
+   "limitations",
+   "native_handoffs",
+   "paths",
+   "seed",
+   "seed_matches",
+   "source_evidence_id",
+   "source_graph_id",
+   "summary",
+   "trace_id"
+  ],
+  "summary": {
+   "matched_seeds": 10,
+   "traced_nodes": 768,
+   "traced_edges": 1367,
+   "terminal_paths": 87,
+   "native_handoffs": 0,
+   "observed_facts": 462,
+   "inferred_facts": 2278,
+   "unknown_facts": 0,
+   "unavailable_facts": 85
+  },
+  "coverage": {
+   "status": "partial",
+   "source_graph_status": "partial",
+   "total_seed_matches": 10
+  },
+  "limitations": [
+   "A trace reports graph relationships, not proof that code executed or that a feature is reachable in every state.",
+   "Native handoffs never open a binary or invoke a provider automatically; snapshot reuse remains provider/profile/target exact.",
+   "Static, native, passive-runtime, inferred, and unknown facts retain their original authority in the returned graph.",
+   "The source application graph is incomplete; unmatched seeds and frontiers remain unknown."
+  ]
+ },
+ "semantics-bounds-common-callers": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "aed105d4a38070ba5553d71a1c8f21240a7ef1c192ea17a8be6516853e4dc5d3"
+  },
+  "direction": "callers",
+  "status": "found",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 1,
+   "traversed_relations": 0,
+   "traversed_functions": 1,
+   "traversed_modules": 1,
+   "relevant_unknowns": 1
+  },
+  "seed_locations": [
+   "src/bounds.ts:1387"
+  ],
+  "reached_locations": [
+   "src/bounds.ts:1387"
+  ],
+  "relations": {},
+  "unknowns": {
+   "call-flow/dynamic-call": 1
+  }
+ },
+ "semantics-collision-hititself-callers": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "de3bab5c0587a3b064dae2a879445bdb4b19a493d2f27cf172c3c8d9a9b39132"
+  },
+  "direction": "callers",
+  "status": "ambiguous",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 2,
+   "traversed_relations": 1,
+   "traversed_functions": 2,
+   "traversed_modules": 1,
+   "relevant_unknowns": 18
+  },
+  "seed_locations": [
+   "src/collision.ts:137"
+  ],
+  "reached_locations": [
+   "src/collision.ts:137",
+   "src/collision.ts:264"
+  ],
+  "relations": {
+   "calls/candidate": 1
+  },
+  "unknowns": {
+   "call-flow/dynamic-call": 18
+  }
+ },
+ "semantics-export-svg-callers": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "7f013eac29cff4a228f3c7f3dc2017137ebb970355691d431d3f8b4edf7c2516"
+  },
+  "direction": "callers",
+  "status": "ambiguous",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 2,
+   "traversed_relations": 1,
+   "traversed_functions": 2,
+   "traversed_modules": 1,
+   "relevant_unknowns": 60
+  },
+  "seed_locations": [
+   "scene/export.ts:969"
+  ],
+  "reached_locations": [
+   "scene/export.ts:1376",
+   "scene/export.ts:969"
+  ],
+  "relations": {
+   "calls/candidate": 1
+  },
+  "unknowns": {
+   "call-flow/dynamic-call": 60
+  }
+ },
+ "semantics-gesture-center-callers": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "e90da693d50592c8455960f8cdb027db5bf4f305cbfafe8501e56548689c7292"
+  },
+  "direction": "callers",
+  "status": "found",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 1,
+   "traversed_relations": 0,
+   "traversed_functions": 1,
+   "traversed_modules": 1,
+   "relevant_unknowns": 4
+  },
+  "seed_locations": [
+   "gesture.ts:3"
+  ],
+  "reached_locations": [
+   "gesture.ts:3"
+  ],
+  "relations": {},
+  "unknowns": {
+   "call-flow/dynamic-call": 4
+  }
+ },
+ "semantics-groupids-property": {
+  "seed": {
+   "kind": "property",
+   "name": "groupIds"
+  },
+  "direction": "forward-influence",
+  "status": "ambiguous",
+  "summary": {
+   "total_seed_matches": 3,
+   "traversed_nodes": 7,
+   "traversed_relations": 4,
+   "traversed_functions": 3,
+   "traversed_modules": 1,
+   "relevant_unknowns": 3
+  },
+  "seed_locations": [],
+  "reached_locations": [
+   "src/groups.ts:104",
+   "src/groups.ts:222",
+   "src/groups.ts:233"
+  ],
+  "relations": {
+   "aliases/resolved": 1,
+   "reads-property/candidate": 3
+  },
+  "unknowns": {
+   "object-flow/ambiguous-target": 3
+  }
+ },
+ "semantics-groups-selectfromgiven-callers": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "95a23ff1b03978c2499ec1f9704d044e8fe76392b75e511b20c81e3221c5eb28"
+  },
+  "direction": "callers",
+  "status": "found",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 1,
+   "traversed_relations": 0,
+   "traversed_functions": 1,
+   "traversed_modules": 1,
+   "relevant_unknowns": 3
+  },
+  "seed_locations": [
+   "src/groups.ts:94"
+  ],
+  "reached_locations": [
+   "src/groups.ts:94"
+  ],
+  "relations": {},
+  "unknowns": {
+   "call-flow/dynamic-call": 3
+  }
+ },
+ "semantics-history-record-callers": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "5c1a3faa0cd6a38b7f97d82efe0a8939706a249af63a9c2483f1ee04edeab7b9"
+  },
+  "direction": "callers",
+  "status": "found",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 1,
+   "traversed_relations": 0,
+   "traversed_functions": 1,
+   "traversed_modules": 1,
+   "relevant_unknowns": 6
+  },
+  "seed_locations": [
+   "history.ts:124"
+  ],
+  "reached_locations": [
+   "history.ts:124"
+  ],
+  "relations": {},
+  "unknowns": {
+   "call-flow/dynamic-call": 6
+  }
+ },
+ "semantics-json-serialize-callers": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "4bad2ccca71a445f12340bb9119cbf24fb28cd8cba7b45e20f2bad1c47fb8ca2"
+  },
+  "direction": "callers",
+  "status": "ambiguous",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 2,
+   "traversed_relations": 1,
+   "traversed_functions": 2,
+   "traversed_modules": 1,
+   "relevant_unknowns": 5
+  },
+  "seed_locations": [
+   "data/json.ts:52"
+  ],
+  "reached_locations": [
+   "data/json.ts:52",
+   "data/json.ts:87"
+  ],
+  "relations": {
+   "calls/candidate": 1
+  },
+  "unknowns": {
+   "call-flow/dynamic-call": 5
+  }
+ },
+ "semantics-library-merge-callers": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "3e1023fcf447dcbd6e1cf55576b7d8041b5e43e2bee3dd8948afd92b519f5cc1"
+  },
+  "direction": "callers",
+  "status": "ambiguous",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 2,
+   "traversed_relations": 1,
+   "traversed_functions": 2,
+   "traversed_modules": 1,
+   "relevant_unknowns": 2
+  },
+  "seed_locations": [
+   "data/library.ts:145"
+  ],
+  "reached_locations": [
+   "data/library.ts:145",
+   "data/library.ts:337"
+  ],
+  "relations": {
+   "calls/candidate": 1
+  },
+  "unknowns": {
+   "call-flow/dynamic-call": 2
+  }
+ },
+ "semantics-seed-property": {
+  "seed": {
+   "kind": "property",
+   "name": "seed"
+  },
+  "direction": "forward-influence",
+  "status": "ambiguous",
+  "summary": {
+   "total_seed_matches": 3,
+   "traversed_nodes": 6,
+   "traversed_relations": 3,
+   "traversed_functions": 3,
+   "traversed_modules": 2,
+   "relevant_unknowns": 3
+  },
+  "seed_locations": [],
+  "reached_locations": [
+   "src/newElement.ts:161",
+   "src/shape.ts:205",
+   "src/shape.ts:687"
+  ],
+  "relations": {
+   "reads-property/candidate": 3
+  },
+  "unknowns": {
+   "object-flow/ambiguous-target": 3
+  }
+ },
+ "semantics-shape-adjustroughness-callers": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "47eceb3e3ade1e1e27e46781374177c13ebbccb4639bad64b5f0e479b866fddf"
+  },
+  "direction": "callers",
+  "status": "found",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 2,
+   "traversed_relations": 1,
+   "traversed_functions": 2,
+   "traversed_modules": 1,
+   "relevant_unknowns": 5
+  },
+  "seed_locations": [
+   "src/shape.ts:176"
+  ],
+  "reached_locations": [
+   "src/shape.ts:176",
+   "src/shape.ts:226"
+  ],
+  "relations": {
+   "calls/resolved": 1
+  },
+  "unknowns": {
+   "call-flow/dynamic-call": 5
+  }
+ },
+ "semantics-shape-roughoptions-callers": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "7f1d339b1149c35559f0a806ceed32d3f3c34fe56c43785bd0c764dc3cf9f675"
+  },
+  "direction": "callers",
+  "status": "ambiguous",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 9,
+   "traversed_relations": 8,
+   "traversed_functions": 2,
+   "traversed_modules": 1,
+   "relevant_unknowns": 8
+  },
+  "seed_locations": [
+   "src/shape.ts:199"
+  ],
+  "reached_locations": [
+   "src/shape.ts:1044",
+   "src/shape.ts:199",
+   "src/shape.ts:863",
+   "src/shape.ts:879",
+   "src/shape.ts:924",
+   "src/shape.ts:934",
+   "src/shape.ts:945",
+   "src/shape.ts:952",
+   "src/shape.ts:977"
+  ],
+  "relations": {
+   "calls/candidate": 8
+  },
+  "unknowns": {
+   "call-flow/dynamic-call": 8
+  }
+ },
+ "semantics-viewport-forzoom-callers": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "96f9bbd545ed7fa9fbb4bea5cec3f17c636e3f891139797c5e1769b5917a7ffb"
+  },
+  "direction": "callers",
+  "status": "ambiguous",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 2,
+   "traversed_relations": 1,
+   "traversed_functions": 2,
+   "traversed_modules": 1,
+   "relevant_unknowns": 0
+  },
+  "seed_locations": [
+   "viewport.ts:204"
+  ],
+  "reached_locations": [
+   "viewport.ts:204",
+   "viewport.ts:248"
+  ],
+  "relations": {
+   "calls/candidate": 1
+  },
+  "unknowns": {}
+ }
+}

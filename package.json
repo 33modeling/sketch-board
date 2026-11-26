@@ -1,0 +1,14 @@
+{
+  "name": "sketch-board",
+  "version": "1.0.0",
+  "private": true,
+  "description": "손그림 보드 — 손그림 느낌 도형·화살표·글자 화이트보드(한국어, 의존성 없음)",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "test:e2e": "node --test tests/e2e/*.e2e.mjs"
+  },
+  "license": "MIT"
+}

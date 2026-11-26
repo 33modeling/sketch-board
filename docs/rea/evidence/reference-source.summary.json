@@ -1,0 +1,1493 @@
+{
+ "element": {
+  "schema": "HistoricalSourceGraph",
+  "inventory_state": "partial",
+  "languages": [
+   "JSON",
+   "TypeScript"
+  ],
+  "files": [
+   {
+    "path": "package.json",
+    "language": "JSON",
+    "size": 1876,
+    "sha256": "2a311cd155062319578a31d106019301fbd2ed31c55950987a460d88bb513158",
+    "classifications": [
+     "manifest"
+    ]
+   },
+   {
+    "path": "src/Scene.ts",
+    "language": "TypeScript",
+    "size": 12805,
+    "sha256": "f1041d078d17270979a3ef4757e6da22139b0db195f25742e095927dbd778e3f",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/__tests__/__snapshots__/transform.test.ts.snap",
+    "language": null,
+    "size": 55904,
+    "sha256": "644dc50ee54453834625b5249818db77bcb99143f8281d2606a7081a1bdf30c4",
+    "classifications": [
+     "source",
+     "test"
+    ]
+   },
+   {
+    "path": "src/align.ts",
+    "language": "TypeScript",
+    "size": 2575,
+    "sha256": "b71776c223782e6808bf76370e46a8119fb992e5cbebe8f560c70133d4cb5ab7",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/arrowEndpointText.ts",
+    "language": "TypeScript",
+    "size": 9483,
+    "sha256": "a91fddf5fe6843f949e03323344ac59dd42d1d8d14032a4ddd03fbfb125c787d",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/arrowheads.ts",
+    "language": "TypeScript",
+    "size": 778,
+    "sha256": "ded721e82d48a48d53d3d0a5052f3be9c5b28441db9e5a15ff127b52af8669d2",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/arrows/focus.ts",
+    "language": "TypeScript",
+    "size": 15672,
+    "sha256": "a07189a4a663eb2fdd54e7d15ca2e2963a501606d3bbd7c197fb01d7c534ef15",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/arrows/helpers.ts",
+    "language": "TypeScript",
+    "size": 1352,
+    "sha256": "0a34c048e6883469d1651f78ed27ecc96c590037097658078ea2d42544ff7d38",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/binding.ts",
+    "language": "TypeScript",
+    "size": 102558,
+    "sha256": "ceaac25ddd60bd035d983bb40b500116ac7a18d4e6da8b902f28da296f2521f9",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/bounds.ts",
+    "language": "TypeScript",
+    "size": 52139,
+    "sha256": "161493986eca16878ee7b46e34e8ad3d825ea1864edc992d88d3429c8eecb207",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/bucketFill.ts",
+    "language": "TypeScript",
+    "size": 68917,
+    "sha256": "fac97d6a2c1d23537c8fe0ba6bea72f344c3eb00825bf891d62e051fdddcb5b1",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/collision.ts",
+    "language": "TypeScript",
+    "size": 27892,
+    "sha256": "4eb2ff72c60d7df0c6e8ddd7c4d65e0a562d2837dd7ff7574391950e1203cc94",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/comparisons.ts",
+    "language": "TypeScript",
+    "size": 1965,
+    "sha256": "290f5fb88e6e3477b9400a7f9f39f89d5593d742f5350726e75ee31d7e401cb7",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/containerCache.ts",
+    "language": "TypeScript",
+    "size": 823,
+    "sha256": "ad153ecd3f879d0bf830030de1f2c4ccf151091baa173ec44aa6e4ce7870b5ae",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/convertToShape.ts",
+    "language": "TypeScript",
+    "size": 26633,
+    "sha256": "326f46fcfd465878dea76ba2d2c6e4938893f6ec480fed028857c42e595aa267",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/cropElement.ts",
+    "language": "TypeScript",
+    "size": 9451,
+    "sha256": "b9fff076e113954d4fb55bfe994856edfa93d1e653c58c914df76678cc3ad92b",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/delta.ts",
+    "language": "TypeScript",
+    "size": 72273,
+    "sha256": "3dd1b0411c930a6eb04b20534c68a2f006d5582000ed154fc9e98638f277faf8",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/distance.ts",
+    "language": "TypeScript",
+    "size": 5070,
+    "sha256": "7f2a2c58dd42fd314b023a3460ca9cac2a868f1e3ce9bd940dcd397faa66a5cf",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/distribute.ts",
+    "language": "TypeScript",
+    "size": 3413,
+    "sha256": "d989418991cb57d809d9364d760be4215508e6fa3c9802a16e6e291425c33f9b",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/dragElements.ts",
+    "language": "TypeScript",
+    "size": 12192,
+    "sha256": "1e6e0ba6c1ef413610b3dface52447bfc9f38729fbabcfce595a3ca871617db1",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/duplicate.ts",
+    "language": "TypeScript",
+    "size": 21125,
+    "sha256": "6ea4e5048ab6c5cc45dbb51361e171bace0a89d9875cd7ff0d558f72bdee402b",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/elbowArrow.ts",
+    "language": "TypeScript",
+    "size": 69199,
+    "sha256": "e4cefa94db68ec38a5b967af7bc1adfab377de5b05e6e2ba562b57710f55d0df",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/elementLink.ts",
+    "language": "TypeScript",
+    "size": 2212,
+    "sha256": "29388a8caf1aa6260c68ae2371ae7e12880458c0d407b4f1563f367f63b59a83",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/embeddable.ts",
+    "language": "TypeScript",
+    "size": 16504,
+    "sha256": "315bd04e63c820a16b8288eef338c6a1a1762ba5e6eee88bf1688d99dec195a5",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/flowchart.ts",
+    "language": "TypeScript",
+    "size": 21836,
+    "sha256": "81da7baaa7d3f9f087374a9dc075007b08d12388a83ba9f6dc567405e1ac134d",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/fractionalIndex.ts",
+    "language": "TypeScript",
+    "size": 15093,
+    "sha256": "c1d65ed45dac1c7d0ed8b5a28b13c03e9412c6cb10b74c4ac156834e7441e9aa",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/frame.ts",
+    "language": "TypeScript",
+    "size": 32685,
+    "sha256": "615c2ec75e4e42550ae9ff1ee6a40eb808fb16a9963ef112e6b2a94b7529516a",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/groups.ts",
+    "language": "TypeScript",
+    "size": 9452,
+    "sha256": "01c78a87badfa84a9a714c091e647bc0345459062961909809b578390cf70200",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/heading.ts",
+    "language": "TypeScript",
+    "size": 7263,
+    "sha256": "638ef9760c2cf97a09f08bea3b49c514b1506562cc58f958b7026a2022cb2ca5",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/image.ts",
+    "language": "TypeScript",
+    "size": 4777,
+    "sha256": "c42c68557f13a22ae3ac88dec4de7fbee80f750ca061f9c5a3365a8301fe2054",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/index.ts",
+    "language": "TypeScript",
+    "size": 3476,
+    "sha256": "c6b46d0a5bfb81315e64577e6d07f78540950dfae9a328de047a2369fb399939",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/linearElementEditor.ts",
+    "language": "TypeScript",
+    "size": 83946,
+    "sha256": "2c40ab8390e0f97b05be03a712d42d8be945a5f3cabd17ff40bec0741890b9e2",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/listMarker.ts",
+    "language": "TypeScript",
+    "size": 10681,
+    "sha256": "a799d411f48c7f2a12a0196e2ec650859f23cc6fbb4cbc588f88c4ad4f8df823",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/mutateElement.ts",
+    "language": "TypeScript",
+    "size": 5556,
+    "sha256": "508c48f064cca2550027614889300dc09380b7ee58087bcbd7819d1d65fb769b",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/newElement.ts",
+    "language": "TypeScript",
+    "size": 19011,
+    "sha256": "a8e340ef0890c63933d4ce9b0dcc6a6f393b72da15e347209c340d1add1e8539",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/positionElementsOnGrid.ts",
+    "language": "TypeScript",
+    "size": 3929,
+    "sha256": "ea3145d9c7a39f56dc0359f4f4012fbbdc36ae09b46e16e489f86ddea5873363",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/renderElement.ts",
+    "language": "TypeScript",
+    "size": 45803,
+    "sha256": "691cc058c9067cba0bf87373afd5c60b9c836797ef0df87518e823b2d82dfad8",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/renderEnvironment.ts",
+    "language": "TypeScript",
+    "size": 4690,
+    "sha256": "565369baf018a6cf640c5eba7785154df69fd6bc6b265a3d47f120477627c27f",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/resizeElements.ts",
+    "language": "TypeScript",
+    "size": 45847,
+    "sha256": "f1a35977d33efe532410973f3b7036f503b9fcab1a016b9b8d0e0f6aaf8c929d",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/resizeTest.ts",
+    "language": "TypeScript",
+    "size": 7692,
+    "sha256": "73a32279ba7d59f64fc98517e6584d25a87c4c9c746bb85232004ffd9bc0ee25",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/selection.ts",
+    "language": "TypeScript",
+    "size": 7995,
+    "sha256": "5d54d26e11465a15646820095e49c690743c3a522125b5da0071a4a9c0a6437c",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/shape.ts",
+    "language": "TypeScript",
+    "size": 41929,
+    "sha256": "d9db3f15f23d199f48dd9d0b3b9a24461b321880cc4e98ee857c932c6574412f",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/showSelectedShapeActions.ts",
+    "language": "TypeScript",
+    "size": 823,
+    "sha256": "38373e045507a37a26b38bb512ba8f5610e99f460d87e9623a173c2524f858d7",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/sizeHelpers.ts",
+    "language": "TypeScript",
+    "size": 7685,
+    "sha256": "41522fd29ede43035294d8f29057ad5e6b49e6b7120f66e579088b2a341d40df",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/sortElements.ts",
+    "language": "TypeScript",
+    "size": 3672,
+    "sha256": "2f4423b47e1a53e88fb926ba14b5dbb45c9ec955fefbcd64ae548d846c03ccdb",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/stickyNote.ts",
+    "language": "TypeScript",
+    "size": 29997,
+    "sha256": "c23962929b8fbfd62205f08900667cf4fda36106c58b511b5b3106bf6688add9",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/store.ts",
+    "language": "TypeScript",
+    "size": 29265,
+    "sha256": "45cad877e99ced5c813539e4ad422f8c8bc5a71d15307750f374d648ae82e480",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/textElement.ts",
+    "language": "TypeScript",
+    "size": 18446,
+    "sha256": "262bb12d1526d67b83dd71f3dadf2ab146044b9b33862b85f0aa7f1a4bf373c5",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/textMeasurements.ts",
+    "language": "TypeScript",
+    "size": 8613,
+    "sha256": "3c92e8570c05c77e0609a191552c3ea112e6fade38ea0a2e38c620b2acf5d774",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/textWrapping.ts",
+    "language": "TypeScript",
+    "size": 22268,
+    "sha256": "29b9203ed4547238e76cf8ff725dcc0a8724d3bffac8e2d8e0682bb4ce9c54c3",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/transform.ts",
+    "language": "TypeScript",
+    "size": 36830,
+    "sha256": "3ba1702201d7eb0fe5619aac9293b3288dead8ae593e78f024fcb50a4ef49a3c",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/transformHandles.ts",
+    "language": "TypeScript",
+    "size": 8726,
+    "sha256": "16a51dca2bea8b9efbdb47c5d392b6ae2ffd935f2e5f2e83450d1036a41406c0",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/typeChecks.ts",
+    "language": "TypeScript",
+    "size": 11787,
+    "sha256": "c5a156114ef397f77e3e4f33f1025c44c04865f513e3251b83a3ec9724044bfa",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/types.ts",
+    "language": "TypeScript",
+    "size": 14954,
+    "sha256": "ae55b7f4e5e62aa33c36ae54c26b34e7c5853c0a4bb9accbf384a635b4070ef4",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/utils.ts",
+    "language": "TypeScript",
+    "size": 24877,
+    "sha256": "3298aed68967c41efc7b337212b26208ecc05798fa384ae4b07fda5b567b237d",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/visualdebug.ts",
+    "language": "TypeScript",
+    "size": 5742,
+    "sha256": "d262e92313e1d454c6054f2c8cf5ef60037e7819d3ad66ba288879e9e593df8b",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/zindex.ts",
+    "language": "TypeScript",
+    "size": 18951,
+    "sha256": "6d8a10576e5bd945c384558e2fd2dff7ecea93795546aec0c21ec0acb89d87c3",
+    "classifications": [
+     "source"
+    ]
+   }
+  ],
+  "relationships": 518,
+  "parse_failures": 0,
+  "vcs_head": "dabd83c4aa6b9e42d0dd0a42be62200eb8e3cce9"
+ },
+ "excalidraw": {
+  "schema": "HistoricalSourceGraph",
+  "inventory_state": "partial",
+  "languages": [
+   "JSON",
+   "TSX",
+   "TypeScript"
+  ],
+  "files": [
+   {
+    "path": "actions/actionAddToLibrary.ts",
+    "language": "TypeScript",
+    "size": 1793,
+    "sha256": "bf4037ebaca1c8bea96336f7d75a4c5eff519ed6458c85feefce2fe0f1d17e72",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionAlign.tsx",
+    "language": "TSX",
+    "size": 8328,
+    "sha256": "e285baf237001ee9723fd3e3c3cc01942e67cc5a53155c248a65a3925477113e",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionBoundText.tsx",
+    "language": "TSX",
+    "size": 13172,
+    "sha256": "1ae3678cc23659b2c6702b15983312abe56285781a7ec40b14f4ae5d2481ca1b",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionCanvas.tsx",
+    "language": "TSX",
+    "size": 14761,
+    "sha256": "2a28137926fdf317728dd4a0aaff5aa1438e302e89becb4a24a857849ca540e8",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionClipboard.tsx",
+    "language": "TSX",
+    "size": 8172,
+    "sha256": "fd02f7dd17eb772a5d0cfd80ee296d2bc3f0790e41f58057e9baf726b01c9f47",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionCropEditor.tsx",
+    "language": "TSX",
+    "size": 1593,
+    "sha256": "1bbe7890bfdabc8905049f90cd3867e34f139eba94d31a58afcdedc6604c8f5c",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionDeleteSelected.tsx",
+    "language": "TSX",
+    "size": 9975,
+    "sha256": "eddda97183535f14a3352ac9195127fcd25d8cd8be94606b5472120c30648b47",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionDeselect.ts",
+    "language": "TypeScript",
+    "size": 4391,
+    "sha256": "304a9d6a532b7f9da0fd59e80bb225e0fc007ae203ca39ff2dba191e958e5ad6",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionDistribute.tsx",
+    "language": "TSX",
+    "size": 4035,
+    "sha256": "be3ab5b7040d18a4daaa6b7580c50c3bb671030daa1fc86f922469b6013e64a2",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionDuplicateSelection.tsx",
+    "language": "TSX",
+    "size": 4055,
+    "sha256": "1c34ed15a1075e2682e1ebe395a79e4e79d0a36737048c2962c8b4d548cf7edc",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionElementLink.ts",
+    "language": "TypeScript",
+    "size": 3030,
+    "sha256": "b08589758ad85b1f077fb284583646e7a113113db02b58f0e2674d1539a19454",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionElementLock.ts",
+    "language": "TypeScript",
+    "size": 6654,
+    "sha256": "d810b4a4a869105e7c3e4cf1d6a5a9f26d9b0ac08b79e6996767c602318f7118",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionExport.tsx",
+    "language": "TSX",
+    "size": 12914,
+    "sha256": "e23c3ff540df6fbfdd4e2508478cb16fa9869457197891fe6438614e77e4719a",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionFinalize.tsx",
+    "language": "TSX",
+    "size": 14333,
+    "sha256": "af26581c8a8cf4cebb15c4901f7685e957cb78ae1723b0d44fc813023a01f748",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionFlip.ts",
+    "language": "TypeScript",
+    "size": 5820,
+    "sha256": "0a92a3168c4a84ac48f4f49fe43eee438e197854ea012f7702e663e5ab672703",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionFrame.ts",
+    "language": "TypeScript",
+    "size": 11095,
+    "sha256": "d36ea74ac6aca1bd2412dcc4cbf1177bee3d6c3a27ec6be3a2708c1ff43ea78f",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionGroup.tsx",
+    "language": "TSX",
+    "size": 9867,
+    "sha256": "d8c92ba266655802e40b22d4758143a92127b6beb1591fcc39954c9c21395692",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionHistory.tsx",
+    "language": "TSX",
+    "size": 4510,
+    "sha256": "61078c67fd75bebb84a9c57d273d5113362a161ce299e7c153b11146ca28518f",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionLinearEditor.tsx",
+    "language": "TSX",
+    "size": 5858,
+    "sha256": "4257ed9db48bafd519eb30f47fa9beb34eeb338193cc8d01374b9c6cc70d04ac",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionLink.tsx",
+    "language": "TSX",
+    "size": 1964,
+    "sha256": "83db7a4e99323a9303359ba1df4431afe9a62cdb937cdb2cc52bfd443dd48e7b",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionMenu.tsx",
+    "language": "TSX",
+    "size": 937,
+    "sha256": "544905f9beb8e33d35245ba114b87ffa6e16c9810fd3c0efc4867fb015ea5cbf",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionNavigate.tsx",
+    "language": "TSX",
+    "size": 4400,
+    "sha256": "550b388b3c35dc493b1e73189243509b4fab684633b3a042261b1719c72166bb",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionProperties.tsx",
+    "language": "TSX",
+    "size": 71594,
+    "sha256": "0fe8177b5fd59019728d562ade54dacf6573b118699a95d57fcb69be4deb6230",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionSelectAll.ts",
+    "language": "TypeScript",
+    "size": 2019,
+    "sha256": "a80f51d369ce3cd29801bcf923fbc29858d228a9364929bd52c6d001bbd3be48",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionStyles.ts",
+    "language": "TypeScript",
+    "size": 8501,
+    "sha256": "e59019893f2ccdde2f2c3772d8433c10b9842424080d38e8d56e6ecb06d65731",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionTextAutoResize.ts",
+    "language": "TypeScript",
+    "size": 6072,
+    "sha256": "035e76cbda9f6096db5692b42580392e074433bcd8b591a018af7954ef801443",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionToggleArrowBinding.tsx",
+    "language": "TSX",
+    "size": 763,
+    "sha256": "35eaa4ff7cb327833007078c6863c783881f4e9e90c0d16f178a9621ccfb7cc4",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionToggleGridMode.tsx",
+    "language": "TSX",
+    "size": 933,
+    "sha256": "4632f18ce365c8798a2b9f2d219d88a6eec420d82cd0565cd9d4d5eb5421964c",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionToggleMidpointSnapping.tsx",
+    "language": "TSX",
+    "size": 628,
+    "sha256": "d4edd3205f47f7b4b4f138d6bd2bc00a1abe20bea3653d92be33b6f4d029745e",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionToggleMinimap.tsx",
+    "language": "TSX",
+    "size": 2215,
+    "sha256": "3f99a57ea8225e423886e1b7a6119301bb18cdd5736b52266a4e007858332b40",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionToggleObjectsSnapMode.tsx",
+    "language": "TSX",
+    "size": 991,
+    "sha256": "59d53c2b4bb4b30f1f11974ab18eaf72d03e9fecf8166bb2a9b9ade23f6ec1f6",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionToggleSearchMenu.ts",
+    "language": "TypeScript",
+    "size": 1484,
+    "sha256": "3c0d2a9afbd63a34e2bc8c9bd218882ff8991150aee91ccad171f22542d16e78",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionToggleShapeSwitch.tsx",
+    "language": "TSX",
+    "size": 981,
+    "sha256": "c4f78fe7f7065af52f0bde562ccbed3d847dd08b716852f9dd70e1b73f84f701",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionToggleShowHints.tsx",
+    "language": "TSX",
+    "size": 753,
+    "sha256": "2cb043bad6badd3407cb4465c16c2786b8b60fd1112517027427e54e0e42a141",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionToggleStats.tsx",
+    "language": "TSX",
+    "size": 790,
+    "sha256": "2ceaa7bb2e958c89bf3d1c3c5e3061ed02e1e34650db450c232419b44c452e11",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionToggleViewMode.tsx",
+    "language": "TSX",
+    "size": 957,
+    "sha256": "d6c9c7ee5c4822f0abba09771150656476b360ab8ef309a14673745560786d66",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionToggleWrap.ts",
+    "language": "TypeScript",
+    "size": 623,
+    "sha256": "27e4e7ec8bd04f5e299e59a84632822a2a5e1028c9497e43f68dd6b6bd9a4af6",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionToggleZenMode.tsx",
+    "language": "TSX",
+    "size": 977,
+    "sha256": "fc077960fe45032f65c9f241d0d1a1e1ad9361481eb29b91cfa6565ef554c9b4",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/actionZindex.tsx",
+    "language": "TSX",
+    "size": 4146,
+    "sha256": "1926de13f1dc4d09b32082e81ff09d97b045568cc2a45bd357fd59aa94d31693",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/colorTargets.ts",
+    "language": "TypeScript",
+    "size": 6129,
+    "sha256": "8b38fa8105245da99df44e83e38892f834a93542f05010019e74727a83a19c74",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/index.ts",
+    "language": "TypeScript",
+    "size": 2877,
+    "sha256": "ccfa8320814b4004a96528c2cf27142e1793e6a2fedc1761fac92ef237d98674",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/manager.tsx",
+    "language": "TSX",
+    "size": 6797,
+    "sha256": "fd9740dc54aae851b8759e3c7fb7c8dff40e9668309a5f44c5a7b94a4a3b3031",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/register.ts",
+    "language": "TypeScript",
+    "size": 334,
+    "sha256": "d75b47c9d5f34eb98da0dfdc11740f7c0eefd9db8b1a3258ddbf4e98a8c7cee4",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/shortcuts.ts",
+    "language": "TypeScript",
+    "size": 3917,
+    "sha256": "08a95c75af82f812ed3829f643974f89fbc6f601d3a74e61059ebf71a3f980be",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "actions/types.ts",
+    "language": "TypeScript",
+    "size": 5486,
+    "sha256": "0b77d2fff92e925c81072e7ba77da9b4442240a0def4de510aaa3d2bfbf1b3a8",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "analytics.ts",
+    "language": "TypeScript",
+    "size": 1020,
+    "sha256": "1a695387e385a9d017825c391eb4d19de1c2e3a1b502bf8fc4079691b07a81e6",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "animatedTrail.ts",
+    "language": "TypeScript",
+    "size": 5732,
+    "sha256": "975b69fc4f8d1bee63a55067469e0dd850583ad68e4bca31cbf0bed0a90cb920",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "appState.ts",
+    "language": "TypeScript",
+    "size": 14150,
+    "sha256": "d56c869b3650774e9784423a126c00d4587a6d5dd16216d8e4ccce52fc786777",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "clients.ts",
+    "language": "TypeScript",
+    "size": 7322,
+    "sha256": "6ef0518207922a844317d4bae8ecd134b7c04268ef215d87b238de75e1e72ef6",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "clipboard.ts",
+    "language": "TypeScript",
+    "size": 19316,
+    "sha256": "801629c0583f67d75dbc85b3a92c0edc6885a1e24b5d0506c2633008d5211fe8",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "components/App.tsx",
+    "language": "TSX",
+    "size": 371568,
+    "sha256": "cf0f9de8343065867e5438de0f2953ed4e26232caf1e33197366296ed73f4c2b",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "css.d.ts",
+    "language": "TypeScript",
+    "size": 211,
+    "sha256": "25639fb7a82fed12a3cb9498444e78bb2e407c450dad484d76d44457896ccd5a",
+    "classifications": [
+     "generated",
+     "source"
+    ]
+   },
+   {
+    "path": "data/EditorLocalStorage.ts",
+    "language": "TypeScript",
+    "size": 1354,
+    "sha256": "4652f28a216a3726ca8a89f659e00af39cd96730a11bc3c5ea97c281b0fdf0ba",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "data/ai/types.ts",
+    "language": "TypeScript",
+    "size": 8925,
+    "sha256": "1e29941e343553c3fd94603db5b4de0f474cb3e1c640cc49605d9f72e31cbdf3",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "data/blob.ts",
+    "language": "TypeScript",
+    "size": 16192,
+    "sha256": "f0d835720c7680edfd3938b4578e12cc5f606b5aad515cfb873d1cc54576d08d",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "data/encode.ts",
+    "language": "TypeScript",
+    "size": 11557,
+    "sha256": "a5562335573adedb3d576681ad940b0836b16f8816013a17298bf702e39956bf",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "data/encryption.ts",
+    "language": "TypeScript",
+    "size": 2423,
+    "sha256": "cf0459f24fadf50018db8d78f69c0d44333bc53fb88ec34435fa7fad37e602ed",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "data/filesystem.ts",
+    "language": "TypeScript",
+    "size": 1905,
+    "sha256": "5a7e4dc96f057987161e45ccdfba810c806b7757ff3834c0ce495d0d1fd6e91e",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "data/image.ts",
+    "language": "TypeScript",
+    "size": 1974,
+    "sha256": "414bf5beb41337f809080a6ab68a174349c814cd2ab07ff98bba2d4eb8c3cd93",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "data/index.ts",
+    "language": "TypeScript",
+    "size": 6209,
+    "sha256": "8e7bc64fe0786079d315fcc127833d8a832d2775d35e54dbc432e0b7efdca927",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "data/json.ts",
+    "language": "TypeScript",
+    "size": 4239,
+    "sha256": "d38e58836b569507a40f6f3a745d600c589202a43627762ee7a578331a3d514d",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "data/library.ts",
+    "language": "TypeScript",
+    "size": 31539,
+    "sha256": "b242773104cb14645820e5b7f1d43d2a56f86d95206f7b9571360fbddfbc8b61",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "data/reconcile.ts",
+    "language": "TypeScript",
+    "size": 3811,
+    "sha256": "5fc65669562fc509d3f1c466ac9be019c049f9e6b263df05e2c578f74150c8a4",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "data/resave.ts",
+    "language": "TypeScript",
+    "size": 1242,
+    "sha256": "d085e4ede62fd5b1829a8afe75d9c7fc654fed7289a5b5968a79821d079edac3",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "data/restore.ts",
+    "language": "TypeScript",
+    "size": 44093,
+    "sha256": "3e14fa4f10a8f4282ee7fa821bfded0358381911d45ad0d67046029c144e0b5f",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "data/types.ts",
+    "language": "TypeScript",
+    "size": 1595,
+    "sha256": "0388bc60a0ff5477d088f1b8185a8f9a2069fda2d8c9a42419116efce717b255",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "deburr.ts",
+    "language": "TypeScript",
+    "size": 4407,
+    "sha256": "f375bf4b731a5ad54a93ca401a5b8fe99b5e54571b6b1dc18acb45b4a577adf4",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "drawShapeTrail.ts",
+    "language": "TypeScript",
+    "size": 1802,
+    "sha256": "f2f39a985d09e8806c182ad0def03abcadd97b55735f11402f4b5155503d696d",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "editor-jotai.ts",
+    "language": "TypeScript",
+    "size": 522,
+    "sha256": "0e3ab7724605564bba4c50fd15deccfe69ee2f2a7f8bf94c2889dedab806b62b",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "errors.ts",
+    "language": "TypeScript",
+    "size": 2164,
+    "sha256": "8bbc7ada42eba3707105d1c2f029c929c1349a92e1816de65cd0ef6ed6a33d34",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "gesture.ts",
+    "language": "TypeScript",
+    "size": 548,
+    "sha256": "4964b16fbf58474e705801199221da83a2a5cb4338eb6e477a6c3ac25a66534f",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "global.d.ts",
+    "language": "TypeScript",
+    "size": 3273,
+    "sha256": "d7679fa3bf5d6b64bc2a526070ad97f0d653e22579c6d9056b3ce94e53750814",
+    "classifications": [
+     "generated",
+     "source"
+    ]
+   },
+   {
+    "path": "history.ts",
+    "language": "TypeScript",
+    "size": 7466,
+    "sha256": "617d5445a6bdd27b77708299e3329511cfdb5d39882565966fa99234d57f1794",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "i18n.ts",
+    "language": "TypeScript",
+    "size": 5583,
+    "sha256": "731e71175203721d7dc393e940bb4985978357436933592a48b2e6df039087be",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "index-node.ts",
+    "language": "TypeScript",
+    "size": 1671,
+    "sha256": "e6d7d1fc3434a50bd1b88bb0bd1a33753df56cf4b5002d6447294bb3e77d1085",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "index.tsx",
+    "language": "TSX",
+    "size": 17068,
+    "sha256": "3950c091f349d1da279f1e14a7d48da5a373e86d4ca0d48c6a00665523f290d1",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "laserTrails.ts",
+    "language": "TypeScript",
+    "size": 3867,
+    "sha256": "94c9c207dca0c7e18d65cb252ab0367d18fcd01cff8a4cc849ad48d55a75f27b",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "mermaid.ts",
+    "language": "TypeScript",
+    "size": 1583,
+    "sha256": "5d8aa5c82e1cea07ff81ac963b8a595503f690a30c5f9578a47facb64f81bcbd",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "package.json",
+    "language": "JSON",
+    "size": 3896,
+    "sha256": "7a7226be91e3365916b5c680811f8c7f43d1eafd78db52711722287e6f3fe76a",
+    "classifications": [
+     "manifest"
+    ]
+   },
+   {
+    "path": "polyfill.ts",
+    "language": "TypeScript",
+    "size": 3226,
+    "sha256": "d0d3e659be0712b2f1569fe2e98cb24d7f11e0d1f979072bf0979bc0e00af3ba",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "pwacompat.d.ts",
+    "language": "TypeScript",
+    "size": 28,
+    "sha256": "f8a7ec5b298ce49bd0e4fd5dd47880768ecb156a790c5d5c37a2baca65060e82",
+    "classifications": [
+     "generated",
+     "source"
+    ]
+   },
+   {
+    "path": "react-app-env.d.ts",
+    "language": "TypeScript",
+    "size": 40,
+    "sha256": "57eda4c4c04a1dca45c62857326882ce9cc948c4b52973c0e3c3b7e4c3fa3990",
+    "classifications": [
+     "generated",
+     "source"
+    ]
+   },
+   {
+    "path": "reactUtils.ts",
+    "language": "TypeScript",
+    "size": 1744,
+    "sha256": "c30b355efc06450440d7a55e62d3660ab9f429e93991674b94cc5af94822fcdc",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "renderOverrides.ts",
+    "language": "TypeScript",
+    "size": 2095,
+    "sha256": "0098b84efbb332ddb866d5e0c875a93004fc95cb12312661880f79c0f60f5ba5",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "renderer/animation.ts",
+    "language": "TypeScript",
+    "size": 6639,
+    "sha256": "1f7cbf1f22f89861916e094596ae7a96021e321516310655cb98a879ed4c2165",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "renderer/helpers.ts",
+    "language": "TypeScript",
+    "size": 4988,
+    "sha256": "081ff48697a08b1cd492603da044adf43ff79a4c98ff7de17176ab877f18bf30",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "renderer/interactiveScene.ts",
+    "language": "TypeScript",
+    "size": 60719,
+    "sha256": "b88fb80b4fb7d533b7b7f1f0e5be26fcb3027a9ba069575cc9a1b2d8a8c6f760",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "renderer/renderNewElementScene.ts",
+    "language": "TypeScript",
+    "size": 2601,
+    "sha256": "057ff8e3dd3108d34a6868fd1f892b3d51c81d92ae04aba5a055631388b4245f",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "renderer/renderSnaps.ts",
+    "language": "TypeScript",
+    "size": 5566,
+    "sha256": "231d21c5e511b94afa100ee891399eb0912fb4135b2339b3f0a97150251a15ac",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "renderer/roundRect.ts",
+    "language": "TypeScript",
+    "size": 1213,
+    "sha256": "82d3e4972890525dacb51fe10a3965ab8ebbe1b1913bfc0aebea84a87a652fff",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "renderer/staticScene.ts",
+    "language": "TypeScript",
+    "size": 18684,
+    "sha256": "b4c39c53462a4a2009e89d7fe2fe4dcaffa2a9865d6683a160751abfd5b78d57",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "renderer/staticSvgScene.ts",
+    "language": "TypeScript",
+    "size": 30298,
+    "sha256": "30ac71869ab150c5ca9c78d809382200bc6f7663d5e2af63465fa6a647721466",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "scene/Renderer.ts",
+    "language": "TypeScript",
+    "size": 12526,
+    "sha256": "60da0dae4ff8d8caac4ba117aece51ca0430f3da74b24bce4eb63a2159d0f7eb",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "scene/export.ts",
+    "language": "TypeScript",
+    "size": 44913,
+    "sha256": "ae2f2b9dc86f61243cb2d1c97733494fb580231368c8f16e12b113a8091afb4a",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "scene/index.ts",
+    "language": "TypeScript",
+    "size": 481,
+    "sha256": "961333c76ec7d1420839dc770da8e890ffa3d74bc022a3afdcf32ecb65e028e6",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "scene/normalize.ts",
+    "language": "TypeScript",
+    "size": 536,
+    "sha256": "c8bb23a964c8df6090f0ca394144ab9db3382d562ca8617b9fa0bfad164e0d61",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "scene/scrollbars.ts",
+    "language": "TypeScript",
+    "size": 5341,
+    "sha256": "628c819e400c2034f2fff0c3759ff9d97dde33be5030f21e200877d6d7e448ae",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "scene/types.ts",
+    "language": "TypeScript",
+    "size": 6249,
+    "sha256": "7c868d782eeda827cc5d67427d90ea984bfd9c53a8438652f47a192b0152306e",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "shortcut.ts",
+    "language": "TypeScript",
+    "size": 625,
+    "sha256": "f389a4966180316aec9f716951659de01a2338f15d6b54401b6a4f4c6286f282",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "snapping.ts",
+    "language": "TypeScript",
+    "size": 36227,
+    "sha256": "07dc8aeeacb322d99249ec52286d0753f8baf99a1d814dc24d2f1469d7f38362",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "textAutoResizeHandle.ts",
+    "language": "TypeScript",
+    "size": 2589,
+    "sha256": "5383b99bc397ea25453e8ed4ac34119c882cdfe83ba9270376d0f42dc31dc831",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "types.ts",
+    "language": "TypeScript",
+    "size": 60725,
+    "sha256": "51603163498fce2d621a0bdf2a9280aa2bf9ac1d01856d680b6f16c7ff08c3f8",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "viewport.ts",
+    "language": "TypeScript",
+    "size": 14905,
+    "sha256": "7fc95483ae81961873df516cb1e6dc936074b6e193a211e302acbb8743bcad0e",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "vite-env.d.ts",
+    "language": "TypeScript",
+    "size": 1598,
+    "sha256": "72ebb8cb009923c4f378f04123ce878a46520b9da7c6a82e3779687c2d13fbfd",
+    "classifications": [
+     "generated",
+     "source"
+    ]
+   },
+   {
+    "path": "workers.ts",
+    "language": "TypeScript",
+    "size": 4150,
+    "sha256": "962327a34e6b302af76cedabcd4d98335d29b2e13634752cb567d6bb1ef1cf18",
+    "classifications": [
+     "source"
+    ]
+   }
+  ],
+  "relationships": 749,
+  "parse_failures": 0,
+  "vcs_head": "dabd83c4aa6b9e42d0dd0a42be62200eb8e3cce9"
+ }
+}

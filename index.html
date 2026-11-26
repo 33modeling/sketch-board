@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="description" content="손그림 느낌으로 도형·화살표·글자를 그리는 한국어 화이트보드">
+<meta name="theme-color" content="#ffffff">
+<title>손그림 보드</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='5' width='24' height='22' rx='3' fill='%23fff' stroke='%236965db' stroke-width='3'/%3E%3Cpath d='M9 20c4-6 7 2 14-8' fill='none' stroke='%231e1e1e' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+<canvas id="board" aria-label="그림판" tabindex="0"></canvas>
+<textarea id="text-editor" spellcheck="false" aria-label="글자 입력" rows="1"></textarea>
+
+<header class="top">
+  <div class="island">
+    <button data-act="menu" aria-label="메뉴" title="메뉴"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <button data-act="undo" aria-label="실행 취소" title="실행 취소 (Ctrl+Z)"><svg viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg></button>
+    <button data-act="redo" aria-label="다시 실행" title="다시 실행 (Ctrl+Shift+Z)"><svg viewBox="0 0 24 24"><path d="m15 14 5-5-5-5"/><path d="M20 9H10a6 6 0 0 0 0 12h3"/></svg></button>
+  </div>
+  <div class="island">
+    <button data-act="zoomOut" aria-label="축소" title="축소"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button>
+    <button data-act="zoomReset" id="zoom-label" class="zoom-label" aria-label="100%로 되돌리기" title="100%로">100%</button>
+    <button data-act="zoomIn" aria-label="확대" title="확대"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></button>
+    <button data-act="fit" aria-label="모두 보기" title="모두 보기"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+  </div>
+  <div class="island">
+    <button data-act="props" aria-controls="props" aria-expanded="true" aria-label="모양 설정" title="모양 설정"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="16" r="3"/><path d="M11 8h9M4 16h9"/></svg></button>
+    <button data-act="library" aria-controls="library" aria-expanded="false" aria-label="라이브러리" title="라이브러리"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><path d="M16.5 13v7M13 16.5h7"/></svg></button>
+  </div>
+</header>
+
+<nav class="tools island" aria-label="도구">
+  <button data-tool="select" aria-label="고르기 (V)" title="고르기 (V)"><svg viewBox="0 0 24 24"><path d="M6 3l12 9-5.5 1L15 19l-2.5 1.2-2.6-6L6 17z"/></svg></button>
+  <button data-tool="hand" aria-label="화면 옮기기 (H)" title="화면 옮기기 (H)"><svg viewBox="0 0 24 24"><path d="M8 13V6a1.5 1.5 0 0 1 3 0v5M11 11V4.5a1.5 1.5 0 0 1 3 0V11M14 11V6a1.5 1.5 0 0 1 3 0v7c0 4-2.5 7-6 7-2.5 0-4-1.3-5.5-3.5L3.8 13.6a1.5 1.5 0 0 1 2.4-1.8L8 14"/></svg></button>
+  <button data-tool="rectangle" aria-label="사각형 (R)" title="사각형 (R)"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1.5"/></svg></button>
+  <button data-tool="diamond" aria-label="마름모 (D)" title="마름모 (D)"><svg viewBox="0 0 24 24"><path d="M12 3l9 9-9 9-9-9z"/></svg></button>
+  <button data-tool="ellipse" aria-label="원 (O)" title="원 (O)"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="8.5" ry="7.5"/></svg></button>
+  <button data-tool="arrow" aria-label="화살표 (A)" title="화살표 (A)"><svg viewBox="0 0 24 24"><path d="M4 20 20 4M11 4h9v9"/></svg></button>
+  <button data-tool="line" aria-label="선 (L)" title="선 (L)"><svg viewBox="0 0 24 24"><path d="M4 20 20 4"/></svg></button>
+  <button data-tool="freedraw" aria-label="펜 (P)" title="펜 (P)"><svg viewBox="0 0 24 24"><path d="M4 18c3-1 4-8 7-8s1 7 4 7 3-6 5-8"/></svg></button>
+  <button data-tool="text" aria-label="글자 (T)" title="글자 (T)"><svg viewBox="0 0 24 24"><path d="M5 6V4h14v2M12 4v16M9 20h6"/></svg></button>
+  <button id="tool-lock" aria-pressed="false" aria-label="도구 고정" title="그린 뒤에도 같은 도구 유지"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></button>
+</nav>
+
+<aside id="props" class="panel island" aria-label="모양 설정">
+  <div class="panel-head"><strong>모양</strong><span id="sel-count" class="muted"></span><button class="close" data-close="props" aria-label="닫기">×</button></div>
+  <div class="row-label">선 색</div>
+  <div class="row swatches">
+    <button data-prop="strokeColor" data-value="#1e1e1e" style="--c:#1e1e1e" aria-label="검정"></button>
+    <button data-prop="strokeColor" data-value="#e03131" style="--c:#e03131" aria-label="빨강"></button>
+    <button data-prop="strokeColor" data-value="#2f9e44" style="--c:#2f9e44" aria-label="초록"></button>
+    <button data-prop="strokeColor" data-value="#1971c2" style="--c:#1971c2" aria-label="파랑"></button>
+    <button data-prop="strokeColor" data-value="#f08c00" style="--c:#f08c00" aria-label="주황"></button>
+  </div>
+  <div class="row-label">채우기</div>
+  <div class="row swatches">
+    <button data-prop="backgroundColor" data-value="transparent" class="none" aria-label="채우지 않음"></button>
+    <button data-prop="backgroundColor" data-value="#ffc9c9" style="--c:#ffc9c9" aria-label="연분홍"></button>
+    <button data-prop="backgroundColor" data-value="#b2f2bb" style="--c:#b2f2bb" aria-label="연두"></button>
+    <button data-prop="backgroundColor" data-value="#a5d8ff" style="--c:#a5d8ff" aria-label="하늘"></button>
+    <button data-prop="backgroundColor" data-value="#ffec99" style="--c:#ffec99" aria-label="노랑"></button>
+  </div>
+  <div class="row seg">
+    <button data-prop="fillStyle" data-value="hachure">빗금</button>
+    <button data-prop="fillStyle" data-value="cross-hatch">격자</button>
+    <button data-prop="fillStyle" data-value="solid">꽉 채움</button>
+  </div>
+  <div class="row-label">선 굵기·모양</div>
+  <div class="row seg">
+    <button data-prop="strokeWidth" data-value="1">가늘게</button>
+    <button data-prop="strokeWidth" data-value="2">보통</button>
+    <button data-prop="strokeWidth" data-value="4">굵게</button>
+  </div>
+  <div class="row seg">
+    <button data-prop="strokeStyle" data-value="solid">실선</button>
+    <button data-prop="strokeStyle" data-value="dashed">끊은 선</button>
+    <button data-prop="strokeStyle" data-value="dotted">점선</button>
+  </div>
+  <div class="row-label">손 떨림</div>
+  <div class="row seg">
+    <button data-prop="roughness" data-value="0">반듯</button>
+    <button data-prop="roughness" data-value="1">손그림</button>
+    <button data-prop="roughness" data-value="2">삐뚤</button>
+  </div>
+  <div class="row-label">투명도</div>
+  <div class="row seg">
+    <button data-prop="opacity" data-value="100">100</button>
+    <button data-prop="opacity" data-value="60">60</button>
+    <button data-prop="opacity" data-value="30">30</button>
+  </div>
+  <div id="font-row">
+    <div class="row-label">글자 크기</div>
+    <div class="row seg">
+      <button data-prop="fontSize" data-value="16">작게</button>
+      <button data-prop="fontSize" data-value="24">보통</button>
+      <button data-prop="fontSize" data-value="36">크게</button>
+      <button data-prop="fontSize" data-value="56">아주</button>
+    </div>
+  </div>
+  <div class="row-label">고른 것</div>
+  <div class="row actions">
+    <button data-act="group" title="묶기 (Ctrl+G)">묶기</button>
+    <button data-act="ungroup" title="묶음 풀기 (Ctrl+Shift+G)">풀기</button>
+    <button data-act="duplicate" class="needs-sel" title="복제 (Ctrl+D)">복제</button>
+    <button data-act="delete" class="needs-sel danger" title="지우기 (Delete)">지우기</button>
+    <button data-act="front" class="needs-sel">맨 앞으로</button>
+    <button data-act="back" class="needs-sel">맨 뒤로</button>
+    <button data-act="addToLibrary" class="needs-sel wide">라이브러리에 넣기</button>
+  </div>
+</aside>
+
+<aside id="library" class="panel island lib" aria-label="라이브러리" hidden>
+  <div class="panel-head"><strong>라이브러리</strong><button class="close" data-close="library" aria-label="닫기">×</button></div>
+  <p class="muted small">자주 쓰는 도형을 골라 넣어 두고, 누르면 화면 가운데에 놓여요. 이 브라우저에 저장돼요.</p>
+  <div class="row actions">
+    <button data-act="addToLibrary" class="needs-sel wide">고른 것 넣기</button>
+    <button id="lib-import">가져오기</button>
+    <button id="lib-export">파일로 저장</button>
+  </div>
+  <p id="lib-empty" class="muted small">아직 비어 있어요.</p>
+  <div id="lib-items" class="lib-items"></div>
+  <input id="lib-file" type="file" accept=".json,.excalidrawlib,application/json" hidden>
+</aside>
+
+<dialog id="menu" aria-label="메뉴">
+  <div class="dlg">
+    <div class="panel-head"><strong>손그림 보드</strong><button class="close" data-dismiss aria-label="닫기">×</button></div>
+    <button id="m-open" class="menu-item">열기 (JSON·SVG·Excalidraw)</button>
+    <button id="m-save" class="menu-item">장면 JSON 저장</button>
+    <button id="m-export" class="menu-item">그림으로 내보내기 (PNG·SVG)</button>
+    <button id="m-new" class="menu-item danger">새 장면</button>
+    <div class="row-label">바탕색</div>
+    <div class="row swatches">
+      <button data-bg="#ffffff" style="--c:#ffffff" aria-label="흰색"></button>
+      <button data-bg="#f8f9fa" style="--c:#f8f9fa" aria-label="밝은 회색"></button>
+      <button data-bg="#fff9db" style="--c:#fff9db" aria-label="미색"></button>
+      <button data-bg="#ebfbee" style="--c:#ebfbee" aria-label="연한 초록"></button>
+      <button data-bg="#e7f5ff" style="--c:#e7f5ff" aria-label="연한 파랑"></button>
+    </div>
+    <p class="muted small">PC 단축키: V 고르기 · R 사각형 · O 원 · A 화살표 · L 선 · P 펜 · T 글자 · H/스페이스 화면 옮기기 · Ctrl+휠 확대 · Ctrl+G 묶기 · 두 번 눌러 글자 고치기·묶음 안으로</p>
+    <p class="muted small">휴대폰: 두 손가락으로 벌리고 끌어 확대·이동</p>
+  </div>
+  <input id="open-file" type="file" accept=".json,.svg,.excalidraw,application/json,image/svg+xml" hidden>
+</dialog>
+
+<dialog id="export" aria-label="내보내기">
+  <div class="dlg">
+    <div class="panel-head"><strong>그림으로 내보내기</strong><button class="close" data-dismiss aria-label="닫기">×</button></div>
+    <label class="check"><input type="checkbox" id="ex-bg" checked> 바탕색 넣기</label>
+    <label class="check"><input type="checkbox" id="ex-selected"> 고른 것만</label>
+    <label class="check"><input type="checkbox" id="ex-embed" checked> SVG 에 장면 정보 넣기(다시 열어 고칠 수 있음)</label>
+    <div class="row-label">PNG 배율</div>
+    <div class="row seg radios">
+      <label><input type="radio" name="ex-scale" value="1"> 1배</label>
+      <label><input type="radio" name="ex-scale" value="2" checked> 2배</label>
+      <label><input type="radio" name="ex-scale" value="3"> 3배</label>
+    </div>
+    <div class="row actions">
+      <button id="ex-png" class="primary">PNG 저장</button>
+      <button id="ex-svg" class="primary">SVG 저장</button>
+    </div>
+  </div>
+</dialog>
+
+<div id="toast" class="toast" role="status" hidden></div>
+<script type="module" src="./src/app.js"></script>
+</body>
+</html>

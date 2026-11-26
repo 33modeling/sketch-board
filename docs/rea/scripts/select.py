@@ -1,0 +1,34 @@
+"""기능 묶음별로 분석할 excalidraw 파일을 고른다. 사용법: python3 -I select.py <packages 폴더> <작업 폴더>"""
+import json, os, sys
+
+P, W = sys.argv[1], sys.argv[2]
+GROUPS = {
+    'element': {
+        '손그림 도형 생성(roughjs)': ['src/shape.ts', 'src/renderElement.ts', 'src/newElement.ts'],
+        '경계·충돌(선택 판정)': ['src/bounds.ts', 'src/collision.ts', 'src/selection.ts', 'src/distance.ts'],
+        '이동·크기 조절': ['src/dragElements.ts', 'src/resizeElements.ts', 'src/transformHandles.ts', 'src/resizeTest.ts', 'src/sizeHelpers.ts'],
+        '묶기': ['src/groups.ts'],
+        '변경 기록(store·delta)': ['src/store.ts', 'src/delta.ts', 'src/mutateElement.ts'],
+        '순서(z-index)': ['src/zindex.ts', 'src/fractionalIndex.ts'],
+    },
+    'excalidraw': {
+        '실행 취소·다시 실행': ['history.ts', 'actions/actionHistory.tsx'],
+        '묶기 동작': ['actions/actionGroup.tsx'],
+        '확대·이동': ['actions/actionCanvas.tsx', 'scene/normalize.ts', 'viewport.ts', 'gesture.ts', 'scene/scrollbars.ts'],
+        '라이브러리': ['data/library.ts', 'actions/actionAddToLibrary.ts'],
+        '내보내기(PNG·SVG)': ['scene/export.ts', 'renderer/staticSvgScene.ts', 'renderer/staticScene.ts', 'actions/actionExport.tsx', 'data/index.ts'],
+        '장면 JSON 저장·불러오기': ['data/json.ts', 'data/restore.ts', 'data/blob.ts', 'data/filesystem.ts'],
+        '포인터·터치 입력(App)': ['components/App.tsx'],
+    },
+}
+out = {}
+for pkg, groups in GROUPS.items():
+    sel = []
+    for g, files in groups.items():
+        for f in files:
+            assert os.path.isfile(os.path.join(P, pkg, f)), (pkg, f)
+            sel.append(f)
+    json.dump(sel, open(os.path.join(W, f'selection-{pkg}.json'), 'w'))
+    out[pkg] = groups
+json.dump(out, open(os.path.join(W, 'selection-groups.json'), 'w'), ensure_ascii=False, indent=1)
+print({k: sum(len(v) for v in g.values()) for k, g in out.items()})

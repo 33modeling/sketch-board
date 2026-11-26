@@ -1,0 +1,237 @@
+{
+  "schema": "rea-analysis/v1",
+  "id": "excalidraw-sketch-board",
+  "title": "Excalidraw → 손그림 보드",
+  "analyzed_at": "2026-11-26",
+  "app": {
+    "slug": "sketch-board",
+    "name": "손그림 보드",
+    "repo": "33modeling/sketch-board",
+    "url": "https://github.com/33modeling/sketch-board"
+  },
+  "target": {
+    "name": "excalidraw",
+    "source_url": "https://github.com/excalidraw/excalidraw",
+    "commit": "dabd83c4aa6b9e42d0dd0a42be62200eb8e3cce9",
+    "license": "MIT",
+    "scope": "packages/excalidraw 일부(최상위 ts·actions·data·scene·renderer·components/App.tsx)와 packages/element/src 만 sparse·shallow 로 받아 읽음(5.6 MB). 테스트·locales·fonts·나머지 components 제외. npm install·빌드·실행 없음. 코드는 옮기지 않음"
+  },
+  "rea": {
+    "version": "6.8.0",
+    "runs": [
+      {
+        "command": "import-reference-source",
+        "target": "packages/element (+summary)",
+        "exit": 0,
+        "seconds": 4.2,
+        "result": "파일 57개, 관계 518, 파싱 실패 0"
+      },
+      {
+        "command": "import-reference-source",
+        "target": "packages/excalidraw 받은 범위 (+summary)",
+        "exit": 0,
+        "seconds": 4.2,
+        "result": "파일 105개, 관계 749, 파싱 실패 0"
+      },
+      {
+        "command": "analyze-javascript-application",
+        "target": "element 기능 묶음 6개 파일 18개",
+        "exit": 0,
+        "seconds": 14.5,
+        "result": "파싱 실패 0, AST 49,898, 관계 33,419(resolved 19,774), 함수 554, 지문 541, unknown 10,960. 결과 59.6 MB 는 크기·SHA-256 만"
+      },
+      {
+        "command": "analyze-javascript-application",
+        "target": "excalidraw 기능 묶음 7개 파일 20개",
+        "exit": 0,
+        "seconds": 15.6,
+        "result": "파싱 실패 0, AST 70,097, 관계 34,341(resolved 19,131), 함수 782, 지문 776, listener 19, unknown 15,541. 결과 70.4 MB 는 크기·SHA-256 만"
+      },
+      {
+        "command": "inspect-analysis-view",
+        "target": "summary·modules 보기 4개",
+        "exit": 0,
+        "seconds": 30.1,
+        "result": "app-*-summary-view.json, app-*-modules-view.json"
+      },
+      {
+        "command": "trace-application-feature",
+        "target": "shape.ts·groups.ts·history.ts·library.ts 모듈 씨앗(양방향) 4개",
+        "exit": 0,
+        "seconds": 27.9,
+        "result": "element 노드 552·간선 805, excalidraw 768·1,367 — 씨앗과 무관하게 같은 값(전체로 퍼짐)"
+      },
+      {
+        "command": "trace-javascript-semantics",
+        "target": "함수 호출자 11개, 속성 영향 2개(seed·groupIds)",
+        "exit": 0,
+        "seconds": 89.8,
+        "result": "trace-summaries.json. 다른 파일 호출자는 0(dynamic-call unknown)"
+      }
+    ]
+  },
+  "features": [
+    {
+      "name": "흔들리는 손그림 선",
+      "upstream_how": "element/src/shape.ts generateRoughOptions(199행)가 요소 seed·roughness·굵기로 roughjs 옵션을 만들고, seed 는 newElement.ts:161 에서 한 번 정해 다시 그려도 같은 흔들림",
+      "evidence": "trace-summaries.json(semantics-shape-roughoptions-callers: 863·879·924·934·945·952·1044행, semantics-seed-property: newElement.ts:161·shape.ts:205·687)",
+      "status": "implemented",
+      "commits": [],
+      "note": "src/rough.js 직접 구현(roughjs 미사용): seed 난수, 베지어 흔들기·끝 넘기기, 두 번 긋기, 타원은 반지름 흔들기"
+    },
+    {
+      "name": "작은 도형 덜 흔들기",
+      "upstream_how": "adjustRoughness(176행)가 작은 요소의 roughness 를 1/2·1/3 로",
+      "evidence": "trace-summaries.json(semantics-shape-adjustroughness-callers: shape.ts:226)",
+      "status": "implemented",
+      "commits": [],
+      "note": "effectiveRoughness"
+    },
+    {
+      "name": "빗금·격자·꽉 채우기",
+      "upstream_how": "generateRoughOptions 가 fillStyle·hachureGap(굵기×4)·fillWeight(굵기/2)를 넘김",
+      "evidence": "feature-groups.json(손그림 도형 생성), 직접 읽음",
+      "status": "implemented",
+      "commits": [],
+      "note": "hachureLines: 회전 주사선으로 자른 빗금"
+    },
+    {
+      "name": "실선·끊은 선·점선",
+      "upstream_how": "실선이 아니면 두 번 긋기를 끄고 굵기 +0.5",
+      "evidence": "직접 읽음(shape.ts 199행 함수)",
+      "status": "implemented",
+      "commits": [],
+      "note": "실선이 아니면 한 번만 긋고 setLineDash"
+    },
+    {
+      "name": "펜(자유 그리기)",
+      "upstream_how": "perfect-freehand getStroke 로 압력 반영 윤곽선",
+      "evidence": "app-element-modules-view.json(perfect-freehand import), feature-groups.json",
+      "status": "implemented",
+      "commits": [],
+      "note": "Catmull-Rom 곡선 선. 굵기 변화(압력) 없음"
+    },
+    {
+      "name": "누르기 판정",
+      "upstream_how": "collision.ts hitElementItself(137행): 채운 도형은 안쪽, 아니면 테두리 근처",
+      "evidence": "trace-summaries.json(semantics-collision-hititself-callers: 264행)",
+      "status": "implemented",
+      "commits": [],
+      "note": "geometry.js hitElement"
+    },
+    {
+      "name": "묶기·묶음 안으로 들어가기",
+      "upstream_how": "groups.ts: groupIds 안쪽→바깥 순서, editingGroupId 로 한 단계 안쪽 고르기(selectGroup 20행, selectGroupsFromGivenElements 94행)",
+      "evidence": "trace-summaries.json(semantics-groupids-property: 104·222·233행, semantics-groups-selectfromgiven-callers)",
+      "status": "implemented",
+      "commits": [],
+      "note": "groups.js, Ctrl+G·Ctrl+Shift+G, 두 번 누르기"
+    },
+    {
+      "name": "크기 조절",
+      "upstream_how": "resizeElements.ts resizeMultipleElements(1237행): 공통 상자 기준, 글자는 글자 크기도",
+      "evidence": "feature-groups.json(이동·크기 조절), 직접 읽음",
+      "status": "implemented",
+      "commits": [],
+      "note": "8개 손잡이, Shift 비율 유지. 회전 없음"
+    },
+    {
+      "name": "실행 취소·다시 실행",
+      "upstream_how": "history.ts History(97행): undo·redo 스택, record(124행) 하면 redo 비움, 기록 단위는 store.ts 델타",
+      "evidence": "trace-summaries.json(semantics-history-record-callers: 호출자 0, 다른 파일)",
+      "status": "implemented",
+      "commits": [],
+      "note": "장면 스냅숏 스택(한도 200)"
+    },
+    {
+      "name": "확대·이동",
+      "upstream_how": "viewport.ts getViewportForZoom(204행): 포인터 아래 점 고정, getNormalizedZoom 으로 MIN~MAX, ZOOM_STEP",
+      "evidence": "trace-summaries.json(semantics-viewport-forzoom-callers: 248행)",
+      "status": "implemented",
+      "commits": [],
+      "note": "0.1~30배, Ctrl+휠, 스페이스·가운데 단추·손 도구, 모두 보기"
+    },
+    {
+      "name": "두 손가락 확대·이동",
+      "upstream_how": "App.tsx gesture.pointers 둘이면 거리 비율로 확대(initialScale 5917행), gesture.ts getCenter·getDistance",
+      "evidence": "trace-summaries.json(semantics-gesture-center-callers), 직접 읽음(App.tsx 5905~5975행)",
+      "status": "implemented",
+      "commits": [],
+      "note": "pinch(): 확대와 이동 한 번에, 한 손가락으로 시작한 일은 취소"
+    },
+    {
+      "name": "도형 라이브러리",
+      "upstream_how": "data/library.ts mergeLibraryItems(145행): 새 항목 앞에, isUniqueItem(122행)로 중복 건너뜀. 파일 excalidrawlib",
+      "evidence": "trace-summaries.json(semantics-library-merge-callers: 337행)",
+      "status": "implemented",
+      "commits": [],
+      "note": "위치·id·seed 뺀 모양으로 중복 판정, 가운데에 한 묶음으로 놓기, .excalidrawlib 가져오기"
+    },
+    {
+      "name": "장면 JSON 저장·불러오기",
+      "upstream_how": "data/json.ts serializeAsJSON(52행) {type, version, source, elements, appState, files}, restore.ts restoreElements(960행) 기본값 채우기",
+      "evidence": "trace-summaries.json(semantics-json-serialize-callers: 87행)",
+      "status": "implemented",
+      "commits": [],
+      "note": "sketch-board v1 형식, Excalidraw 장면 기본 도형 7종 읽기, 자동 저장(localStorage)"
+    },
+    {
+      "name": "PNG·SVG 내보내기",
+      "upstream_how": "scene/export.ts exportToSvg(969행, 호출자 1376행 exportScene)·exportToCanvas, 여백·배율, SVG 장면 base64(encodeSvgBase64Payload 1194행)",
+      "evidence": "trace-summaries.json(semantics-export-svg-callers)",
+      "status": "implemented",
+      "commits": [],
+      "note": "PNG 1~3배, 바탕색·고른 것만, SVG <metadata> 에 장면 넣어 다시 열기"
+    },
+    {
+      "name": "화살표 붙이기(binding)",
+      "upstream_how": "binding.ts·elbowArrow.ts",
+      "evidence": "feature-groups.json 밖(받았지만 분석 묶음 아님)",
+      "status": "candidate",
+      "commits": [],
+      "note": "화살표 끝을 도형에 붙여 같이 움직이기"
+    },
+    {
+      "name": "선 꺾기점 편집",
+      "upstream_how": "linearElementEditor.ts",
+      "evidence": "받은 범위",
+      "status": "candidate",
+      "commits": [],
+      "note": "지금은 두 점 직선만"
+    },
+    {
+      "name": "회전",
+      "upstream_how": "transformHandles.ts 회전 손잡이, angle",
+      "evidence": "feature-groups.json(이동·크기 조절)",
+      "status": "candidate",
+      "commits": [],
+      "note": ""
+    },
+    {
+      "name": "협업·공유",
+      "upstream_how": "data/encryption.ts, excalidraw-app(받지 않음)",
+      "evidence": "받은 범위",
+      "status": "deferred",
+      "commits": [],
+      "note": "서버 필요"
+    },
+    {
+      "name": "그림·프레임·임베드",
+      "upstream_how": "image.ts·frame.ts·embeddable.ts",
+      "evidence": "받은 범위",
+      "status": "deferred",
+      "commits": [],
+      "note": ""
+    }
+  ],
+  "limitations": [
+    "의미 추적이 다른 파일에서 import 한 함수 호출을 잇지 못함: History.record·selectGroupsFromGivenElements·getCommonBoundingBox·getCenter 호출자 0(call-flow/dynamic-call)",
+    "모듈 씨앗 trace-application-feature 는 씨앗과 무관하게 분석한 파일 전체로 퍼짐(shape.ts·groups.ts 모두 552/805, history.ts·library.ts 모두 768/1,367)",
+    "속성 씨앗(seed·groupIds)은 seed 위치 0, 닿은 줄 3개(object-flow/ambiguous-target)",
+    "@excalidraw/common 등 별칭 import 와 받지 않은 패키지는 풀리지 않음(범위 밖 파일 element 38·excalidraw 85)",
+    "App.tsx listener 19개는 addEventListener 감싸개·이미터 on/once 로 잡혀 이벤트 이름이 비어 있음. 터치 흐름은 줄 번호를 따라 직접 읽음",
+    "실행·브라우저 관찰을 하지 않아 실제 흔들림 정도·성능은 비교하지 않음"
+  ],
+  "doc": "docs/rea/excalidraw-analysis.md",
+  "evidence_dir": "docs/rea/evidence"
+}

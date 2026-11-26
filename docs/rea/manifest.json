@@ -76,7 +76,9 @@
       "upstream_how": "element/src/shape.ts generateRoughOptions(199행)가 요소 seed·roughness·굵기로 roughjs 옵션을 만들고, seed 는 newElement.ts:161 에서 한 번 정해 다시 그려도 같은 흔들림",
       "evidence": "trace-summaries.json(semantics-shape-roughoptions-callers: 863·879·924·934·945·952·1044행, semantics-seed-property: newElement.ts:161·shape.ts:205·687)",
       "status": "implemented",
-      "commits": [],
+      "commits": [
+        "4bcd8de"
+      ],
       "note": "src/rough.js 직접 구현(roughjs 미사용): seed 난수, 베지어 흔들기·끝 넘기기, 두 번 긋기, 타원은 반지름 흔들기"
     },
     {
@@ -84,7 +86,9 @@
       "upstream_how": "adjustRoughness(176행)가 작은 요소의 roughness 를 1/2·1/3 로",
       "evidence": "trace-summaries.json(semantics-shape-adjustroughness-callers: shape.ts:226)",
       "status": "implemented",
-      "commits": [],
+      "commits": [
+        "4bcd8de"
+      ],
       "note": "effectiveRoughness"
     },
     {
@@ -92,7 +96,9 @@
       "upstream_how": "generateRoughOptions 가 fillStyle·hachureGap(굵기×4)·fillWeight(굵기/2)를 넘김",
       "evidence": "feature-groups.json(손그림 도형 생성), 직접 읽음",
       "status": "implemented",
-      "commits": [],
+      "commits": [
+        "4bcd8de"
+      ],
       "note": "hachureLines: 회전 주사선으로 자른 빗금"
     },
     {
@@ -100,7 +106,9 @@
       "upstream_how": "실선이 아니면 두 번 긋기를 끄고 굵기 +0.5",
       "evidence": "직접 읽음(shape.ts 199행 함수)",
       "status": "implemented",
-      "commits": [],
+      "commits": [
+        "4bcd8de"
+      ],
       "note": "실선이 아니면 한 번만 긋고 setLineDash"
     },
     {
@@ -108,7 +116,9 @@
       "upstream_how": "perfect-freehand getStroke 로 압력 반영 윤곽선",
       "evidence": "app-element-modules-view.json(perfect-freehand import), feature-groups.json",
       "status": "implemented",
-      "commits": [],
+      "commits": [
+        "4bcd8de"
+      ],
       "note": "Catmull-Rom 곡선 선. 굵기 변화(압력) 없음"
     },
     {
@@ -116,7 +126,9 @@
       "upstream_how": "collision.ts hitElementItself(137행): 채운 도형은 안쪽, 아니면 테두리 근처",
       "evidence": "trace-summaries.json(semantics-collision-hititself-callers: 264행)",
       "status": "implemented",
-      "commits": [],
+      "commits": [
+        "4bcd8de"
+      ],
       "note": "geometry.js hitElement"
     },
     {
@@ -124,7 +136,9 @@
       "upstream_how": "groups.ts: groupIds 안쪽→바깥 순서, editingGroupId 로 한 단계 안쪽 고르기(selectGroup 20행, selectGroupsFromGivenElements 94행)",
       "evidence": "trace-summaries.json(semantics-groupids-property: 104·222·233행, semantics-groups-selectfromgiven-callers)",
       "status": "implemented",
-      "commits": [],
+      "commits": [
+        "4bcd8de"
+      ],
       "note": "groups.js, Ctrl+G·Ctrl+Shift+G, 두 번 누르기"
     },
     {
@@ -132,7 +146,9 @@
       "upstream_how": "resizeElements.ts resizeMultipleElements(1237행): 공통 상자 기준, 글자는 글자 크기도",
       "evidence": "feature-groups.json(이동·크기 조절), 직접 읽음",
       "status": "implemented",
-      "commits": [],
+      "commits": [
+        "4bcd8de"
+      ],
       "note": "8개 손잡이, Shift 비율 유지. 회전 없음"
     },
     {
@@ -140,7 +156,9 @@
       "upstream_how": "history.ts History(97행): undo·redo 스택, record(124행) 하면 redo 비움, 기록 단위는 store.ts 델타",
       "evidence": "trace-summaries.json(semantics-history-record-callers: 호출자 0, 다른 파일)",
       "status": "implemented",
-      "commits": [],
+      "commits": [
+        "4bcd8de"
+      ],
       "note": "장면 스냅숏 스택(한도 200)"
     },
     {
@@ -148,7 +166,9 @@
       "upstream_how": "viewport.ts getViewportForZoom(204행): 포인터 아래 점 고정, getNormalizedZoom 으로 MIN~MAX, ZOOM_STEP",
       "evidence": "trace-summaries.json(semantics-viewport-forzoom-callers: 248행)",
       "status": "implemented",
-      "commits": [],
+      "commits": [
+        "4bcd8de"
+      ],
       "note": "0.1~30배, Ctrl+휠, 스페이스·가운데 단추·손 도구, 모두 보기"
     },
     {
@@ -156,7 +176,9 @@
       "upstream_how": "App.tsx gesture.pointers 둘이면 거리 비율로 확대(initialScale 5917행), gesture.ts getCenter·getDistance",
       "evidence": "trace-summaries.json(semantics-gesture-center-callers), 직접 읽음(App.tsx 5905~5975행)",
       "status": "implemented",
-      "commits": [],
+      "commits": [
+        "4bcd8de"
+      ],
       "note": "pinch(): 확대와 이동 한 번에, 한 손가락으로 시작한 일은 취소"
     },
     {
@@ -164,7 +186,9 @@
       "upstream_how": "data/library.ts mergeLibraryItems(145행): 새 항목 앞에, isUniqueItem(122행)로 중복 건너뜀. 파일 excalidrawlib",
       "evidence": "trace-summaries.json(semantics-library-merge-callers: 337행)",
       "status": "implemented",
-      "commits": [],
+      "commits": [
+        "4bcd8de"
+      ],
       "note": "위치·id·seed 뺀 모양으로 중복 판정, 가운데에 한 묶음으로 놓기, .excalidrawlib 가져오기"
     },
     {
@@ -172,7 +196,9 @@
       "upstream_how": "data/json.ts serializeAsJSON(52행) {type, version, source, elements, appState, files}, restore.ts restoreElements(960행) 기본값 채우기",
       "evidence": "trace-summaries.json(semantics-json-serialize-callers: 87행)",
       "status": "implemented",
-      "commits": [],
+      "commits": [
+        "4bcd8de"
+      ],
       "note": "sketch-board v1 형식, Excalidraw 장면 기본 도형 7종 읽기, 자동 저장(localStorage)"
     },
     {
@@ -180,7 +206,9 @@
       "upstream_how": "scene/export.ts exportToSvg(969행, 호출자 1376행 exportScene)·exportToCanvas, 여백·배율, SVG 장면 base64(encodeSvgBase64Payload 1194행)",
       "evidence": "trace-summaries.json(semantics-export-svg-callers)",
       "status": "implemented",
-      "commits": [],
+      "commits": [
+        "4bcd8de"
+      ],
       "note": "PNG 1~3배, 바탕색·고른 것만, SVG <metadata> 에 장면 넣어 다시 열기"
     },
     {
